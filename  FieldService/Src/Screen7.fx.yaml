@@ -46,15 +46,27 @@ Screen7 As screen:
 
         "Map3 As 'Map (preview)'.pcfdataset":
             BorderColor: =RGBA(0, 18, 107, 1)
+            CurrentLocation: =false
+            DefaultLatitude: =ThisItem.'Work Order'.Latitude
+            DefaultLocation: =true
+            DefaultLongitude: =ThisItem.'Work Order'.Longitude
+            DefaultZoomLevel: =16
             DisplayMode: =DisplayMode.Edit
-            Height: =647
+            Height: =807
+            InfoCards: ='Microsoft.Map.InfoCards'.OnClick
             Items: =ThisItem.'Work Order'
-            ItemsAddresses: =
+            ItemsAddresses: ="msdyn_address1"
+            MapStyle: ='Microsoft.Map.MapStyle'.Road
             OnSelect: =Select(Parent)
             PinColor: =RGBA(29, 114, 169, 1)
+            RouteMaintainOrder: =true
+            RouteOptimization: ='Microsoft.Map.RouteOptimization'.Distance
+            SatelliteView: =false
+            ShapeDrawing: =false
+            UseRouting: =true
             Width: =640
             X: =0
-            Y: =177
+            Y: =17
             ZIndex: =6
 
             msdyn_address11 As pcfDataField.textualColumn:
@@ -104,4 +116,36 @@ Screen7 As screen:
                 FieldVariantName: ="textualColumn"
                 Order: =6
                 ZIndex: =12
+
+            msdyn_stateorprovince1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_stateorprovince"
+                FieldName: ="msdyn_stateorprovince"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =7
+                ZIndex: =13
+
+            msdyn_latitude1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_latitude"
+                FieldName: ="msdyn_latitude"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =8
+                ZIndex: =14
+
+            msdyn_longitude1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="msdyn_longitude"
+                FieldName: ="msdyn_longitude"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =9
+                ZIndex: =15
+
+        Label12 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =
+            Width: =560
+            ZIndex: =7
 
