@@ -47,19 +47,23 @@ Screen7 As screen:
         "Map3 As 'Map (preview)'.pcfdataset":
             BorderColor: =RGBA(0, 18, 107, 1)
             CurrentLocation: =false
+            CurrentLocationLatitude: =Location.Latitude
+            CurrentLocationLongitude: =Location.Longitude
             DefaultLatitude: =ThisItem.Latitude
             DefaultLocation: =true
             DefaultLongitude: =ThisItem.Longitude
-            DefaultZoomLevel: =16
+            DefaultZoomLevel: =14
             DisplayMode: =DisplayMode.Edit
             Height: =807
             InfoCards: ='Microsoft.Map.InfoCards'.OnClick
-            Items: =First('Work Orders')
+            Items: =Filter('Work Orders', 'WO Number'= Gallery1.Selected.'Work Order'.'WO Number')
             ItemsAddresses: =
+            ItemsLatitudes: ="msdyn_latitude"
+            ItemsLongitudes: ="msdyn_longitude"
             MapStyle: ='Microsoft.Map.MapStyle'.Road
             OnSelect: =
             PinColor: =RGBA(29, 114, 169, 1)
-            RouteMaintainOrder: =true
+            RouteMaintainOrder: =false
             RouteOptimization: ='Microsoft.Map.RouteOptimization'.Distance
             RouteWaypoints_Items: =First('Work Orders')
             SatelliteView: =false
@@ -154,10 +158,19 @@ Screen7 As screen:
         Button11 As button:
             Height: =88
             OnSelect: |-
-                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &" " &Substitute(ThisItem.'Street 2'," ","+")&" " &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
             Size: =24
-            Text: ="Button"
+            Text: ="Get Directions"
             Width: =640
             Y: =824
             ZIndex: =8
+
+    Button13 As button:
+        Height: =70
+        OnSelect: =Navigate(Screen2)
+        Size: =24
+        Text: ="Back"
+        Width: =280
+        Y: =154
+        ZIndex: =2
 

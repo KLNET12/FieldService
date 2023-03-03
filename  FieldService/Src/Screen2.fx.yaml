@@ -1098,7 +1098,7 @@ Screen2 As screen:
 
     Button10 As button:
         Height: =70
-        OnSelect: =Navigate('Map Screen')
+        OnSelect: =Navigate(Screen7)
         Size: =24
         Text: ="Button"
         Width: =180
