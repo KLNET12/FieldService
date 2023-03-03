@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "msdyn_timeentrysetting",
-    "MaxGetRowsCount": 500,
     "Name": "Time Sources",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
