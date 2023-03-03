@@ -2,7 +2,7 @@ Screen7 As screen:
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =912
-        Items: =Gallery1.Selected
+        Items: =Gallery1.Selected.'Work Order'
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =912
@@ -16,7 +16,7 @@ Screen7 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Internal Flags (msdyn_internalflags)'
+            Text: =ThisItem.'Created On'
             VerticalAlign: =VerticalAlign.Top
             Width: =300
             X: =20
@@ -30,7 +30,7 @@ Screen7 As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Requirement Group Set'
+            Text: =ThisItem.Latitude
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2.Width
             X: =Title2.X
@@ -47,22 +47,24 @@ Screen7 As screen:
         "Map3 As 'Map (preview)'.pcfdataset":
             BorderColor: =RGBA(0, 18, 107, 1)
             CurrentLocation: =false
-            DefaultLatitude: =ThisItem.'Work Order'.Latitude
+            DefaultLatitude: =ThisItem.Latitude
             DefaultLocation: =true
-            DefaultLongitude: =ThisItem.'Work Order'.Longitude
+            DefaultLongitude: =ThisItem.Longitude
             DefaultZoomLevel: =16
             DisplayMode: =DisplayMode.Edit
             Height: =807
             InfoCards: ='Microsoft.Map.InfoCards'.OnClick
-            Items: =ThisItem.'Work Order'
-            ItemsAddresses: ="msdyn_address1"
+            Items: =First('Work Orders')
+            ItemsAddresses: =
             MapStyle: ='Microsoft.Map.MapStyle'.Road
-            OnSelect: =Select(Parent)
+            OnSelect: =
             PinColor: =RGBA(29, 114, 169, 1)
             RouteMaintainOrder: =true
             RouteOptimization: ='Microsoft.Map.RouteOptimization'.Distance
+            RouteWaypoints_Items: =First('Work Orders')
             SatelliteView: =false
             ShapeDrawing: =false
+            ShowRoutePins: =true
             UseRouting: =true
             Width: =640
             X: =0
@@ -148,4 +150,14 @@ Screen7 As screen:
             Text: =
             Width: =560
             ZIndex: =7
+
+        Button11 As button:
+            Height: =88
+            OnSelect: |-
+                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+            Size: =24
+            Text: ="Button"
+            Width: =640
+            Y: =824
+            ZIndex: =8
 
