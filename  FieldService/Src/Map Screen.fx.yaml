@@ -1,0 +1,248 @@
+"'Map Screen' As screen":
+
+    Label5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(221, 79, 14, 1)
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =39
+        Size: =21
+        Text: ="Image"
+        Width: =260
+        X: =380
+        Y: =265
+        ZIndex: =2
+
+    Icon7 As icon.Attachment:
+        Height: =57
+        Icon: =Icon.PaperClip
+        Width: =70
+        X: =123
+        Y: =306
+        ZIndex: =8
+
+    "Gallery1_4 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        DelayItemLoading: =true
+        Height: =1040
+        Items: =Filter('Bookable Resource Bookings', Resource.Username= TextInput2.Text)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =891
+        Y: =92
+        ZIndex: =10
+
+        "Gallery1_5 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+            DelayItemLoading: =true
+            Height: =891
+            Items: =ThisItem.'Work Order'
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =4
+            TemplateSize: =887
+            Width: =632
+            ZIndex: =10
+
+            Title1_5 As label:
+                Height: =36
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =10
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: |-
+                    =Text("Workorder Number:  ") & ThisItem.'Work Order Number'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =508
+                Y: =9
+                ZIndex: =2
+
+            Body1_10 As label:
+                Height: =38
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =10
+                PaddingRight: =0
+                PaddingTop: =10
+                Text: |-
+                    =Text("Created On :  "& ThisItem.'Created On')
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 32
+                Y: =45
+                ZIndex: =4
+
+            Body1_11 As label:
+                Height: =38
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =10
+                PaddingRight: =0
+                PaddingTop: =10
+                Text: |-
+                    ="Service Account :  " & ThisItem.'Service Account'.'Account Name'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 32
+                Y: =82
+                ZIndex: =5
+
+            Rectangle1_5 As rectangle:
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =632
+                Y: =232
+                ZIndex: =6
+
+            Label2_15 As label:
+                Height: =38
+                OnSelect: =Select(Parent)
+                Size: =17
+                Text: |-
+                    =Text("Billing Account:  " & ThisItem.'Billing Account'.'Account Name')
+                Width: =632
+                Y: =121
+                ZIndex: =7
+
+            Label2_17 As label:
+                AutoHeight: =true
+                Height: =34
+                OnSelect: =Select(Parent)
+                Size: =17
+                Text: |-
+                    =Text("Work Order Summary :  " & ThisItem.'Work Order Summary')
+                Width: =632
+                Y: =198
+                ZIndex: =8
+
+            Label2_16 As label:
+                OnSelect: =Select(Parent)
+                Size: =17
+                Text: |-
+                    =Text("System Status :  " & ThisItem.'System Status')
+                Width: =573
+                Y: =158
+                ZIndex: =9
+
+            "Map2 As 'Map (preview)'.pcfdataset":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =551
+                Items: =Filter('Work Orders','WO Number' = ThisItem.'WO Number')
+                ItemsAddresses: ="msdyn_address1"
+                ItemsLatitudes: ="msdyn_latitude"
+                ItemsLongitudes: ="msdyn_longitude"
+                OnSelect: =First(Filter('Work Orders','WO Number' = ThisItem.'WO Number'))
+                PinColor: =RGBA(29, 114, 169, 1)
+                Width: =624
+                X: =0
+                Y: =254
+                ZIndex: =10
+
+                "'Work Order Number1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Work Order Number"
+                    FieldName: ="msdyn_name"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =11
+
+                "'Service Account1' As pcfDataField":
+                    FieldDisplayName: ="Service Account"
+                    FieldName: ="msdyn_serviceaccount"
+                    FieldType: ="E"
+                    FieldVariantName: ="complexTypeColumn"
+                    Order: =2
+                    ZIndex: =12
+
+                Substatus1 As pcfDataField:
+                    FieldDisplayName: ="Substatus"
+                    FieldName: ="msdyn_substatus"
+                    FieldType: ="E"
+                    FieldVariantName: ="complexTypeColumn"
+                    Order: =4
+                    ZIndex: =13
+
+                "'System Status1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="System Status"
+                    FieldName: ="msdyn_systemstatus"
+                    FieldType: ="l"
+                    FieldVariantName: ="textualColumn"
+                    Order: =5
+                    ZIndex: =14
+
+                "'Created On1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Created On"
+                    FieldName: ="createdon"
+                    FieldType: ="d"
+                    FieldVariantName: ="textualColumn"
+                    Order: =6
+                    ZIndex: =15
+
+                "'Work Order Type1' As pcfDataField":
+                    FieldDisplayName: ="Work Order Type"
+                    FieldName: ="msdyn_workordertype"
+                    FieldType: ="E"
+                    FieldVariantName: ="complexTypeColumn"
+                    Order: =7
+                    ZIndex: =16
+
+                "'Primary Incident Type1' As pcfDataField":
+                    FieldDisplayName: ="Primary Incident Type"
+                    FieldName: ="msdyn_primaryincidenttype"
+                    FieldType: ="E"
+                    FieldVariantName: ="complexTypeColumn"
+                    Order: =8
+                    ZIndex: =17
+
+                "'Primary Incident Description1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Primary Incident Description"
+                    FieldName: ="msdyn_primaryincidentdescription"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =9
+                    ZIndex: =18
+
+            Label9 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =Map2.ItemsAddresses
+                Width: =560
+                X: =13
+                Y: =89
+                ZIndex: =11
+
+            Button9 As button:
+                Height: =70
+                OnSelect: |-
+                    =Filter('Work Orders','WO Number' = ThisItem.'WO Number');
+                    //Launch("http://www.google.com/maps/place/" & Substitute(ThisItem.'Street 1'," ","+") & "+" &Substitute(ThisItem.'Street 2'," ","+") & "+" &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+") &"/@" & Substitute(ThisItem.Latitude," ","+") & "," & Substitute(ThisItem.Longitude," ","+"))
+                    
+                    Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+                    
+                    //Launch("http://www.google.com/maps/place/" & ThisItem.Latitude & "," & ThisItem.Longitude)
+                Size: =24
+                Text: ="Button"
+                Width: =280
+                X: =344
+                Y: =735
+                ZIndex: =12
+
+            Label11 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Street 1'
+                Width: =560
+                X: =32
+                Y: =103
+                ZIndex: =13
+
+            Label10 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =15
+                Text: |-
+                    ="http://www.google.com/maps/place/" & Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+") &"/@" & Substitute(ThisItem.Latitude," ","+") & "," & Substitute(ThisItem.Longitude," ","+")
+                Width: =560
+                Y: =817
+                ZIndex: =14
+
