@@ -1,5 +1,5 @@
 {
-  "685de24c-a61b-4453-a10f-9b82362e534f": {
+  "93a9db26-6e96-419a-9dd9-8db9aafd34b0": {
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -10,10 +10,11 @@
     },
     "datasets": {},
     "dataSources": [
-      "SpatialServices"
+      "SpatialServices",
+      "SpatialServices_1"
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "685de24c-a61b-4453-a10f-9b82362e534f"
+    "id": "93a9db26-6e96-419a-9dd9-8db9aafd34b0"
   }
 }
