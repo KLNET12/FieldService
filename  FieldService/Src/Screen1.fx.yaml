@@ -1,0 +1,143 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =72
+        Size: =21
+        Text: ="Your Bookings"
+        Width: =640
+        Y: =70
+        ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        DelayItemLoading: =true
+        Height: =923
+        Items: =If(Dropdown3.Selected.Value = "My Active Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Active Bookable Resource Bookings'),If(Dropdown3.Selected.Value = "My Inprogress Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'In Progress Booking'), If(Dropdown3.Selected.Value = "My Completed Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Completed Booking'),Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text))))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(Screen2)
+        TemplatePadding: =4
+        TemplateSize: =369
+        Y: =213
+        ZIndex: =2
+
+        Title1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                =Text("Workorder Number:  ") & ThisItem.'Resource Requirement'.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =508
+            Y: =9
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("Start Date & Time :  "& ThisItem.'Start Time')
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =84
+            ZIndex: =4
+
+        Body1_1 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("End Date & Time :  "& ThisItem.'End Time')
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =122
+            ZIndex: =5
+
+        Rectangle1 As rectangle:
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =632
+            Y: =299
+            ZIndex: =6
+
+        Label2 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Duration :  " & ThisItem.Duration & " mins")
+            Width: =264
+            Y: =159
+            ZIndex: =7
+
+        Label2_1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Status :  " & ThisItem.'Booking Status'.Name)
+            Width: =632
+            Y: =195
+            ZIndex: =8
+
+        Label2_2 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Type :  " & ThisItem.'Booking Type')
+            Width: =318
+            X: =1
+            Y: =231
+            ZIndex: =9
+
+        Icon1 As icon.ChevronRight:
+            Height: =73
+            Icon: =Icon.Edit
+            OnSelect: =Select(Parent)
+            Width: =54
+            X: =558
+            Y: =83
+            ZIndex: =10
+
+        Label2_12 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text("Resource :  " & ThisItem.Resource.Name)
+            Width: =318
+            X: =1
+            Y: =53
+            ZIndex: =11
+
+    Dropdown3 As dropdown:
+        Height: =72
+        Items: =["My Active Bookings","My Inprogress Bookings","My Completed Bookings"]
+        Size: =21
+        Width: =640
+        Y: =141
+        ZIndex: =3
+
+    Component1_2 As Component1:
+        Height: =70
+        ZIndex: =4
+
+    Icon3 As icon.ArrowLeft:
+        Height: =70
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Screen3)
+        Width: =80
+        ZIndex: =5
+

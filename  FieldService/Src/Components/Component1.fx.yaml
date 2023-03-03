@@ -1,0 +1,18 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label6 As label:
+        Align: =Align.Center
+        Fill: =RGBA(127, 178, 57, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Field Service"
+        Width: =Parent.Width
+        ZIndex: =1
+
