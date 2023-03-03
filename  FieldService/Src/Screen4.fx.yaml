@@ -7,7 +7,7 @@ Screen4 As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =4
-        TemplateSize: =246
+        TemplateSize: =336
         Y: =213
         ZIndex: =1
 
@@ -57,7 +57,7 @@ Screen4 As screen:
             Height: =2
             OnSelect: =Select(Parent)
             Width: =632
-            Y: =244
+            Y: =335
             ZIndex: =6
 
         Label2_3 As label:
@@ -65,9 +65,9 @@ Screen4 As screen:
             OnSelect: =Select(Parent)
             Size: =17
             Text: |-
-                =Text("Duration :  " & ThisItem.Duration & " mins")
+                =Text(" Duration :  " & ThisItem.Duration & " mins")
             Width: =264
-            Y: =120
+            Y: =127
             ZIndex: =7
 
         Label2_4 As label:
@@ -75,7 +75,7 @@ Screen4 As screen:
             OnSelect: =Select(Parent)
             Size: =17
             Text: |-
-                =Text("Bookable Resource :  " & ThisItem.'Bookable Resource'.Name)
+                =Text(" Bookable Resource :  " & ThisItem.'Bookable Resource'.Name)
             Width: =528
             Y: =161
             ZIndex: =8
@@ -85,10 +85,28 @@ Screen4 As screen:
             OnSelect: =Select(Parent)
             Size: =17
             Text: |-
-                =Text("Entry Status :  " & ThisItem.'Entry Status')
+                =Text(" Entry Status :  " & ThisItem.'Entry Status')
             Width: =318
-            Y: =208
+            Y: =247
             ZIndex: =9
+
+        Label2_13 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Type :  " & ThisItem.Type)
+            Width: =318
+            X: =1
+            Y: =209
+            ZIndex: =10
+
+        Icon9 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: =Navigate('Update Entry')
+            X: =554
+            Y: =217
+            ZIndex: =11
 
     Dropdown3_1 As dropdown:
         Height: =72
@@ -117,4 +135,11 @@ Screen4 As screen:
         OnSelect: =Navigate(Screen3)
         Y: =3
         ZIndex: =5
+
+    Icon8 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =Navigate('Add Entry')
+        X: =576
+        Y: =76
+        ZIndex: =6
 
