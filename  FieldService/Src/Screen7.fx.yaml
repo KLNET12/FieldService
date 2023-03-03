@@ -33,12 +33,12 @@ Screen7 As screen:
 
         "Gallery1_5 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
             DelayItemLoading: =true
-            Height: =809
+            Height: =891
             Items: =ThisItem.'Work Order'
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =4
-            TemplateSize: =805
+            TemplateSize: =887
             Width: =632
             ZIndex: =10
 
@@ -214,7 +214,11 @@ Screen7 As screen:
                 Height: =70
                 OnSelect: |-
                     =Filter('Work Orders','WO Number' = ThisItem.'WO Number');
-                    Launch("http://www.google.com/maps/place/" & ThisItem.'Street 1' & ThisItem.'Street 2' & ThisItem.'Street 3' & ThisItem.City & ThisItem.'State Or Province' & ThisItem.'Country/Region' & ThisItem.'Booking Summary')
+                    //Launch("http://www.google.com/maps/place/" & Substitute(ThisItem.'Street 1'," ","+") & "+" &Substitute(ThisItem.'Street 2'," ","+") & "+" &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+") &"/@" & Substitute(ThisItem.Latitude," ","+") & "," & Substitute(ThisItem.Longitude," ","+"))
+                    
+                    Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+                    
+                    //Launch("http://www.google.com/maps/place/" & ThisItem.Latitude & "," & ThisItem.Longitude)
                 Size: =24
                 Text: ="Button"
                 Width: =280
@@ -231,4 +235,14 @@ Screen7 As screen:
                 X: =32
                 Y: =103
                 ZIndex: =13
+
+            Label10 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =15
+                Text: |-
+                    ="http://www.google.com/maps/place/" & Substitute(ThisItem.'Street 1'," ","+") &Substitute(ThisItem.'Street 2'," ","+") &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+") &"/@" & Substitute(ThisItem.Latitude," ","+") & "," & Substitute(ThisItem.Longitude," ","+")
+                Width: =560
+                Y: =817
+                ZIndex: =14
 
