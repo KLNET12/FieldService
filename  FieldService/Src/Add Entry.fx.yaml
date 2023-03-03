@@ -1036,13 +1036,3 @@
         OnSelect: =Navigate(Screen4)
         ZIndex: =4
 
-    Button10 As button:
-        Height: =70
-        OnSelect: =SubmitForm(Form4)
-        Size: =24
-        Text: ="Save"
-        Width: =280
-        X: =180
-        Y: =1062
-        ZIndex: =5
-
