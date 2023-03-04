@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "transactioncurrency",
-    "MaxGetRowsCount": 500,
     "Name": "Currencies",
     "NativeCDSDataSourceInfoNameMapping": {
       "basecurrency_organization": "Organizations",
