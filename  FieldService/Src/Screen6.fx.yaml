@@ -115,7 +115,7 @@ Screen6 As screen:
 
     Icon5 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen3)
+        OnSelect: =Navigate(DashBoard)
         Y: =3
         ZIndex: =5
 

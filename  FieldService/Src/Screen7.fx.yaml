@@ -1,176 +1,96 @@
 Screen7 As screen:
 
-    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =912
-        Items: =Gallery1.Selected.'Work Order'
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =927
+        Items: =Gallery1_2.Selected
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =912
-        Y: =224
+        TemplateSize: =927
+        Y: =164
         ZIndex: =1
 
         Title2 As label:
-            Height: =Self.Size * 1.8
+            Height: =73
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Created On'
+            Text: ="WorkOrder No."  & ThisItem.'Work Order Number'
             VerticalAlign: =VerticalAlign.Top
-            Width: =300
-            X: =20
-            Y: =44
+            Width: =500
+            Y: =6
             ZIndex: =2
 
-        Subtitle1 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Latitude
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title2.Width
-            X: =Title2.X
-            Y: =Title2.Y + Title2.Height + 4
-            ZIndex: =3
-
-        Separator11 As rectangle:
+        Separator12 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-        "Map3 As 'Map (preview)'.pcfdataset":
-            BorderColor: =RGBA(0, 18, 107, 1)
-            CurrentLocation: =false
-            CurrentLocationLatitude: =Location.Latitude
-            CurrentLocationLongitude: =Location.Longitude
-            DefaultLatitude: =ThisItem.Latitude
-            DefaultLocation: =true
-            DefaultLongitude: =ThisItem.Longitude
-            DefaultZoomLevel: =14
-            DisplayMode: =DisplayMode.Edit
-            Height: =807
-            InfoCards: ='Microsoft.Map.InfoCards'.OnClick
-            Items: =Filter('Work Orders', 'WO Number'= Gallery1.Selected.'Work Order'.'WO Number')
-            ItemsAddresses: =
-            ItemsLatitudes: ="msdyn_latitude"
-            ItemsLongitudes: ="msdyn_longitude"
-            MapStyle: ='Microsoft.Map.MapStyle'.Road
-            OnSelect: =
-            PinColor: =RGBA(29, 114, 169, 1)
-            RouteMaintainOrder: =false
-            RouteOptimization: ='Microsoft.Map.RouteOptimization'.Distance
-            RouteWaypoints_Items: =First('Work Orders')
-            SatelliteView: =false
-            ShapeDrawing: =false
-            ShowRoutePins: =true
-            UseRouting: =true
-            Width: =640
-            X: =0
-            Y: =17
+        "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =886
+            Items: =ThisItem.Invoices
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =219
+            Y: =40
             ZIndex: =6
 
-            msdyn_address11 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_address1"
-                FieldName: ="msdyn_address1"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =1
-                ZIndex: =7
+            Title3 As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.'Invoice ID'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =400
+                X: |
+                    =0
+                Y: =44
+                ZIndex: =2
 
-            msdyn_address21 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_address2"
-                FieldName: ="msdyn_address2"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =2
-                ZIndex: =8
+            NextArrow2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
 
-            msdyn_address31 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_address3"
-                FieldName: ="msdyn_address3"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =3
-                ZIndex: =9
+            Separator13 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
 
-            msdyn_city1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_city"
-                FieldName: ="msdyn_city"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =4
-                ZIndex: =10
+            Label9 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Name
+                Width: =560
+                Y: =80
+                ZIndex: =6
 
-            msdyn_country1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_country"
-                FieldName: ="msdyn_country"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =5
-                ZIndex: =11
-
-            msdyn_postalcode1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_postalcode"
-                FieldName: ="msdyn_postalcode"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =6
-                ZIndex: =12
-
-            msdyn_stateorprovince1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_stateorprovince"
-                FieldName: ="msdyn_stateorprovince"
-                FieldType: ="s"
-                FieldVariantName: ="textualColumn"
-                Order: =7
-                ZIndex: =13
-
-            msdyn_latitude1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_latitude"
-                FieldName: ="msdyn_latitude"
-                FieldType: ="n"
-                FieldVariantName: ="textualColumn"
-                Order: =8
-                ZIndex: =14
-
-            msdyn_longitude1 As pcfDataField.textualColumn:
-                FieldDisplayName: ="msdyn_longitude"
-                FieldName: ="msdyn_longitude"
-                FieldType: ="n"
-                FieldVariantName: ="textualColumn"
-                Order: =9
-                ZIndex: =15
-
-        Label12 As label:
-            Height: =70
-            OnSelect: =Select(Parent)
+        Label10 As label:
+            Height: =65
+            OnSelect: =Navigate(Screen9)
             Size: =21
-            Text: =
-            Width: =560
+            Text: ="Create Invoice"
+            Width: =204
+            X: =436
             ZIndex: =7
-
-        Button11 As button:
-            Height: =88
-            OnSelect: |-
-                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &" " &Substitute(ThisItem.'Street 2'," ","+")&" " &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
-            Size: =24
-            Text: ="Get Directions"
-            Width: =640
-            Y: =824
-            ZIndex: =8
-
-    Button13 As button:
-        Height: =70
-        OnSelect: =Navigate(Screen2)
-        Size: =24
-        Text: ="Back"
-        Width: =280
-        Y: =154
-        ZIndex: =2
 

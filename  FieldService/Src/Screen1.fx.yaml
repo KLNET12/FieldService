@@ -137,7 +137,7 @@ Screen1 As screen:
     Icon3 As icon.ArrowLeft:
         Height: =70
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen3)
+        OnSelect: =Navigate(DashBoard)
         Width: =80
         ZIndex: =5
 

@@ -119,13 +119,15 @@
     "Login Screen",
     "Screen1",
     "Screen2",
-    "Screen3",
+    "DashBoard",
     "Screen4",
-    "Screen5",
+    "WorkOrder",
     "Screen6",
     "Screen8",
     "Add Entry",
     "Update Entry",
-    "Screen7"
+    "Map Screen",
+    "Screen7",
+    "Screen9"
   ]
 }
