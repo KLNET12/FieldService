@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "Currencies",
   "InstanceUrl": "https://org06cf92c8.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "transactioncurrencies",
-    "logicalName": "transactioncurrency"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org06cf92c8.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('transactioncurrency')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
