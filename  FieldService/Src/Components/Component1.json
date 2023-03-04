@@ -88,7 +88,14 @@
           "LineHeight",
           "BorderThickness",
           "FocusedBorderThickness",
-          "Size",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Size",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Italic",
           "Underline",
           "Strikethrough",
@@ -110,7 +117,7 @@
         "Name": "Label6",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 402,
+        "PublishOrderIndex": 407,
         "Rules": [
           {
             "Category": "Data",
@@ -228,7 +235,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "FontWeight.Semibold",
+            "InvariantScript": "FontWeight.Bold",
             "Property": "FontWeight",
             "RuleProviderType": "Unknown"
           },
@@ -300,7 +307,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "21",
+            "InvariantScript": "22",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -372,7 +379,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638135492077063081",
+    "LastModifiedTimestamp": "638135525548296114",
     "Name": "Component1",
     "Rules": [
       {
@@ -431,7 +438,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638135492077063081",
+  "LastModifiedTimestamp": "638135525548296114",
   "Name": "a73a522b367046b7954774ef7f2f2d64",
   "OverridableProperties": {},
   "Version": "638132119121275763"

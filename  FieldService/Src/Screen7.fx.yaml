@@ -33,7 +33,7 @@ Screen7 As screen:
             ZIndex: =6
 
             Title3 As label:
-                Height: =Self.Size * 1.8
+                Height: =35
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =10
@@ -42,7 +42,7 @@ Screen7 As screen:
                 Text: |-
                     ="Invoice No. :  " &ThisItem.'Invoice ID'
                 VerticalAlign: =VerticalAlign.Top
-                Width: =400
+                Width: =612
                 X: |
                     =0
                 Y: =20
@@ -78,7 +78,7 @@ Screen7 As screen:
                 Size: =18
                 Text: |-
                     ="Invoice Name :  " & ThisItem.Name
-                Width: =469
+                Width: =612
                 Y: =55
                 ZIndex: =6
 
@@ -130,7 +130,9 @@ Screen7 As screen:
         Button9 As button:
             Fill: =RGBA(100, 196, 151, 1)
             Height: =67
-            OnSelect: =Navigate(Screen9)
+            OnSelect: |-
+                =Set(varInvoice,false);
+                Navigate(Screen9)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -144,10 +146,28 @@ Screen7 As screen:
         Align: =Align.Center
         Fill: =RGBA(229, 255, 145, 0.81)
         FontWeight: =FontWeight.Bold
-        Height: =70
+        Height: =97
         Size: =23
         Text: ="Invoices for WorkOrder No."  & Gallery1_2.Selected.'Work Order Number'
         Width: =640
-        Y: =94
+        Y: =67
         ZIndex: =2
+
+    Component1_11 As Component1:
+        Height: =67
+        ZIndex: =3
+
+    Icon14 As icon.ChevronLeft:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =If(varInvoice,Navigate(Screen1),Navigate(WorkOrder))
+        Y: =1
+        ZIndex: =4
+
+    Icon15 As icon.Reload:
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Invoices)
+        X: =576
+        Y: =164
+        ZIndex: =5
 
