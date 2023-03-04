@@ -7,16 +7,6 @@ Capture As screen:
         Y: =210
         ZIndex: =1
 
-    Button8 As button:
-        Fill: =RGBA(255, 0, 0, 1)
-        Height: =93
-        Size: =30
-        Text: ="DELETE"
-        Width: =480
-        X: =88
-        Y: =854
-        ZIndex: =2
-
     Button8_1 As button:
         Fill: =RGBA(54, 176, 75, 1)
         Height: =93
