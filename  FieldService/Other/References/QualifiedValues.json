@@ -204,6 +204,13 @@
         "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
         "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
       }
+    },
+    {
+      "Kind": "default.cds_transactioncurrency_forms",
+      "Namespace": "Currencies (Forms)",
+      "Values": {
+        "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
     }
   ]
 }
