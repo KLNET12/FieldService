@@ -742,6 +742,9 @@ Screen9 As screen:
     Icon13 As icon.DockLeft:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen7);
+        OnSelect: |-
+            =Refresh(Invoices);
+            Refresh('Work Orders');
+            Navigate(Screen7);
         ZIndex: =36
 

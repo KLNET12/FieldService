@@ -27,6 +27,7 @@ Screen7 As screen:
                 =Set(varInvoice,true);
                 Set(varInvoiceId, ThisItem.Invoice);
                 Navigate(Screen9)
+            ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =204
             Y: =67
@@ -166,7 +167,9 @@ Screen7 As screen:
 
     Icon15 As icon.Reload:
         Icon: =Icon.Reload
-        OnSelect: =Refresh(Invoices)
+        OnSelect: |-
+            =Refresh('Work Orders');
+            Refresh(Invoices);
         X: =576
         Y: =164
         ZIndex: =5
