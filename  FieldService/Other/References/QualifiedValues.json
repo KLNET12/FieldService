@@ -179,16 +179,6 @@
       }
     },
     {
-      "Kind": "default.cds_provisionlanguageforuser_forms",
-      "Namespace": "ProvisionLanguageForUser (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_resource_forms",
-      "Namespace": "Resources (Forms)",
-      "Values": {}
-    },
-    {
       "Kind": "default.cds_msdyn_workorderproduct_forms",
       "Namespace": "Work Order Products (Forms)",
       "Values": {
@@ -204,6 +194,16 @@
         "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
         "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
       }
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {}
     }
   ]
 }
