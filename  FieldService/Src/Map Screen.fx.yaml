@@ -2,12 +2,12 @@
     Fill: =RGBA(255, 255, 217, 1)
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =1007
+        Height: =1066
         Items: =Gallery1.Selected.'Work Order'
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =1007
-        Y: =129
+        TemplateSize: =1066
+        Y: =70
         ZIndex: =1
 
         Separator11 As rectangle:
@@ -27,7 +27,7 @@
             DefaultLongitude: =ThisItem.Longitude
             DefaultZoomLevel: =14
             DisplayMode: =DisplayMode.Edit
-            Height: =807
+            Height: =865
             InfoCards: ='Microsoft.Map.InfoCards'.OnClick
             Items: =Filter('Work Orders', 'WO Number'= Gallery1.Selected.'Work Order'.'WO Number')
             ItemsAddresses: =
@@ -123,22 +123,23 @@
         Button11 As button:
             Height: =88
             OnSelect: |-
-                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1'," ","+") &" " &Substitute(ThisItem.'Street 2'," ","+")&" " &Substitute(ThisItem.'Street 3'," ","+") & ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
+                =Launch("https://www.google.com/maps/dir/" & Location.Latitude &","& Location.Longitude &"/"& Text( Substitute(ThisItem.'Street 1' &ThisItem.'Street 2'& ThisItem.'Street 3'," ","+")& ",+" &Substitute(ThisItem.City," ","+") &",+" & Substitute(ThisItem.'State Or Province'," ","+") &"+" &Substitute(ThisItem.'Postal Code'," ","+") & ",+" & Substitute(ThisItem.'Country/Region'," ","+")) )
             Size: =24
             Text: ="Get Directions"
             Width: =640
-            Y: =919
+            Y: =977
             ZIndex: =8
 
         Label5 As label:
+            Align: =Align.Center
             FontWeight: =FontWeight.Semibold
-            Height: =70
+            Height: =87
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =23
             Text: |-
-                ="Work Order No. :  " & ThisItem.'Work Order Number'
-            Width: =560
-            Y: =27
+                ="Location for Work Order No. :  " & ThisItem.'Work Order Number'
+            Width: =640
+            Y: =9
             ZIndex: =9
 
     Component1_12 As Component1:
