@@ -1,0 +1,29 @@
+Capture As screen:
+
+    Image2 As image:
+        Height: =556
+        Width: =606
+        X: =14
+        Y: =210
+        ZIndex: =1
+
+    Button8_1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =93
+        Size: =30
+        Text: ="SAVE"
+        Width: =480
+        X: =88
+        Y: =980
+        ZIndex: =3
+
+    Label11_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(99, 139, 44, 1)
+        Color: =RGBA(77, 77, 77, 1)
+        Height: =96
+        Size: =25
+        Text: ="SAVE IMAGE"
+        Width: =640
+        ZIndex: =4
+

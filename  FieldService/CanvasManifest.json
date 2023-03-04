@@ -123,11 +123,14 @@
     "Screen4",
     "WorkOrder",
     "Screen6",
-    "Screen8",
+    "Signature",
     "Add Entry",
     "Update Entry",
     "Map Screen",
     "Screen7",
-    "Screen9"
+    "Screen9",
+    "Camera",
+    "Capture",
+    "Gallery"
   ]
 }

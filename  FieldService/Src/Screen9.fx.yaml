@@ -56,11 +56,3 @@ Screen9 As screen:
         Y: =675
         ZIndex: =7
 
-    Label12 As label:
-        Height: =52
-        Size: =21
-        Text: ="Invoice Name"
-        Width: =640
-        Y: =97
-        ZIndex: =8
-
