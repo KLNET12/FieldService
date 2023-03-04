@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "invoice",
+    "MaxGetRowsCount": 500,
     "Name": "Invoices",
     "NativeCDSDataSourceInfoNameMapping": {
       "_customerid_value": "Customer",

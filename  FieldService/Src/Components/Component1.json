@@ -19,7 +19,14 @@
             "NameMapSourceSchema": "?"
           },
           "Role",
-          "Color",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Color",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledColor",
           "PressedColor",
           "HoverColor",
@@ -103,7 +110,7 @@
         "Name": "Label6",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 374,
+        "PublishOrderIndex": 363,
         "Rules": [
           {
             "Category": "Data",
@@ -131,7 +138,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 1)",
+            "InvariantScript": "RGBA(102, 102, 102, 1)",
             "Property": "Color",
             "RuleProviderType": "Unknown"
           },
@@ -191,7 +198,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(127, 178, 57, 1)",
+            "InvariantScript": "RGBA(255, 191, 0, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -365,7 +372,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638135259354657255",
+    "LastModifiedTimestamp": "638135341195337957",
     "Name": "Component1",
     "Rules": [
       {
@@ -424,7 +431,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638135259354657255",
+  "LastModifiedTimestamp": "638135341195337957",
   "Name": "a73a522b367046b7954774ef7f2f2d64",
   "OverridableProperties": {},
   "Version": "638132119121275763"

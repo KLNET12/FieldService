@@ -1,99 +1,265 @@
 Screen9 As screen:
     Fill: =RGBA(252, 252, 232, 1)
 
+    Label12_6 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Currency"
+        Width: =182
+        Y: =478
+        ZIndex: =1
+
     Button6 As button:
-        Height: =70
+        Height: =85
         OnSelect: |-
-            =Patch(Invoices,Defaults(Invoices), {Name:"Ishu", Customer: Dropdown1.Selected , 'Price List': Dropdown1_1.Selected , Currency: Dropdown1_2.Selected, 'Work Order': Dropdown1_3.Selected, 'Project Invoice Status': Dropdown2.Selected.Value
+            =Patch(Invoices,Defaults(Invoices), {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected , Currency: Currency.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value
             } )
         Size: =24
-        Text: ="Button"
-        Width: =280
-        X: =360
-        Y: =2
+        Text: ="Generate Invoice"
+        Width: =640
+        Y: =1051
         ZIndex: =2
 
-    Dropdown1 As dropdown:
+    Label12_1 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =20
+        Text: ="Name"
+        Width: =182
+        Y: =172
+        ZIndex: =3
+
+    Name As text:
+        Default: =""
+        Height: =60
+        HintText: ="Name"
+        Size: =21
+        Width: =457
+        X: =182
+        Y: =172
+        ZIndex: =4
+
+    Label12_2 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Customer"
+        Width: =182
+        Y: =232
+        ZIndex: =5
+
+    Label12_3 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Workorder"
+        Width: =182
+        Y: =292
+        ZIndex: =6
+
+    Label12_4 As label:
+        BorderThickness: =1
+        Height: =65
+        PaddingLeft: =10
+        Size: =18
+        Text: |-
+            ="Bookable
+            Resource"
+        Width: =182
+        Y: =352
+        ZIndex: =7
+
+    "'Bookable resource' As dropdown":
+        Default: =First(Filter('Bookable Resources', Username = TextInput2.Text)).Name
+        Height: =65
+        Items: =First(Filter('Bookable Resources', Username = TextInput2.Text))
+        Size: =21
+        Width: =458
+        X: =182
+        Y: =352
+        ZIndex: =8
+
+    Label12_5 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Price List"
+        Width: =640
+        Y: =417
+        ZIndex: =9
+
+    Customer As dropdown:
+        Default: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)).'Account Name'
         Height: =60
         Items: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account))
         Size: =21
         Width: =458
         X: =182
         Y: =232
-        ZIndex: =3
-
-    Dropdown1_1 As dropdown:
-        Height: =70
-        Items: =First(Filter('Price Lists', 'Price List' = Gallery3.Selected.'Price List'.'Price List'))
-        Size: =21
-        Width: =575
-        X: =12
-        Y: =962
-        ZIndex: =4
-
-    Dropdown1_2 As dropdown:
-        Height: =70
-        Items: =First(Filter(Currencies, 'Currency Code' = Gallery3.Selected.Currency.'Currency Code'))
-        Size: =21
-        Width: =575
-        X: =32
-        Y: =1032
-        ZIndex: =5
-
-    Dropdown1_3 As dropdown:
-        Height: =70
-        Items: =Gallery3.Selected
-        Size: =21
-        Width: =575
-        X: =12
-        Y: =777
-        ZIndex: =6
-
-    Dropdown2 As dropdown:
-        Height: =70
-        Items: =Choices('Project Invoice Status')
-        Size: =21
-        Width: =575
-        X: =65
-        Y: =648
-        ZIndex: =7
-
-    Label12_1 As label:
-        BorderThickness: =1
-        Height: =60
-        PaddingLeft: =10
-        Size: =21
-        Text: ="Name"
-        Width: =640
-        Y: =172
-        ZIndex: =9
-
-    TextInput3 As text:
-        Default: ="Text input"
-        Height: =60
-        Size: =21
-        Width: =457
-        X: =182
-        Y: =172
         ZIndex: =10
 
-    Label12_2 As label:
-        BorderThickness: =1
+    "'Price List' As dropdown":
+        Default: =Gallery3.Selected.'Price List'.Name
         Height: =60
-        PaddingLeft: =10
+        Items: ='Price Lists'
         Size: =21
-        Text: ="Customer"
-        Width: =640
-        Y: =232
+        Width: =458
+        X: =182
+        Y: =417
         ZIndex: =11
 
-    Label12_3 As label:
+    Currency As dropdown:
+        Default: =Gallery3.Selected.Currency.'Currency Name'
+        Height: =60
+        Items: =Currencies
+        Size: =21
+        Width: =458
+        X: =182
+        Y: =477
+        ZIndex: =12
+
+    "'WO Number' As dropdown":
+        Default: =Gallery3.Selected.'Work Order Number'
+        Height: =60
+        Items: =Gallery3.Selected
+        Size: =21
+        Width: =458
+        X: =182
+        Y: =292
+        ZIndex: =13
+
+    Status As dropdown:
+        Height: =60
+        Items: =Choices('Project Invoice Status')
+        Size: =21
+        Width: =458
+        X: =181
+        Y: =837
+        ZIndex: =14
+
+    Label12_8 As label:
         BorderThickness: =1
         Height: =60
         PaddingLeft: =10
+        Size: =19
+        Text: ="Invoice Date"
+        Width: =182
+        Y: =597
+        ZIndex: =17
+
+    "'Invoice Date' As datepicker":
+        Height: =60
+        Size: =24
+        Width: =458
+        X: =182
+        Y: =597
+        ZIndex: =18
+
+    Label12_9 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Due Date"
+        Width: =182
+        Y: =657
+        ZIndex: =19
+
+    "'Due date' As datepicker":
+        Height: =60
+        Size: =24
+        Width: =458
+        X: =182
+        Y: =657
+        ZIndex: =20
+
+    Label12_10 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Type"
+        Width: =182
+        Y: =717
+        ZIndex: =21
+
+    Type As dropdown:
+        Default: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)).'Account Name'
+        Height: =60
+        Items: =Choices('Type (Invoices)')
         Size: =21
-        Text: ="Workorder"
+        Width: =458
+        X: =182
+        Y: =717
+        ZIndex: =22
+
+    Label12_13 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =18
+        Text: ="Invoice Status"
+        Width: =182
+        Y: =837
+        ZIndex: =27
+
+    Label12_14 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =18
+        Text: ="Bookings"
+        Width: =182
+        Y: =777
+        ZIndex: =28
+
+    Currency_1 As dropdown:
+        Default: =Gallery1.Selected.Name
+        Height: =60
+        Items: =Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text)
+        Size: =21
+        Width: =458
+        X: =181
+        Y: =777
+        ZIndex: =29
+
+    Label12_11 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =19
+        Text: ="Total Amount"
+        Width: =182
+        Y: =538
+        ZIndex: =30
+
+    Name_1 As text:
+        Default: =Gallery3.Selected.'Total Amount'
+        DisplayMode: =DisplayMode.View
+        Height: =60
+        HintText: =""
+        Size: =21
+        Width: =457
+        X: =183
+        Y: =537
+        ZIndex: =31
+
+    Component1_8 As Component1:
+        Height: =70
+        ZIndex: =32
+
+    Label12 As label:
+        Fill: =RGBA(247, 241, 173, 0.96)
+        Height: =102
+        Size: =21
+        Text: ="Please fill all the fields to generate the Invoice"
         Width: =640
-        Y: =292
-        ZIndex: =12
+        Y: =70
+        ZIndex: =33
 

@@ -18,7 +18,7 @@ Screen1 As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(Screen2)
         TemplatePadding: =4
-        TemplateSize: =369
+        TemplateSize: =326
         Y: =213
         ZIndex: =2
 
@@ -33,7 +33,7 @@ Screen1 As screen:
                 =Text("Workorder Number:  ") & ThisItem.'Resource Requirement'.Name
             VerticalAlign: =VerticalAlign.Top
             Width: =508
-            Y: =9
+            Y: =5
             ZIndex: =2
 
         Body1 As label:
@@ -47,7 +47,7 @@ Screen1 As screen:
                 =Text("Start Date & Time :  "& ThisItem.'Start Time')
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 32
-            Y: =84
+            Y: =100
             ZIndex: =4
 
         Body1_1 As label:
@@ -61,7 +61,7 @@ Screen1 As screen:
                 =Text("End Date & Time :  "& ThisItem.'End Time')
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 32
-            Y: =122
+            Y: =132
             ZIndex: =5
 
         Rectangle1 As rectangle:
@@ -78,7 +78,7 @@ Screen1 As screen:
             Text: |-
                 =Text(" Duration :  " & ThisItem.Duration & " mins")
             Width: =264
-            Y: =159
+            Y: =170
             ZIndex: =7
 
         Label2_1 As label:
@@ -88,7 +88,7 @@ Screen1 As screen:
             Text: |-
                 =Text(" Booking Status :  " & ThisItem.'Booking Status'.Name)
             Width: =632
-            Y: =195
+            Y: =205
             ZIndex: =8
 
         Label2_2 As label:
@@ -99,7 +99,7 @@ Screen1 As screen:
                 =Text(" Booking Type :  " & ThisItem.'Booking Type')
             Width: =318
             X: =1
-            Y: =231
+            Y: =240
             ZIndex: =9
 
         Icon1 As icon.ChevronRight:
@@ -108,7 +108,7 @@ Screen1 As screen:
             OnSelect: =Select(Parent)
             Width: =54
             X: =558
-            Y: =83
+            Y: =11
             ZIndex: =10
 
         Label2_12 As label:
@@ -119,8 +119,26 @@ Screen1 As screen:
                 =Text("Resource :  " & ThisItem.Resource.Name)
             Width: =318
             X: =1
-            Y: =53
+            Y: =74
             ZIndex: =11
+
+        Label13 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                ="Booking Name : " & ThisItem.Name
+            Width: =560
+            Y: =42
+            ZIndex: =12
+
+        Icon12 As icon.Add:
+            Icon: =Icon.Add
+            OnSelect: =Navigate(Screen7)
+            Tooltip: ="Generate Invoice"
+            X: =548
+            Y: =143
+            ZIndex: =13
 
     Dropdown3 As dropdown:
         Height: =72
