@@ -1,4 +1,5 @@
 Screen9 As screen:
+    Fill: =RGBA(252, 252, 232, 1)
 
     Button6 As button:
         Height: =70
@@ -13,11 +14,12 @@ Screen9 As screen:
         ZIndex: =2
 
     Dropdown1 As dropdown:
-        Height: =70
+        Height: =60
         Items: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account))
         Size: =21
-        Width: =575
-        Y: =847
+        Width: =458
+        X: =182
+        Y: =232
         ZIndex: =3
 
     Dropdown1_1 As dropdown:
@@ -52,7 +54,56 @@ Screen9 As screen:
         Items: =Choices('Project Invoice Status')
         Size: =21
         Width: =575
-        X: =32
-        Y: =675
+        X: =65
+        Y: =648
         ZIndex: =7
+
+    Label12 As label:
+        BorderThickness: =1
+        Height: =92
+        PaddingLeft: =10
+        Size: =21
+        Text: ="Please fill ll the required details to generate Invoice"
+        Width: =640
+        Y: =80
+        ZIndex: =8
+
+    Label12_1 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =21
+        Text: ="Name"
+        Width: =640
+        Y: =172
+        ZIndex: =9
+
+    TextInput3 As text:
+        Default: ="Text input"
+        Height: =60
+        Size: =21
+        Width: =457
+        X: =182
+        Y: =172
+        ZIndex: =10
+
+    Label12_2 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =21
+        Text: ="Customer"
+        Width: =640
+        Y: =232
+        ZIndex: =11
+
+    Label12_3 As label:
+        BorderThickness: =1
+        Height: =60
+        PaddingLeft: =10
+        Size: =21
+        Text: ="Workorder"
+        Width: =640
+        Y: =292
+        ZIndex: =12
 

@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "msdyn_workorderproduct",
+    "MaxGetRowsCount": 500,
     "Name": "Work Order Products",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
