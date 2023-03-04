@@ -4,9 +4,10 @@ Camera As screen:
 
     "'Camera Capture' As camera":
         Camera: ='Toggle Camera'.Value
-        Height: =482
+        Height: =631
+        StreamRate: =100
         Width: =640
-        Y: =200
+        Y: =126
         ZIndex: =1
 
     Label11 As label:
