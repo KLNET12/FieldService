@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "pricelevel",
+    "MaxGetRowsCount": 500,
     "Name": "Price Lists",
     "NativeCDSDataSourceInfoNameMapping": {
       "begindate": "Start Date",
