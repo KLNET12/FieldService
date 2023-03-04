@@ -1,8 +1,9 @@
 Camera As screen:
     BackgroundImage: ='istockphoto-1137974374-612x612'
+    ImagePosition: =ImagePosition.Fill
 
-    Camera3 As camera:
-        Camera: =0
+    "'Camera Capture' As camera":
+        Camera: ='Toggle Camera'.Value
         Height: =482
         Width: =640
         Y: =200
@@ -20,6 +21,7 @@ Camera As screen:
 
     Icon7 As icon.Waffle:
         Icon: =Icon.Waffle
+        OnSelect: =Navigate(Gallery,ScreenTransition.Cover)
         X: =20
         Y: =12
         ZIndex: =3
@@ -41,7 +43,7 @@ Camera As screen:
         Y: =819
         ZIndex: =5
 
-    Toggle1 As toggleSwitch:
+    "'Toggle Camera' As toggleSwitch":
         Color: =RGBA(51, 51, 51, 1)
         FalseFill: =RGBA(54, 176, 75, 1)
         Height: =49
