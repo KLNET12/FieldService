@@ -700,7 +700,8 @@ Screen9 As screen:
 
     Button6 As button:
         Height: =70
-        OnSelect: =SubmitForm(Form5)
+        OnSelect: |-
+            =Patch(Invoices, Defaults(Invoices), {Name: DataCardValue27, Customer: First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)) ;
         Size: =24
         Text: ="Button"
         Width: =280
