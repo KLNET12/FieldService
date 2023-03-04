@@ -16,7 +16,18 @@ Screen9 As screen:
         Height: =85
         OnSelect: |-
             =Patch(Invoices,Defaults(Invoices), {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected , Currency: Currency.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value
-            } )
+            } );
+            Reset(Name);
+            Reset(Customer);
+            Reset('Bookable resource');
+            Reset('Invoice Date');
+            Reset(Currency);
+            Reset('Due date');
+            Reset(Type);
+            Reset(Status);
+            Reset('Price List');
+            Reset(Currency_1);
+            Reset('WO Number');
         Size: =24
         Text: ="Generate Invoice"
         Width: =640
