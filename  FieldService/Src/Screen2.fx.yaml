@@ -1099,9 +1099,14 @@ Screen2 As screen:
     Button10 As button:
         Height: =70
         OnSelect: =Navigate('Map Screen')
-        Size: =24
-        Text: ="Button"
-        Width: =180
-        X: =460
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =18
+        Text: ="Work Location"
+        Width: =192
+        X: =422
+        Y: =70
         ZIndex: =5
 

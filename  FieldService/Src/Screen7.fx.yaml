@@ -1,5 +1,8 @@
 Screen7 As screen:
     Fill: =
+    OnVisible: |-
+        =Refresh('Work Orders');
+        Refresh(Invoices)
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =972
@@ -164,13 +167,4 @@ Screen7 As screen:
         OnSelect: =If(varInvoice,Navigate(Screen1),Navigate(WorkOrder))
         Y: =1
         ZIndex: =4
-
-    Icon15 As icon.Reload:
-        Icon: =Icon.Reload
-        OnSelect: |-
-            =Refresh('Work Orders');
-            Refresh(Invoices);
-        X: =576
-        Y: =164
-        ZIndex: =5
 

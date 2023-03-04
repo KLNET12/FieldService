@@ -745,6 +745,17 @@ Screen9 As screen:
         OnSelect: |-
             =Refresh(Invoices);
             Refresh('Work Orders');
+            Reset(Name);
+            Reset(Customer);
+            Reset('Bookable resource');
+            Reset('Invoice Date');
+            Reset(Currency);
+            Reset('Due date');
+            Reset(Type);
+            Reset(Status);
+            Reset('Price List');
+            Reset(Currency_1);
+            Reset('WO Number');
             Navigate(Screen7);
         ZIndex: =36
 

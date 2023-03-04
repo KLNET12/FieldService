@@ -1,4 +1,5 @@
 "'Map Screen' As screen":
+    Fill: =RGBA(255, 255, 217, 1)
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =1007
@@ -130,6 +131,7 @@
             ZIndex: =8
 
         Label5 As label:
+            FontWeight: =FontWeight.Semibold
             Height: =70
             OnSelect: =Select(Parent)
             Size: =21
@@ -139,11 +141,25 @@
             Y: =27
             ZIndex: =9
 
-    Button13 As button:
-        Height: =82
+    Component1_12 As Component1:
+        Height: =70
+        ZIndex: =3
+
+    Icon17 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(Screen2)
-        Size: =24
-        Text: ="Back"
-        Width: =110
-        ZIndex: =2
+        Y: =3
+        ZIndex: =4
+
+    Label10 As label:
+        Align: =Align.Center
+        Fill: =RGBA(255, 255, 212, 0.91)
+        Height: =1041
+        OnSelect: =
+        Size: =21
+        Text: ="No Work Order Related to this booking"
+        Visible: =If(CountRows(Gallery2.AllItems)<=0, true, false)
+        Width: =640
+        Y: =93
+        ZIndex: =5
 

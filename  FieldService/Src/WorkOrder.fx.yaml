@@ -1,4 +1,5 @@
 WorkOrder As screen:
+    OnVisible: =Refresh('Work Orders')
 
     Dropdown3_2 As dropdown:
         Height: =72
