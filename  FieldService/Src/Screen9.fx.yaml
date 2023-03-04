@@ -4,6 +4,7 @@ Screen9 As screen:
         DataSource: =Invoices
         DefaultMode: =FormMode.New
         Height: =1096
+        NumberOfColumns: =2
         Width: =640
         Y: =40
         ZIndex: =1
@@ -19,7 +20,7 @@ Screen9 As screen:
             MaxLength: =DataSourceInfo([@Invoices], DataSourceInfo.MaxLength, "name")
             Required: =true
             Update: =DataCardValue27.Text
-            Width: =640
+            Width: =320
             X: =0
             Y: =0
             ZIndex: =1
@@ -83,17 +84,27 @@ Screen9 As screen:
 
         Customer_DataCard1 As typedDataCard.blankPolymorphicEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="_customerid_value"
-            Default: =ThisItem.Customer
+            DataField: =ThisItem.Name
+            Default: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account))
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Invoices],DataSourceInfo.DisplayName,"_customerid_value")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =225
             Required: =true
-            Width: =640
-            X: =0
-            Y: =1
+            Update: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account))
+            Width: =320
+            X: =1
+            Y: =0
             ZIndex: =1
+
+            Label12 As label:
+                Height: =70
+                Size: =21
+                Text: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)).'Account Name'
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
 
         "'Price List_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -105,9 +116,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue28.Selected
-            Width: =640
+            Width: =320
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =1
 
             DataCardKey38 As label:
@@ -129,8 +140,9 @@ Screen9 As screen:
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 IsSearchable: =false
-                Items: |
+                Items: |+
                     =Choices([@Invoices].pricelevelid)
+                    
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["name"]
                 SearchItems: =[]
@@ -179,9 +191,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue29.Selected
-            Width: =640
-            X: =0
-            Y: =3
+            Width: =320
+            X: =1
+            Y: =1
             ZIndex: =1
 
             DataCardKey39 As label:
@@ -252,9 +264,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue30.Selected
-            Width: =640
+            Width: =320
             X: =0
-            Y: =4
+            Y: =2
             ZIndex: =1
 
             DataCardKey40 As label:
@@ -313,6 +325,77 @@ Screen9 As screen:
                 Y: =DataCardKey40.Y
                 ZIndex: =4
 
+        Currency_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="transactioncurrencyid"
+            Default: =ThisItem.Currency
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Invoices],DataSourceInfo.DisplayName,"transactioncurrencyid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue35.Selected
+            Width: =320
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey45 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue35 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =First(Filter(Currencies, 'Currency Code' = Gallery3.Selected.Currency.'Currency Code'))
+                DisplayFields: =["currencyname"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@Invoices].transactioncurrencyid)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["currencyname"]
+                SearchItems: =Search(Choices([@Invoices].transactioncurrencyid),DataCardValue35.SearchText,"currencyname")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                ZIndex: =2
+
+            ErrorMessage45 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue35.Y + DataCardValue35.Height
+                ZIndex: =3
+
+            StarVisible45 As label:
+                Align: =Align.Center
+                Height: =DataCardKey45.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey45.Y
+                ZIndex: =4
+
         "'Total Detail Amount_DataCard1' As typedDataCard.currencyEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="totallineitemamount"
@@ -323,9 +406,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue31.Text)
-            Width: =640
+            Width: =320
             X: =0
-            Y: =5
+            Y: =3
             ZIndex: =1
 
             DataCardKey41 As label:
@@ -395,9 +478,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue32.Text)
-            Width: =640
-            X: =0
-            Y: =6
+            Width: =320
+            X: =1
+            Y: =3
             ZIndex: =1
 
             DataCardKey42 As label:
@@ -467,9 +550,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue33.Text)
-            Width: =640
+            Width: =320
             X: =0
-            Y: =7
+            Y: =4
             ZIndex: =1
 
             DataCardKey43 As label:
@@ -539,9 +622,9 @@ Screen9 As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue34.Text)
-            Width: =640
-            X: =0
-            Y: =8
+            Width: =320
+            X: =1
+            Y: =4
             ZIndex: =1
 
             DataCardKey44 As label:
@@ -600,4 +683,28 @@ Screen9 As screen:
                 Wrap: =false
                 Y: =DataCardKey44.Y
                 ZIndex: =4
+
+        Customer_DataCard4 As typedDataCard.blankPolymorphicEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="_customerid_value"
+            Default: =ThisItem.Customer
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Invoices],DataSourceInfo.DisplayName,"_customerid_value")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =225
+            Required: =true
+            Width: =320
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+    Button6 As button:
+        Height: =70
+        OnSelect: =SubmitForm(Form5)
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =360
+        Y: =2
+        ZIndex: =2
 
