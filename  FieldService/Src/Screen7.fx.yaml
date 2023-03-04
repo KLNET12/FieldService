@@ -25,6 +25,7 @@ Screen7 As screen:
             Layout: =Layout.Vertical
             OnSelect: |-
                 =Set(varInvoice,true);
+                Set(varInvoiceId, ThisItem.Invoice);
                 Navigate(Screen9)
             TemplatePadding: =0
             TemplateSize: =204

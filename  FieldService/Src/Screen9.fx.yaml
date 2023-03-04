@@ -267,7 +267,7 @@ Screen9 As screen:
         BorderThickness: =1
         Fill: =RGBA(252, 255, 204, 1)
         Height: =964
-        Items: =Gallery4.Selected
+        Items: =Filter(Invoices, Invoice = varInvoiceId)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =964
@@ -282,11 +282,434 @@ Screen9 As screen:
             ZIndex: =5
 
         Label16 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
             Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
             OnSelect: =Select(Parent)
-            Size: =19
-            Text: =ThisItem.Name
-            Width: =640
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice No."
+            Width: =230
             Y: =5
             ZIndex: =6
+
+        Label16_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Name"
+            Width: =230
+            Y: =60
+            ZIndex: =7
+
+        Label16_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Customer"
+            Width: =230
+            Y: =115
+            ZIndex: =8
+
+        Label16_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Work Order No."
+            Width: =230
+            Y: =170
+            ZIndex: =9
+
+        Label16_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Bookable Resource"
+            Width: =230
+            Y: =225
+            ZIndex: =10
+
+        Label16_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Booking"
+            Width: =230
+            Y: =280
+            ZIndex: =11
+
+        Label16_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Due Date"
+            Width: =230
+            Y: =555
+            ZIndex: =12
+
+        Label16_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Date"
+            Width: =230
+            Y: =500
+            ZIndex: =13
+
+        Label16_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Created On"
+            Width: =230
+            Y: =445
+            ZIndex: =14
+
+        Label16_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Currency"
+            Width: =230
+            Y: =390
+            ZIndex: =15
+
+        Label16_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Price List"
+            Width: =230
+            Y: =335
+            ZIndex: =16
+
+        Label16_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Invoice Type"
+            Width: =230
+            Y: =610
+            ZIndex: =17
+
+        Label16_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Ship To"
+            Width: =230
+            Y: =665
+            ZIndex: =18
+
+        Label16_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =134
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Bill To Address"
+            Width: =230
+            Y: =720
+            ZIndex: =19
+
+        Label16_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Detail Amount"
+            Width: =230
+            Y: =854
+            ZIndex: =20
+
+        Label16_15 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: ="Total Amount"
+            Width: =230
+            Y: =909
+            ZIndex: =21
+
+        Label16_16 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Invoice ID'
+            Width: =410
+            X: =230
+            Y: =5
+            ZIndex: =22
+
+        Label16_17 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Name
+            Width: =410
+            X: =230
+            Y: =60
+            ZIndex: =23
+
+        Label16_18 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =If(IsType(ThisItem.Customer, Accounts), AsType(ThisItem.Customer, Accounts).'Account Name', AsType(ThisItem.Customer, Contacts).'Full Name')
+            Width: =410
+            X: =230
+            Y: =115
+            ZIndex: =24
+
+        Label16_19 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Work Order'.'Work Order Number'
+            Width: =410
+            X: =230
+            Y: =170
+            ZIndex: =25
+
+        Label16_20 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bookable Resource'.Name
+            Width: =410
+            X: =230
+            Y: =225
+            ZIndex: =26
+
+        Label16_21 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bookable Resource Booking'.Name
+            Width: =410
+            X: =230
+            Y: =280
+            ZIndex: =27
+
+        Label16_22 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Price List'.Name
+            Width: =410
+            X: =230
+            Y: =335
+            ZIndex: =28
+
+        Label16_23 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Currency.'Currency Name'
+            Width: =410
+            X: =230
+            Y: =390
+            ZIndex: =29
+
+        Label16_24 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Created On'
+            Width: =410
+            X: =230
+            Y: =445
+            ZIndex: =30
+
+        Label16_25 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Invoice Date'
+            Width: =410
+            X: =230
+            Y: =500
+            ZIndex: =31
+
+        Label16_26 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Due Date'
+            Width: =410
+            X: =230
+            Y: =555
+            ZIndex: =32
+
+        Label16_27 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.Type
+            Width: =410
+            X: =230
+            Y: =610
+            ZIndex: =33
+
+        Label16_28 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Ship To'
+            Width: =410
+            X: =230
+            Y: =665
+            ZIndex: =34
+
+        Label16_29 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =134
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Bill To Street 1' & " " & ThisItem.'Bill To Street 2' & " " &   ThisItem.'Bill To Street 3' & " " & ThisItem.'Bill To City' & " " & ThisItem.'Bill To State/Province' & " " &  ThisItem.'Bill To Country/Region'
+            Width: =410
+            X: =230
+            Y: =720
+            ZIndex: =35
+
+        Label16_30 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Total Detail Amount'
+            Width: =410
+            X: =230
+            Y: =854
+            ZIndex: =36
+
+        Label16_31 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(239, 255, 217, 1)
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Size: =17
+            Text: =ThisItem.'Total Amount'
+            Width: =410
+            X: =230
+            Y: =909
+            ZIndex: =37
 
