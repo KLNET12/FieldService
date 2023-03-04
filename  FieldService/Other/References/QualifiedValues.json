@@ -90,6 +90,13 @@
       }
     },
     {
+      "Kind": "default.cds_transactioncurrency_forms",
+      "Namespace": "Currencies (Forms)",
+      "Values": {
+        "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
+    },
+    {
       "Kind": "default.cds_msfp_alert_forms",
       "Namespace": "Customer Voice alert (Forms)",
       "Values": {
@@ -114,6 +121,15 @@
       "Values": {
         "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
         "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
+      }
+    },
+    {
+      "Kind": "default.cds_pricelevel_forms",
+      "Namespace": "Price Lists (Forms)",
+      "Values": {
+        "Information": "24e04567-e803-4bf0-a999-4c5192ed1f65",
+        "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
+        "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
       }
     },
     {
@@ -165,6 +181,14 @@
       }
     },
     {
+      "Kind": "default.cds_msdyn_workorderproduct_forms",
+      "Namespace": "Work Order Products (Forms)",
+      "Values": {
+        "Information": "ffdd4e22-a23a-440a-9d28-5d5224c1c01a",
+        "Work Order Product - Mobile": "70c4a13d-3787-44b0-ac74-35e25c4ce7df"
+      }
+    },
+    {
       "Kind": "default.cds_msdyn_workorder_forms",
       "Namespace": "Work Orders (Forms)",
       "Values": {
@@ -187,23 +211,6 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
-    },
-    {
-      "Kind": "default.cds_msdyn_workorderproduct_forms",
-      "Namespace": "Work Order Products (Forms)",
-      "Values": {
-        "Information": "ffdd4e22-a23a-440a-9d28-5d5224c1c01a",
-        "Work Order Product - Mobile": "70c4a13d-3787-44b0-ac74-35e25c4ce7df"
-      }
-    },
-    {
-      "Kind": "default.cds_pricelevel_forms",
-      "Namespace": "Price Lists (Forms)",
-      "Values": {
-        "Information": "24e04567-e803-4bf0-a999-4c5192ed1f65",
-        "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
-        "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
-      }
     }
   ]
 }

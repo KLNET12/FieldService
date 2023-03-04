@@ -103,7 +103,7 @@
         "Name": "Label6",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 361,
+        "PublishOrderIndex": 380,
         "Rules": [
           {
             "Category": "Data",
@@ -365,7 +365,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638135089126866938",
+    "LastModifiedTimestamp": "638135236456131210",
     "Name": "Component1",
     "Rules": [
       {
@@ -424,7 +424,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638135089126866938",
+  "LastModifiedTimestamp": "638135236456131210",
   "Name": "a73a522b367046b7954774ef7f2f2d64",
   "OverridableProperties": {},
   "Version": "638132119121275763"
