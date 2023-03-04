@@ -141,7 +141,7 @@ Screen9 As screen:
                 Height: =70
                 IsSearchable: =false
                 Items: |+
-                    =Choices([@Invoices].pricelevelid)
+                    =
                     
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["name"]
@@ -357,10 +357,11 @@ Screen9 As screen:
                 DisplayFields: =["currencyname"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@Invoices].transactioncurrencyid)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["currencyname"]
-                SearchItems: =Search(Choices([@Invoices].transactioncurrencyid),DataCardValue35.SearchText,"currencyname")
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

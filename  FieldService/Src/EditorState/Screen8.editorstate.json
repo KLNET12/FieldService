@@ -33,9 +33,6 @@
       "MetaDataIDKey": "",
       "Name": "AddressInput1",
       "ParentIndex": 0,
-      "PcfServiceDependencies": [
-        "SpatialServices_4"
-      ],
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
