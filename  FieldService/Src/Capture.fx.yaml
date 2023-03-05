@@ -2,6 +2,7 @@ Capture As screen:
 
     Image2 As image:
         Height: =556
+        Image: = LookUp('PowerApps Images',Title= TextInput3.Text, 'Image Info')
         Width: =606
         X: =14
         Y: =210
