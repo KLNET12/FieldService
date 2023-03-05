@@ -4,12 +4,13 @@ Camera As screen:
 
     "'Camera Capture' As camera":
         Camera: ='Toggle Camera'.Value
-        Height: =631
+        Height: =394
         OnSelect: |-
             =ClearCollect(CameraImage,Camera3.Photo); UpdateContext({PhotoDateTime: Now()})
         StreamRate: =100
-        Width: =640
-        Y: =126
+        Width: =472
+        X: =89
+        Y: =79
         ZIndex: =1
 
     TextInput3 As text:
@@ -18,18 +19,33 @@ Camera As screen:
         Height: =70
         Size: =21
         Width: =560
-        X: =40
-        Y: =901
+        X: =30
+        Y: =862
         ZIndex: =7
 
     Button8 As button:
         Height: =106
         OnSelect: |-
-            =Patch('PowerApps Images', Defaults('PowerApps Images'), {Title: TextInput3.Text, 'Image Info': First(CameraImage).Url})
+            =Patch(Notes, Defaults(Notes), { column name : Camera1.image}), {Title: TextInput3.Text, 'Image Info': First(CameraImage).Url})
         Size: =24
         Text: ="Upload Image to Field Service"
         Width: =420
-        X: =100
-        Y: =1002
+        X: =30
+        Y: =988
         ZIndex: =8
+
+    Image4 As image:
+        Height: =320
+        Image: =
+        Width: =372
+        X: =124
+        Y: =473
+        ZIndex: =9
+
+    Icon7 As icon.ChevronRight:
+        Icon: =Icon.ChevronRight
+        OnSelect: = Navigate(Screen2)
+        X: =510
+        Y: =1009
+        ZIndex: =10
 
