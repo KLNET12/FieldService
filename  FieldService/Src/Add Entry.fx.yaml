@@ -38,7 +38,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =First(Filter('Bookable Resources', Username = TextInput2.Text))
                 DisplayFields: =["name"]
-                DisplayMode: =Vi
+                DisplayMode: =View
                 Height: =70
                 Items: =Choices([@'Time Entries'].msdyn_bookableresource)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
