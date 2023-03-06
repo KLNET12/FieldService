@@ -1,6 +1,7 @@
 Camera As screen:
     BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
+    OnVisible: =Set(varCam,0)
 
     Button8 As button:
         Height: =106
@@ -9,37 +10,9 @@ Camera As screen:
         Size: =24
         Text: ="Upload Image to Field Service"
         Width: =420
-        X: =30
-        Y: =988
+        X: =16
+        Y: =548
         ZIndex: =1
-
-    Icon7 As icon.ChevronRight:
-        Icon: =Icon.ChevronRight
-        OnSelect: = Navigate(Screen2)
-        X: =510
-        Y: =1009
-        ZIndex: =2
-
-    Camera1 As camera:
-        Camera: =varCam
-        DisplayMode: =DisplayMode.View
-        Height: =247
-        OnSelect: =Camera1.Photo
-        OnStream: =100
-        StreamRate: =100
-        Width: =277
-        X: =17
-        Y: =118
-        ZIndex: =3
-
-    Dropdown1 As dropdown:
-        Height: =70
-        Items: =Camera1.AvailableDevices
-        Size: =21
-        Width: =575
-        X: =30
-        Y: =700
-        ZIndex: =4
 
     Icon11 As icon.Home:
         Height: =84
@@ -49,21 +22,58 @@ Camera As screen:
             Set(varCam,1)
         Width: =84
         X: =198
-        Y: =364
+        Y: =349
         ZIndex: =5
 
     Image4 As image:
-        Height: =201
+        Height: =222
         Image: =varTakenPhoto
-        Width: =274
+        Width: =308
         X: =332
-        Y: =148
+        Y: =127
         ZIndex: =6
 
     Icon12 As icon.Reload:
         Icon: =Icon.Reload
         OnSelect: =Set(varCam,0)
-        X: =510
+        X: =541
         Y: =364
         ZIndex: =7
+
+    Camera1 As camera:
+        Camera: =varCam
+        Height: =222
+        StreamRate: =100
+        Width: =332
+        Y: =127
+        ZIndex: =8
+
+    Label11 As label:
+        Height: =55
+        Size: =21
+        Text: ="Ret"
+        Width: =153
+        X: =388
+        Y: =373
+        ZIndex: =9
+
+    Label11_1 As label:
+        Height: =55
+        Size: =21
+        Text: ="Capture"
+        Width: =153
+        X: =45
+        Y: =378
+        ZIndex: =10
+
+    Label14 As label:
+        Align: =Align.Center
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =222
+        Size: =21
+        Text: ="Click on Retake to take picture again"
+        Visible: =If(varCam=0,false,true)
+        Width: =332
+        Y: =127
+        ZIndex: =11
 
