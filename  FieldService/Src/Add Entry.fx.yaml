@@ -1,12 +1,43 @@
 "'Add Entry' As screen":
 
+    Component1_10 As Component1:
+        Height: =70
+        ZIndex: =2
+
+    Label1_3 As label:
+        Align: =Align.Center
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =72
+        Size: =21
+        Text: ="Create New Time Entries"
+        Width: =640
+        Y: =71
+        ZIndex: =3
+
+    Icon5_3 As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Screen4)
+        ZIndex: =4
+
+    Button12_1 As button:
+        Height: =70
+        OnSelect: |-
+            =SubmitForm(Form4);
+            NewForm(Form4);
+            Notify("Entry Created",NotificationType.Success)
+        Size: =24
+        Text: ="Create Entry"
+        Width: =640
+        Y: =1066
+        ZIndex: =5
+
     Form4 As form:
         DataSource: ='Time Entries'
         DefaultMode: =FormMode.New
         Height: =739
         Width: =640
-        Y: =262
-        ZIndex: =1
+        Y: =213
+        ZIndex: =6
 
         "'Bookable Resource_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -77,148 +108,6 @@
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey26.Y
-                ZIndex: =4
-
-        "'Bookable Resource Booking_DataCard1' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="msdyn_BookableResourceBooking"
-            Default: =ThisItem.'Bookable Resource Booking'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Time Entries'],DataSourceInfo.DisplayName,"msdyn_BookableResourceBooking")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue19.Selected
-            Width: =640
-            X: =0
-            Y: =1
-            ZIndex: =1
-
-            DataCardKey27 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue19 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["name"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Time Entries'].msdyn_BookableResourceBooking)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["name"]
-                SearchItems: =Search(Choices([@'Time Entries'].msdyn_BookableResourceBooking),DataCardValue19.SearchText,"name")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
-                ZIndex: =2
-
-            ErrorMessage31 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue19.Y + DataCardValue19.Height
-                ZIndex: =3
-
-            StarVisible31 As label:
-                Align: =Align.Center
-                Height: =DataCardKey27.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey27.Y
-                ZIndex: =4
-
-        "'Work Order_DataCard3' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="msdyn_WorkOrder"
-            Default: =ThisItem.'Work Order'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Time Entries'],DataSourceInfo.DisplayName,"msdyn_WorkOrder")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue26.Selected
-            Width: =640
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey36 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue26 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["msdyn_name"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Time Entries'].msdyn_WorkOrder)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["msdyn_name"]
-                SearchItems: =Search(Choices([@'Time Entries'].msdyn_WorkOrder),DataCardValue26.SearchText,"msdyn_name")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
-                ZIndex: =2
-
-            ErrorMessage36 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue26.Y + DataCardValue26.Height
-                ZIndex: =3
-
-            StarVisible36 As label:
-                Align: =Align.Center
-                Height: =DataCardKey36.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey36.Y
                 ZIndex: =4
 
         "'Booking Status_DataCard2' As typedDataCard.comboBoxEditCard":
@@ -557,6 +446,148 @@
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey35.Y
+                ZIndex: =4
+
+        "'Work Order_DataCard3' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="msdyn_WorkOrder"
+            Default: =ThisItem.'Work Order'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Time Entries'],DataSourceInfo.DisplayName,"msdyn_WorkOrder")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue26.Selected
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey36 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue26 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["msdyn_name"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Time Entries'].msdyn_WorkOrder)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["msdyn_name"]
+                SearchItems: =Search(Choices([@'Time Entries'].msdyn_WorkOrder),DataCardValue26.SearchText,"msdyn_name")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                ZIndex: =2
+
+            ErrorMessage36 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue26.Y + DataCardValue26.Height
+                ZIndex: =3
+
+            StarVisible36 As label:
+                Align: =Align.Center
+                Height: =DataCardKey36.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey36.Y
+                ZIndex: =4
+
+        "'Bookable Resource Booking_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="msdyn_BookableResourceBooking"
+            Default: =ThisItem.'Bookable Resource Booking'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Time Entries'],DataSourceInfo.DisplayName,"msdyn_BookableResourceBooking")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue19.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey27 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue19 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["name"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Filter('Bookable Resource Bookings', 'Work Order'.'WO Number' = DataCardValue26.Selected.'WO Number')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["name"]
+                SearchItems: =Search(Filter('Bookable Resource Bookings', 'Work Order'.'WO Number' = DataCardValue26.Selected.'WO Number'),DataCardValue19.SearchText,"name")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                ZIndex: =2
+
+            ErrorMessage31 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue19.Y + DataCardValue19.Height
+                ZIndex: =3
+
+            StarVisible31 As label:
+                Align: =Align.Center
+                Height: =DataCardKey27.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey27.Y
                 ZIndex: =4
 
         Type_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
@@ -953,7 +984,8 @@
             DisplayName: =DataSourceInfo([@'Time Entries'],DataSourceInfo.DisplayName,"msdyn_duration")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =true
+            Required: |
+                =true
             Update: =Value(DataCardValue3.Text)
             Width: =640
             X: =0
@@ -1016,34 +1048,4 @@
                 Wrap: =false
                 Y: =DataCardKey21.Y
                 ZIndex: =4
-
-    Component1_10 As Component1:
-        Height: =70
-        ZIndex: =2
-
-    Label1_3 As label:
-        Align: =Align.Center
-        Fill: =RGBA(187, 221, 140, 1)
-        Height: =72
-        Size: =21
-        Text: ="Create New Time Entries"
-        Width: =640
-        Y: =71
-        ZIndex: =3
-
-    Icon5_3 As icon.ChevronLeft:
-        Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen4)
-        ZIndex: =4
-
-    Button12_1 As button:
-        Height: =70
-        OnSelect: |-
-            =SubmitForm(Form4);NewForm(Form4);
-            Notify("Entry Created",NotificationType.Success)
-        Size: =24
-        Text: ="Create Entry"
-        Width: =640
-        Y: =1066
-        ZIndex: =5
 
