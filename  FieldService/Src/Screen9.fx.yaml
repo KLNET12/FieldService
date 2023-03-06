@@ -761,12 +761,3 @@ Screen9 As screen:
             Navigate(Screen7);
         ZIndex: =36
 
-    Label17 As label:
-        Height: =70
-        Size: =21
-        Text: =First(Filter(Accounts,Account =varWID)).'Account Name'
-        Width: =560
-        X: =40
-        Y: =40
-        ZIndex: =37
-

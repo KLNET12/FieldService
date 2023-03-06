@@ -4097,6 +4097,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varWID"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varWID",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varWID",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.guidvar"
                 }
               ],
