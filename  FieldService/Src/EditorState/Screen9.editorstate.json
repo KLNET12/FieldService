@@ -18818,7 +18818,7 @@
         },
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"msdyn_name\"}",
+          "NameMap": "{\"Value\":\"Body1_4\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

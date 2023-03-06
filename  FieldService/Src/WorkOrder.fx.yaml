@@ -12,7 +12,7 @@ WorkOrder As screen:
     "Gallery1_2 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         DelayItemLoading: =true
         Height: =923
-        Items: =If(Dropdown3_2.Selected.Value = "All Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'),If(Dropdown3_2.Selected.Value = "Active Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'), If(Dropdown3_2.Selected.Value = "Closed Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Inactive Work Orders'),Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'))))
+        Items: =If(Dropdown3_2.Selected.Value = "All Workorders" ,Filter(Filter('Work Orders','Bookable resource'.SelectedText.Name = TextInput2.Text),'Work Orders (Views)'.'All Work Order'), If(Dropdown3_2.Selected.Value = "Closed Workorders" ,Filter(Filter('Work Orders','Bookable resource'.SelectedText.Name = TextInput2.Text),'Work Orders (Views)'.'Inactive Work Orders'),Filter('Work Orders','Work Orders (Views)'.'Active Work Orders')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(Screen7)
