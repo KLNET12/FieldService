@@ -2,16 +2,6 @@ Camera As screen:
     BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
 
-    TextInput3 As text:
-        Align: =Align.Center
-        Default: ="Photo taken Successfully " & PhotoDateTime
-        Height: =70
-        Size: =21
-        Width: =560
-        X: =30
-        Y: =862
-        ZIndex: =7
-
     Button8 As button:
         Height: =106
         OnSelect: |-
@@ -42,7 +32,26 @@ Camera As screen:
         Camera: =0
         Height: =320
         OnSelect: =Camera1.Photo
+        OnStream: =100
         X: =110
         Y: =33
         ZIndex: =11
+
+    Dropdown1 As dropdown:
+        Height: =70
+        Items: =Camera1.AvailableDevices
+        Size: =21
+        Width: =575
+        X: =30
+        Y: =700
+        ZIndex: =12
+
+    Icon11 As icon.Home:
+        Height: =84
+        Icon: =Icon.Camera
+        OnSelect: =Set(varTakenPhoto, Camera1.Stream)
+        Width: =84
+        X: =510
+        Y: =500
+        ZIndex: =13
 

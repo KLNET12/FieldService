@@ -131,6 +131,7 @@
     "DateValue9": 396,
     "Description_DataCard1": 414,
     "Description_DataCard2": 60,
+    "Dropdown1": 426,
     "Dropdown3": 118,
     "Dropdown3_1": 143,
     "Dropdown3_2": 324,
@@ -214,6 +215,7 @@
     "HourValue9": 397,
     "Icon1": 122,
     "Icon10": 95,
+    "Icon11": 427,
     "Icon13": 159,
     "Icon14": 73,
     "Icon15": 96,
@@ -414,7 +416,6 @@
     "Subtitle1": 103,
     "TextInput1": 136,
     "TextInput2": 134,
-    "TextInput3": 91,
     "TextInput4": 97,
     "Title1": 121,
     "Title1_1": 146,
@@ -434,7 +435,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/06/2023 07:10:48",
+  "HeaderLastSavedDateTimeUTC": "03/06/2023 07:21:47",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "93a9db26-6e96-419a-9dd9-8db9aafd34b0": "\"/providers/microsoft.powerapps/apis/shared_microsoftspatialservices/connections/da53979fdf664f2b81fe734673245a2b\""
@@ -870,6 +871,7 @@
     "DateValue9": {},
     "Description_DataCard1": {},
     "Description_DataCard2": {},
+    "Dropdown1": {},
     "Dropdown3": {},
     "Dropdown3_1": {},
     "Dropdown3_2": {},
@@ -953,6 +955,7 @@
     "HourValue9": {},
     "Icon1": {},
     "Icon10": {},
+    "Icon11": {},
     "Icon13": {},
     "Icon14": {},
     "Icon15": {},
@@ -1496,7 +1499,6 @@
     "Subtitle1": {},
     "TextInput1": {},
     "TextInput2": {},
-    "TextInput3": {},
     "TextInput4": {},
     "Title1": {},
     "Title1_1": {},
@@ -1671,6 +1673,7 @@
     "DateValue9": 198,
     "Description_DataCard1": 216,
     "Description_DataCard2": 280,
+    "Dropdown1": 0,
     "Dropdown3": 10,
     "Dropdown3_1": 111,
     "Dropdown3_2": 128,
@@ -1754,6 +1757,7 @@
     "HourValue9": 199,
     "Icon1": 14,
     "Icon10": 395,
+    "Icon11": 0,
     "Icon13": 327,
     "Icon14": 310,
     "Icon15": 396,
@@ -1954,7 +1958,6 @@
     "Subtitle1": 403,
     "TextInput1": 4,
     "TextInput2": 2,
-    "TextInput3": 392,
     "TextInput4": 397,
     "Title1": 13,
     "Title1_1": 114,
@@ -2004,7 +2007,7 @@
       "typedDataCard": 34
     },
     "DeserializationLoadTime": 5.3087478,
-    "ErrorCount": 12
+    "ErrorCount": 11
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
