@@ -1113,9 +1113,13 @@ Screen2 As screen:
     Button13 As button:
         Height: =69
         OnSelect: =Navigate(Camera)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =18
         Text: ="Camera & Signature"
-        Width: =218
+        Width: =192
         X: =422
         Y: =155
         ZIndex: =6
