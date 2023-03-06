@@ -7,7 +7,8 @@ Camera As screen:
         Height: =66
         OnSelect: |-
             =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
-            Set(varImage,false)
+            Set(varImage,false);
+            Notify("Picture Uploaded",NotificationType.Success)
         Size: =24
         Text: ="Upload Image"
         Width: =640
@@ -92,6 +93,7 @@ Camera As screen:
         Height: =66
         OnSelect: |-
             =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Signature",Document:Substitute(Substitute(JSON(PenInput1.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
+            Notify("Signature updated",NotificationType.Success);
             Reset(PenInput1)
         Size: =24
         Text: ="Upload Signature"
