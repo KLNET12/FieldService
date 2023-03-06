@@ -17,6 +17,7 @@ WorkOrder As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(Screen7)
+        ShowScrollbar: =false
         TemplatePadding: =4
         TemplateSize: =411
         Y: =213
@@ -124,10 +125,16 @@ WorkOrder As screen:
         Button14 As button:
             Height: =57
             OnSelect: =Select(Parent)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Size: =18
             Text: ="Invoice"
+            Tooltip: ="To see Invoices"
             Width: =140
             X: =492
+            Y: =13
             ZIndex: =12
 
     Component1_6 As Component1:

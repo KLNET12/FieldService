@@ -28,6 +28,8 @@ Screen9 As screen:
             Reset('Price List');
             Reset(Currency_1);
             Reset('WO Number');
+            
+            Notify("Invoice Generated",NotificationType.Success)
         Size: =24
         Text: ="Generate Invoice"
         Width: =640

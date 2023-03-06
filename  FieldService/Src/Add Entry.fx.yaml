@@ -1038,11 +1038,12 @@
 
     Button12_1 As button:
         Height: =70
-        OnSelect: =SubmitForm(Form4);NewForm(Form4)
+        OnSelect: |-
+            =SubmitForm(Form4);NewForm(Form4);
+            Notify("Entry Created",NotificationType.Success)
         Size: =24
-        Text: ="Save"
-        Width: =280
-        X: =180
+        Text: ="Create Entry"
+        Width: =640
         Y: =1066
         ZIndex: =5
 

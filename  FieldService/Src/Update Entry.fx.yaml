@@ -895,11 +895,12 @@
 
     Button12 As button:
         Height: =70
-        OnSelect: =SubmitForm(Form3)
+        OnSelect: |-
+            =SubmitForm(Form3);
+            Notify("Entry updated",NotificationType.Success)
         Size: =24
         Text: ="Save"
-        Width: =280
-        X: =180
+        Width: =640
         Y: =1066
         ZIndex: =5
 

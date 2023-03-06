@@ -1079,7 +1079,7 @@ Screen2 As screen:
     Button1 As button:
         Height: =56
         OnSelect: |-
-            =SubmitForm(Form1);Notify("Booking is successfully updated:");
+            =SubmitForm(Form1);Notify("Booking is successfully updated:", NotificationType.Success);
             ResetForm(Form1)
         Size: =24
         Text: ="Save"

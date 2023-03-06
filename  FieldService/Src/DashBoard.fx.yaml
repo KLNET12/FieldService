@@ -56,12 +56,16 @@ DashBoard As screen:
         ZIndex: =7
 
     Button7 As button:
-        Fill: =RGBA(99, 139, 44, 1)
+        Fill: =RGBA(194, 194, 143, 1)
         Height: =70
         OnSelect: |-
             =Reset(TextInput1);
             Reset(TextInput2);
             Navigate('Login Screen')
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: ="Logout"
         Width: =120
