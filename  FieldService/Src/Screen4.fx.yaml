@@ -103,7 +103,7 @@ Screen4 As screen:
 
         Icon9 As icon.Edit:
             Icon: =Icon.Edit
-            OnSelect: =Navigate('Update Entry')
+            OnSelect: =Navigate('Update Entry');Set(guidvar,ThisItem.'Time Entry')
             X: =554
             Y: =217
             ZIndex: =11
