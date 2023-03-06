@@ -2,10 +2,10 @@ Screen2 As screen:
 
     Form1 As form:
         DataSource: ='Bookable Resource Bookings'
-        Height: =971
+        Height: =904
         Item: =Gallery1.Selected
         Width: =640
-        Y: =88
+        Y: =155
         ZIndex: =1
 
         "'Work Order_DataCard1' As typedDataCard.comboBoxEditCard":
@@ -1105,13 +1105,12 @@ Screen2 As screen:
         RadiusTopRight: =0
         Size: =18
         Text: ="Work Location"
-        Width: =192
-        X: =422
-        Y: =70
+        Width: =317
+        Y: =77
         ZIndex: =5
 
     Button13 As button:
-        Height: =69
+        Height: =70
         OnSelect: =Navigate(Camera)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -1119,8 +1118,8 @@ Screen2 As screen:
         RadiusTopRight: =0
         Size: =18
         Text: ="Camera & Signature"
-        Width: =192
-        X: =422
-        Y: =155
+        Width: =323
+        X: =317
+        Y: =77
         ZIndex: =6
 

@@ -2,7 +2,6 @@
 
     Form3 As form:
         DataSource: ='Time Entries'
-        DefaultMode: =FormMode.New
         Height: =846
         Item: =Gallery1_1.Selected
         Width: =640
@@ -896,8 +895,7 @@
 
     Button12 As button:
         Height: =70
-        OnSelect: |-
-            =Patch('Time Entries',First(Filter('Time Entries','Time Entry'=GUID(guidvar))),{Description:DataCardValue12.Text,'External Comments':DataCardValue13.Text})
+        OnSelect: =SubmitForm(Form3)
         Size: =24
         Text: ="Save"
         Width: =280

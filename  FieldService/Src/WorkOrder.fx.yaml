@@ -121,6 +121,15 @@ WorkOrder As screen:
             Y: =338
             ZIndex: =11
 
+        Button14 As button:
+            Height: =57
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: ="Invoice"
+            Width: =140
+            X: =492
+            ZIndex: =12
+
     Component1_6 As Component1:
         Height: =70
         ZIndex: =3
