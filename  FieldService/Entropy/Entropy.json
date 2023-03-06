@@ -422,7 +422,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/06/2023 08:41:45",
+  "HeaderLastSavedDateTimeUTC": "03/06/2023 09:04:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "93a9db26-6e96-419a-9dd9-8db9aafd34b0": "\"/providers/microsoft.powerapps/apis/shared_microsoftspatialservices/connections/da53979fdf664f2b81fe734673245a2b\""
@@ -1557,7 +1557,7 @@
     "Button5": 105,
     "Button6": 389,
     "Button7": 102,
-    "Button8": 398,
+    "Button8": 397,
     "Button9": 314,
     "Camera": 79,
     "Camera1": 390,
@@ -1825,7 +1825,7 @@
     "Label4": 1,
     "Label4_1": 3,
     "Label5": 295,
-    "Label6": 400,
+    "Label6": 398,
     "Label7": 109,
     "Label8": 127,
     "Label8_1": 142,

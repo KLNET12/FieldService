@@ -4,14 +4,13 @@ Camera As screen:
     OnVisible: =Set(varCam,0)
 
     Button8 As button:
-        Height: =106
+        Height: =66
         OnSelect: |-
-            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name,Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true })
+            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & "Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true })
         Size: =24
-        Text: ="Upload Image to Field Service"
-        Width: =420
-        X: =16
-        Y: =548
+        Text: ="Upload Image"
+        Width: =640
+        Y: =518
         ZIndex: =1
 
     Icon11 As icon.Home:
