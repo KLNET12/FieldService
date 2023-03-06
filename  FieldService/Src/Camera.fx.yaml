@@ -62,7 +62,7 @@ Camera As screen:
         Text: ="Capture"
         Width: =153
         X: =45
-        Y: =378
+        Y: =363
         ZIndex: =10
 
     Label14 As label:
@@ -75,4 +75,20 @@ Camera As screen:
         Width: =332
         Y: =127
         ZIndex: =11
+
+    PenInput1 As inkControl:
+        Height: =316
+        Width: =640
+        Y: =677
+        ZIndex: =12
+
+    Button8_1 As button:
+        Height: =66
+        OnSelect: |-
+            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & "Siignature",Document:Substitute(Substitute(JSON(PenInput1.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true })
+        Size: =24
+        Text: ="Upload Signature"
+        Width: =640
+        Y: =1020
+        ZIndex: =13
 
