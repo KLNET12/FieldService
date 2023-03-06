@@ -109,7 +109,7 @@ Screen9 As screen:
         ZIndex: =9
 
     Customer As dropdown:
-        Default: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)).'Account Name'
+        Default: =First(Filter(Accounts,Account =varWID)).'Account Name'
         Height: =60
         Items: =First(Filter(Accounts,Account =varWID))
         Size: =21
