@@ -40,7 +40,7 @@ Screen2 As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["msdyn_name"]
-                DisplayMode: =View
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 Items: =Choices([@'Bookable Resource Bookings'].'Work Order')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -111,7 +111,7 @@ Screen2 As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["msdyn_name"]
-                DisplayMode: =View
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 Items: =Choices([@'Bookable Resource Bookings'].'Resource Requirement')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)

@@ -17,7 +17,7 @@ WorkOrder As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
-            =Set(varInvoice,true);
+            =Set(varNav,true);
             Set(varWorkId,GUID(Gallery1_2.Selected.'WO Number'));
             Navigate(Screen7)
         ShowScrollbar: =false

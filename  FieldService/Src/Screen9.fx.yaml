@@ -28,7 +28,6 @@ Screen9 As screen:
             Reset('Price List');
             Reset(Currency_1);
             Reset('WO Number');
-            
             Notify("Invoice Generated",NotificationType.Success)
         Size: =24
         Text: ="Generate Invoice"
@@ -109,9 +108,9 @@ Screen9 As screen:
         ZIndex: =9
 
     Customer As dropdown:
-        Default: =First(Filter(Accounts,Account =varWID)).'Account Name'
+        Default: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account)).'Account Name'
         Height: =60
-        Items: =First(Filter(Accounts,Account =varWID))
+        Items: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account))
         Size: =21
         Width: =458
         X: =182
@@ -139,9 +138,9 @@ Screen9 As screen:
         ZIndex: =12
 
     "'WO Number' As dropdown":
-        Default: =Gallery3.Selected.'Work Order Number'
+        Default: =First(Filter('Work Orders','WO Number' = varWorkId)).'Work Order Number'
         Height: =60
-        Items: =Gallery3.Selected
+        Items: =First(Filter('Work Orders','WO Number' = varWorkId))
         Size: =21
         Width: =458
         X: =182
@@ -745,7 +744,7 @@ Screen9 As screen:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
         OnSelect: |-
-            =If(varInvoice,Set(varInvoice,false), Set(varInvoice,true));
+            =If(varInvoice,Set(varInvoice,true), Set(varInvoice,false));
             Refresh(Invoices);
             Refresh('Work Orders');
             Reset(Name);
@@ -761,4 +760,13 @@ Screen9 As screen:
             Reset('WO Number');
             Navigate(Screen7);
         ZIndex: =36
+
+    Label17 As label:
+        Height: =70
+        Size: =21
+        Text: =First(Filter(Accounts,Account =varWID)).'Account Name'
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =37
 

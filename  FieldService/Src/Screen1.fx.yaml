@@ -137,7 +137,7 @@ Screen1 As screen:
         Icon10 As icon.Add:
             Icon: =Icon.Add
             OnSelect: |-
-                =Set(varInvoice,false);
+                =Set(varNav,false);
                 Navigate(Screen7)
             Tooltip: ="Create Invoice"
             X: =553
