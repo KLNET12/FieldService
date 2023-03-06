@@ -5,7 +5,7 @@ Camera As screen:
     Button8 As button:
         Height: =106
         OnSelect: |-
-            =Patch(Notes, Defaults(Notes), { column name : Camera1.image}), {Title: TextInput3.Text, 'Image Info': First(CameraImage).Url})
+            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Regarding:Gallery1.Selected.'Bookable Resource Booking',Title:Gallery1.Selected.Name,Document:Image4})
         Size: =24
         Text: ="Upload Image to Field Service"
         Width: =420
@@ -15,7 +15,7 @@ Camera As screen:
 
     Image4 As image:
         Height: =297
-        Image: =Camera1.Photo
+        Image: =varTakenPhoto
         Width: =372
         X: =78
         Y: =383
@@ -29,7 +29,7 @@ Camera As screen:
         ZIndex: =10
 
     Camera1 As camera:
-        Camera: =0
+        Camera: =Dropdown1.Selected.Id
         Height: =320
         OnSelect: =Camera1.Photo
         OnStream: =100
@@ -49,7 +49,7 @@ Camera As screen:
     Icon11 As icon.Home:
         Height: =84
         Icon: =Icon.Camera
-        OnSelect: =Set(varTakenPhoto, Camera1.Stream)
+        OnSelect: =Set(varTakenPhoto, Camera1.Photo)
         Width: =84
         X: =510
         Y: =500
