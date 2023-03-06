@@ -7,7 +7,7 @@ Screen4 As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =4
-        TemplateSize: =313
+        TemplateSize: =415
         Y: =213
         ZIndex: =1
 
@@ -57,7 +57,7 @@ Screen4 As screen:
             Height: =2
             OnSelect: =Select(Parent)
             Width: =632
-            Y: =315
+            Y: =406
             ZIndex: =6
 
         Label2_3 As label:
@@ -107,6 +107,28 @@ Screen4 As screen:
             X: =554
             Y: =217
             ZIndex: =11
+
+        Label2_16 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Description :  " & ThisItem.Description)
+            Width: =528
+            X: =1
+            Y: =289
+            ZIndex: =12
+
+        Label2_17 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Status :  " & ThisItem.'Booking Status'.Name)
+            Width: =528
+            X: =1
+            Y: =330
+            ZIndex: =13
 
     Dropdown3_1 As dropdown:
         Height: =72
