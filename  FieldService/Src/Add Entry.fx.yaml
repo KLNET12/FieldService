@@ -36,9 +36,9 @@
 
             DataCardValue18 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =First(Filter('Bookable Resources', Username = TextInput2.Text))
                 DisplayFields: =["name"]
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =Vi
                 Height: =70
                 Items: =Choices([@'Time Entries'].msdyn_bookableresource)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
