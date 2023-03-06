@@ -897,7 +897,7 @@
     Button12 As button:
         Height: =70
         OnSelect: |-
-            =Patch('Time Entries',Defaults('Time Entries'),{Start:DateValue5.SelectedDate,End:DateValue6.SelectedDate,Description:DataCardValue12.Text,'External Comments':DataCardValue13.Text,Type:DataCardValue5.Selected.Value,Date:DateValue7.SelectedDate})
+            =Patch('Time Entries',Defaults('Time Entries'),{Start:DateValue5.SelectedDate,End:DateValue6.SelectedDate,Description:DataCardValue12.Text,'External Comments':DataCardValue13.Text,Date:DateValue7.SelectedDate})
         Size: =24
         Text: ="Save"
         Width: =280
