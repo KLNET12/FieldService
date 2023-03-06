@@ -134,14 +134,6 @@ Screen1 As screen:
             Y: =42
             ZIndex: =12
 
-        Icon12 As icon.Add:
-            Icon: =Icon.Add
-            OnSelect: =Navigate(Screen7)
-            Tooltip: ="Generate Invoice"
-            X: =548
-            Y: =143
-            ZIndex: =13
-
     Dropdown3 As dropdown:
         Height: =72
         Items: =["My Active Bookings","My Inprogress Bookings","My Completed Bookings"]

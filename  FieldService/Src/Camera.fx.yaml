@@ -2,17 +2,6 @@ Camera As screen:
     BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
 
-    "'Camera Capture' As camera":
-        Camera: ='Toggle Camera'.Value
-        Height: =394
-        OnSelect: |-
-            =ClearCollect(CameraImage,Camera3.Photo); UpdateContext({PhotoDateTime: Now()})
-        StreamRate: =100
-        Width: =472
-        X: =89
-        Y: =79
-        ZIndex: =1
-
     TextInput3 As text:
         Align: =Align.Center
         Default: ="Photo taken Successfully " & PhotoDateTime
@@ -35,11 +24,11 @@ Camera As screen:
         ZIndex: =8
 
     Image4 As image:
-        Height: =320
-        Image: =
+        Height: =297
+        Image: =Camera3.Photo
         Width: =372
         X: =124
-        Y: =473
+        Y: =496
         ZIndex: =9
 
     Icon7 As icon.ChevronRight:

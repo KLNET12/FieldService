@@ -14,103 +14,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.Camera"
+                  "fullyQualifiedName": "Camera.Image4.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.Camera",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 15,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "'Toggle Camera'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Camera",
-                "module": "Camera",
-                "type": "Camera.'Camera Capture'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Toggle Camera"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.Camera"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.Camera",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Camera",
-                "module": "Camera",
-                "type": "Camera.'Camera Capture'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect",
+                  "fullyQualifiedName": "Camera.Image4.Image",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 7,
-                  "charOffset": 25,
+                  "charOffset": 0,
                   "snippet": {
                     "text": "Camera3"
                   }
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "Image",
                 "module": "Camera",
-                "type": "Camera.'Camera Capture'"
+                "type": "Camera.Image4"
               }
             }
           ],
@@ -131,26 +54,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect"
+                  "fullyQualifiedName": "Camera.Image4.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect",
+                  "fullyQualifiedName": "Camera.Image4.Image",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 32,
+                  "charOffset": 7,
                   "snippet": {
                     "text": ".Photo"
                   }
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "Image",
                 "module": "Camera",
-                "type": "Camera.'Camera Capture'"
+                "type": "Camera.Image4"
               }
             }
           ],
@@ -168,40 +91,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect"
+                  "fullyQualifiedName": "Camera.TextInput3.Default"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.OnSelect",
+                  "fullyQualifiedName": "Camera.TextInput3.Default",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 39,
-                  "charOffset": 0,
+                  "charLength": 13,
+                  "charOffset": 30,
                   "snippet": {
-                    "text": "ClearCollect(CameraImage,Camera3.Photo)"
+                    "text": "PhotoDateTime"
                   }
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "Default",
                 "module": "Camera",
-                "type": "Camera.'Camera Capture'"
+                "type": "Camera.TextInput3"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ClearCollect"
+              "PhotoDateTime"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -242,7 +165,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -279,7 +202,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColonExpected",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -320,7 +243,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -361,7 +284,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -398,7 +321,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadToken",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -438,7 +361,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -559,7 +482,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -639,7 +562,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -3133,36 +3056,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.'Camera Capture'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.'Camera Capture'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Camera.TextInput3.AccessibleLabel"
                 }
               ],
@@ -3625,66 +3518,6 @@
                 "member": "TabIndex",
                 "module": "Screen1",
                 "type": "Screen1.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Gallery1.Icon12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Gallery1.Icon12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Gallery1.Icon12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Gallery1.Icon12.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Gallery1.Icon12.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen1",
-                "type": "Screen1.Gallery1.Icon12"
               }
             }
           ],
@@ -5263,20 +5096,6 @@
               }
             },
             {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrExpectedFound-Ex-Fnd",
               "messageStrings": {
                 "issue": {
@@ -5322,6 +5141,20 @@
                 "howToFix": [
                   "Remove or replace the unexpected characters."
                 ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
