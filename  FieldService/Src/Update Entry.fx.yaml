@@ -2,6 +2,7 @@
 
     Form3 As form:
         DataSource: ='Time Entries'
+        DefaultMode: =FormMode.New
         Height: =846
         Item: =Gallery1_1.Selected
         Width: =640
