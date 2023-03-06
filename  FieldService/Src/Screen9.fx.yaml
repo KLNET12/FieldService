@@ -111,7 +111,7 @@ Screen9 As screen:
     Customer As dropdown:
         Default: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account)).'Account Name'
         Height: =60
-        Items: =First(Filter(Accounts,Account =Gallery3.Selected.'Billing Account'.Account))
+        Items: =First(Filter(Accounts,Account =varWID))
         Size: =21
         Width: =458
         X: =182
@@ -745,7 +745,8 @@ Screen9 As screen:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
         OnSelect: |-
-            =Refresh(Invoices);
+            =If(varInvoice,Set(varInvoice,false), Set(varInvoice,true));
+            Refresh(Invoices);
             Refresh('Work Orders');
             Reset(Name);
             Reset(Customer);

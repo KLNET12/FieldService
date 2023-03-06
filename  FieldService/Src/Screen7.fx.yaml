@@ -6,7 +6,7 @@ Screen7 As screen:
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =972
-        Items: =Gallery1_2.Selected
+        Items: =If(varInvoice,First(Filter('Work Orders','WO Number'=varWorkId)), Gallery1.Selected.'Work Order')
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =972
@@ -28,7 +28,7 @@ Screen7 As screen:
             Layout: =Layout.Vertical
             OnSelect: |-
                 =Set(varInvoice,true);
-                Set(varInvoiceId, ThisItem.Invoice);
+                Set(varInvoiceId, GUID(ThisItem.Invoice));
                 Navigate(Screen9)
             ShowScrollbar: =false
             TemplatePadding: =0
@@ -136,6 +136,7 @@ Screen7 As screen:
             Height: =67
             OnSelect: |-
                 =Set(varInvoice,false);
+                Set(varWID,GUID(Gallery3.Selected.'Billing Account'.Account));
                 Navigate(Screen9)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -152,7 +153,7 @@ Screen7 As screen:
         FontWeight: =FontWeight.Bold
         Height: =97
         Size: =23
-        Text: ="Invoices for WorkOrder No."  & Gallery1_2.Selected.'Work Order Number'
+        Text: ="Invoices for WorkOrder No."  & If(varInvoice,First(Filter('Work Orders','WO Number'=varWorkId)).'Work Order Number', Gallery1.Selected.'Work Order'.'Work Order Number')
         Width: =640
         Y: =67
         ZIndex: =2
@@ -164,7 +165,7 @@ Screen7 As screen:
     Icon14 As icon.ChevronLeft:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
-        OnSelect: =If(varInvoice,Navigate(Screen1),Navigate(WorkOrder))
+        OnSelect: =If(!varInvoice,Navigate(Screen1),Navigate(WorkOrder))
         Y: =1
         ZIndex: =4
 
