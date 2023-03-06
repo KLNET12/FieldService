@@ -6,7 +6,8 @@ Camera As screen:
     Button8 As button:
         Height: =66
         OnSelect: |-
-            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true })
+            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
+            Set(varImage,false)
         Size: =24
         Text: ="Upload Image"
         Width: =640
@@ -18,7 +19,8 @@ Camera As screen:
         Icon: =Icon.Camera
         OnSelect: |-
             =Set(varTakenPhoto, Camera1.Stream);
-            Set(varCam,1)
+            Set(varCam,1);
+            Set(varImage,true)
         Width: =84
         X: =198
         Y: =349
@@ -27,6 +29,7 @@ Camera As screen:
     Image4 As image:
         Height: =222
         Image: =varTakenPhoto
+        Visible: =varImage
         Width: =308
         X: =332
         Y: =127
@@ -34,7 +37,9 @@ Camera As screen:
 
     Icon12 As icon.Reload:
         Icon: =Icon.Reload
-        OnSelect: =Set(varCam,0)
+        OnSelect: |-
+            =Set(varCam,0);
+            Set(varImage,false)
         X: =541
         Y: =364
         ZIndex: =4
@@ -50,10 +55,10 @@ Camera As screen:
     Label11 As label:
         Height: =55
         Size: =21
-        Text: ="Ret"
-        Width: =153
-        X: =388
-        Y: =373
+        Text: ="Reset"
+        Width: =118
+        X: =405
+        Y: =368
         ZIndex: =6
 
     Label11_1 As label:
@@ -95,6 +100,7 @@ Camera As screen:
         ZIndex: =10
 
     Component1_13 As Component1:
+        Height: =64
         ZIndex: =11
 
     Icon7 As icon.ChevronLeft:
