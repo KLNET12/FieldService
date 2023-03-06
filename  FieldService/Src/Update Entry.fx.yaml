@@ -884,7 +884,7 @@
         Fill: =RGBA(187, 221, 140, 1)
         Height: =72
         Size: =21
-        Text: ="Create New Bookings"
+        Text: ="Update Entry"
         Width: =640
         Y: =64
         ZIndex: =3
@@ -897,7 +897,7 @@
     Button12 As button:
         Height: =70
         OnSelect: |-
-            =Patch('Time Entries',Defaults('Time Entries'),{Start:DateValue5.SelectedDate,End:DateValue6.SelectedDate,Description:DataCardValue12.Text,'External Comments':DataCardValue13.Text,Date:DateValue7.SelectedDate,Type:DataCardValue5.Selected.Value})
+            =Patch('Time Entries',First(Filter('Time Entries','Time Entry'=GUID(guidvar))),{Description:DataCardValue12.Text,'External Comments':DataCardValue13.Text})
         Size: =24
         Text: ="Save"
         Width: =280
