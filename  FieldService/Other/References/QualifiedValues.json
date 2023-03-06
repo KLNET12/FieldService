@@ -211,6 +211,14 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
+    },
+    {
+      "Kind": "default.cds_msdyn_workordertype_forms",
+      "Namespace": "Work Order Types (Forms)",
+      "Values": {
+        "Information": "65d7528f-b2ff-450a-9b5d-a2e46464ce04",
+        "Work Order Type Quick Create FS 5x5": "77cd0dec-da2f-4914-a57c-346271a5b720"
+      }
     }
   ]
 }
