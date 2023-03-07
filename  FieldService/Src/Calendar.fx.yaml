@@ -29,12 +29,39 @@ Calendar As screen:
         TemplatePadding: =0
         TemplateSize: =Min(96, Self.Height - 60)
         WrapCount: =7
-        Y: =196
+        Y: =175
         ZIndex: =1
 
         Title5 As label:
             BorderColor: =RGBA(102, 102, 102, 1)
             BorderThickness: =0.5
+            Color: |-
+                =If(
+                    Month(ThisItem.Value) <> Month(varCurrentDate),
+                    ColorFade(
+                        Self.Fill,
+                        -15%
+                    ),
+                    RGBA(0,
+                         0,
+                         0,
+                         1
+                    )
+                )
+            Fill: |-
+                =If(
+                    ThisItem.Value = Today(),
+                    ColorFade(
+                        RGBA(
+                            58,
+                            150,
+                            221,
+                            1
+                        ),
+                        80%
+                    ),
+                    White
+                )
             Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             PaddingBottom: =0
