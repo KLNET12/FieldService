@@ -890,7 +890,7 @@
 
     Icon5_2 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen4)
+        OnSelect: =Navigate(TimeEntrydetails)
         ZIndex: =4
 
     Button12 As button:

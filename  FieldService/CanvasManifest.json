@@ -121,7 +121,7 @@
     "Screen1",
     "Screen2",
     "DashBoard",
-    "Screen4",
+    "TimeEntrydetails",
     "WorkOrder",
     "Screen6",
     "Signature",
@@ -130,6 +130,7 @@
     "Map Screen",
     "Screen7",
     "Screen9",
-    "Camera"
+    "Camera",
+    "ServicesScreen"
   ]
 }

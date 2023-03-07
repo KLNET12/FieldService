@@ -1097,7 +1097,7 @@ Screen2 As screen:
         ZIndex: =4
 
     Button10 As button:
-        Height: =70
+        Height: =58
         OnSelect: =Navigate('Map Screen')
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -1105,12 +1105,12 @@ Screen2 As screen:
         RadiusTopRight: =0
         Size: =18
         Text: ="Work Location"
-        Width: =317
+        Width: =205
         Y: =77
         ZIndex: =5
 
     Button13 As button:
-        Height: =70
+        Height: =58
         OnSelect: =Navigate(Camera)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -1118,8 +1118,22 @@ Screen2 As screen:
         RadiusTopRight: =0
         Size: =18
         Text: ="Camera & Signature"
-        Width: =323
-        X: =317
+        Width: =249
+        X: =205
         Y: =77
         ZIndex: =6
+
+    services As button:
+        Height: =58
+        OnSelect: =Navigate(ServicesScreen)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =18
+        Text: ="Services"
+        Width: =186
+        X: =454
+        Y: =77
+        ZIndex: =7
 

@@ -171,6 +171,10 @@
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "msdyn_linestatus",
         "OptionSetReferenceEntityName": "Work Order Products"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "msdyn_linestatus",
+        "OptionSetReferenceEntityName": "Work Order Services"
       }
     },
     "OptionSetTypeKey": "PicklistType",
