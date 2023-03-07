@@ -2,7 +2,7 @@ Calendar As screen:
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Fill: =RGBA(0, 13, 75, 1)
-        Height: =126
+        Height: =125
         Items: =Calendar.WeekdaysShort()
         Layout: =Layout.Vertical
         TemplatePadding: =0
@@ -48,7 +48,7 @@ Calendar As screen:
                          1
                     )
                 )
-            Fill: |-
+            Fill: |
                 =If(
                     ThisItem.Value = Today(),
                     ColorFade(
