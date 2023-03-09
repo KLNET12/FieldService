@@ -36,6 +36,13 @@
       }
     },
     {
+      "Kind": "default.cds_msdyn_agreementbookingdate_forms",
+      "Namespace": "Agreement Booking Dates (Forms)",
+      "Values": {
+        "Information": "b81cbfe1-a9c4-48fc-84aa-95c4184f7d83"
+      }
+    },
+    {
       "Kind": "default.cds_bookableresourcebooking_forms",
       "Namespace": "Bookable Resource Bookings (Forms)",
       "Values": {
@@ -189,6 +196,14 @@
       }
     },
     {
+      "Kind": "default.cds_msdyn_workorderservice_forms",
+      "Namespace": "Work Order Services (Forms)",
+      "Values": {
+        "Information": "4155aff4-aefb-412c-83d4-3b382aa73268",
+        "Work Order Service - Mobile": "487fd9b5-37a6-49d8-bd13-ad8d6e31075a"
+      }
+    },
+    {
       "Kind": "default.cds_msdyn_workordertype_forms",
       "Namespace": "Work Order Types (Forms)",
       "Values": {
@@ -211,14 +226,6 @@
       }
     },
     {
-      "Kind": "default.cds_msdyn_workorderservice_forms",
-      "Namespace": "Work Order Services (Forms)",
-      "Values": {
-        "Information": "4155aff4-aefb-412c-83d4-3b382aa73268",
-        "Work Order Service - Mobile": "487fd9b5-37a6-49d8-bd13-ad8d6e31075a"
-      }
-    },
-    {
       "Kind": "default.cds_provisionlanguageforuser_forms",
       "Namespace": "ProvisionLanguageForUser (Forms)",
       "Values": {}
@@ -227,13 +234,6 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
-    },
-    {
-      "Kind": "default.cds_msdyn_agreementbookingdate_forms",
-      "Namespace": "Agreement Booking Dates (Forms)",
-      "Values": {
-        "Information": "b81cbfe1-a9c4-48fc-84aa-95c4184f7d83"
-      }
     }
   ]
 }

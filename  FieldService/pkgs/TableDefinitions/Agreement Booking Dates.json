@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "Agreement Booking Dates",
   "InstanceUrl": "https://org06cf92c8.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "msdyn_agreementbookingdates",
-    "logicalName": "msdyn_agreementbookingdate"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org06cf92c8.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('msdyn_agreementbookingdate')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
