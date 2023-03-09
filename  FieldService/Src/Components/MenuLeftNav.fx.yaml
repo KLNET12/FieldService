@@ -1,5 +1,6 @@
 MenuLeftNav As CanvasComponent:
     ExpandMenu: =false
+    ExpandMenuByDefault: =true
     Fill: =RGBA(0, 0, 0, 0)
     HamburgerMenuColor: =Color.Blue
     Height: =MenuLeftNav.MenuHeight
@@ -76,7 +77,9 @@ MenuLeftNav As CanvasComponent:
             Fill: =Color.Transparent
             Height: =lblMenu_1.Height+lblMenu_1.Y
             HoverFill: =Color.Transparent
-            OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )
+            OnSelect: |-
+                =Set(showMenu,!showMenu);
+                Navigate(ThisItem.MenuScreenNavigate)
             PressedFill: =Color.Transparent
             Size: =24
             Text: =""
@@ -131,7 +134,9 @@ MenuLeftNav As CanvasComponent:
                 Fill: =Color.Transparent
                 Height: =lblSubMenu_1.Height+lblSubMenu_1.Y
                 HoverFill: =Color.Transparent
-                OnSelect: =Navigate(ThisItem.MenuScreenNavigate,ScreenTransition.Cover )
+                OnSelect: |-
+                    =Set(showMenu,!showMenu);
+                    Navigate(ThisItem.MenuScreenNavigate )
                 PressedFill: =Color.Transparent
                 Size: =24
                 Text: =""

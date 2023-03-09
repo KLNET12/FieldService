@@ -168,9 +168,12 @@ TimeEntrydetails As screen:
         ZIndex: =6
 
     MenuLeftNav_3 As MenuLeftNav:
+        ExpandMenu: =true
+        ExpandMenuByDefault: =false
         Height: =MenuLeftNav_3.MenuHeight
         MenuWidth: =If(showMenu, MenuLeftNav_3.SetMenuWidth,icoHamburger_1.Width)
         OnReset: =Set(showMenu, MenuLeftNav_3.ExpandMenu)
+        Visible: =true
         Width: =MenuLeftNav_3.MenuWidth
         Y: =10
         ZIndex: =7

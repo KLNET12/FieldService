@@ -1653,6 +1653,14 @@
           "InvariantPropertyName": "MenuHeight",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ExpandMenuByDefault",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -1712,6 +1720,11 @@
           "Category": "Data",
           "PropertyName": "MenuHeight",
           "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ExpandMenuByDefault",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

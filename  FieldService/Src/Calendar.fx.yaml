@@ -90,13 +90,6 @@ Calendar As screen:
                 Width: =91.42857142857143
                 ZIndex: =1
 
-    MenuLeftNav_5 As MenuLeftNav:
-        Height: =MenuLeftNav_5.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_5.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_5.ExpandMenu)
-        Width: =MenuLeftNav_5.MenuWidth
-        ZIndex: =2
-
     Label18 As label:
         Align: =Align.Center
         Color: =RGBA(241, 244, 249, 1)
@@ -105,6 +98,13 @@ Calendar As screen:
         Size: =21
         Text: =Text(varCurrentDate, "mmmm yyyy")
         Width: =640
+        ZIndex: =2
+
+    MenuLeftNav_5 As MenuLeftNav:
+        Height: =MenuLeftNav_5.MenuHeight
+        MenuWidth: =If(showMenu, MenuLeftNav_5.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_5.ExpandMenu)
+        Width: =MenuLeftNav_5.MenuWidth
         ZIndex: =2
 
     Label19 As label:

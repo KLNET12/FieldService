@@ -73,6 +73,7 @@ DashBoard As screen:
         ZIndex: =8
 
     MenuLeftNav_2 As MenuLeftNav:
+        ExpandMenuByDefault: =false
         Height: =MenuLeftNav_2.MenuHeight
         Width: =MenuLeftNav_2.MenuWidth
         Y: =10
