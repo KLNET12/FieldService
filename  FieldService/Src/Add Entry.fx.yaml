@@ -22,9 +22,9 @@
     Button12_1 As button:
         Height: =70
         OnSelect: |-
-            =SubmitForm(Form4);
+            =If(Connection.Connected,Collect(CollEntry,{BookableResource:DataCardValue18.Selected.Name,WorkOrder:DataCardValue26.Selected.'Work Order Number',Booking:DataCardValue19.Selected.Name,Type:DataCardValue15.Selected.Value,EntryStatus:DataCardValue17.Selected.Value,BookingStatus:DataCardValue20.Selected.Name,Start:DateValue4.SelectedDate,End:DateValue9.SelectedDate,Date:DateValue10.SelectedDate,Duration:DataCardValue3.Text,Description:DataCardValue24.Text,ExternalComments:DataCardValue25.Text});SaveData(CollEntry,"OfflineCollEntry"),SubmitForm(Form4);
             NewForm(Form4);
-            Notify("Entry Created",NotificationType.Success)
+            Notify("Entry Created",NotificationType.Success))
         Size: =24
         Text: ="Create Entry"
         Width: =640

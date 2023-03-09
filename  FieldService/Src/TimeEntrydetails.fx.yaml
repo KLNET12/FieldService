@@ -1,4 +1,22 @@
 TimeEntrydetails As screen:
+    OnVisible: |-
+        =If(
+            Connection.Connected,
+            ClearCollect(
+                CollEntryData,
+                'Time Entries'
+            );
+            SaveData(
+                CollEntryData,
+                "cachedFile"
+            );
+            ,
+            Clear(CollEntryData);
+            LoadData(
+                CollEntryData,
+                "cachedFile"
+            )
+        )
 
     "Gallery1_1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         DelayItemLoading: =true
@@ -8,6 +26,7 @@ TimeEntrydetails As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =4
         TemplateSize: =415
+        Visible: =If(Connection.Connected,true,false)
         Y: =213
         ZIndex: =1
 
@@ -164,4 +183,135 @@ TimeEntrydetails As screen:
         X: =576
         Y: =76
         ZIndex: =6
+
+    "Gallery1_4 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        DelayItemLoading: =true
+        Height: =923
+        Items: =CollEntry
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =415
+        Visible: =false
+        Y: =213
+        ZIndex: =7
+
+        Title1_4 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                =Text("Workorder Number:  ") & ThisItem.WorkOrder
+            VerticalAlign: =VerticalAlign.Top
+            Width: =508
+            Y: =9
+            ZIndex: =2
+
+        Body1_8 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("Start Date & Time :  "& ThisItem.Start)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =45
+            ZIndex: =4
+
+        Body1_9 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: |-
+                =Text("End Date & Time :  "& ThisItem.End)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 32
+            Y: =83
+            ZIndex: =5
+
+        Rectangle1_4 As rectangle:
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =632
+            Y: =406
+            ZIndex: =6
+
+        Label2_18 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Duration :  " & ThisItem.Duration & " mins")
+            Width: =264
+            Y: =127
+            ZIndex: =7
+
+        Label2_19 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Bookable Resource :  " & ThisItem.BookableResource)
+            Width: =528
+            Y: =161
+            ZIndex: =8
+
+        Label2_21 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Entry Status :  " & ThisItem.EntryStatus)
+            Width: =318
+            Y: =247
+            ZIndex: =9
+
+        Label2_20 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Type :  " & ThisItem.Type)
+            Width: =318
+            X: =1
+            Y: =209
+            ZIndex: =10
+
+        Icon9_1 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: =
+            X: =554
+            Y: =217
+            ZIndex: =11
+
+        Label2_22 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Description :  " & ThisItem.Description)
+            Width: =528
+            X: =1
+            Y: =289
+            ZIndex: =12
+
+        Label2_23 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: |-
+                =Text(" Booking Status :  " & ThisItem.BookingStatus)
+            Width: =528
+            X: =1
+            Y: =330
+            ZIndex: =13
 
