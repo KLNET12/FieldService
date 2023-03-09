@@ -165,7 +165,7 @@ Screen7 As screen:
     Icon14 As icon.ChevronLeft:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
-        OnSelect: =If(!varNav,Navigate(Screen1),Navigate(WorkOrder))
+        OnSelect: =If(!varNav,Navigate('Booking Screen'),Navigate(WorkOrder))
         Y: =1
         ZIndex: =4
 

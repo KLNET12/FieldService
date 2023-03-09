@@ -6,7 +6,7 @@ DashBoard As screen:
         BorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(141, 198, 63, 1)
         Height: =300
-        OnSelect: =Navigate(Screen1)
+        OnSelect: =Navigate('Booking Screen')
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -74,8 +74,6 @@ DashBoard As screen:
 
     MenuLeftNav_2 As MenuLeftNav:
         Height: =MenuLeftNav_2.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_2.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_2.ExpandMenu)
         Width: =MenuLeftNav_2.MenuWidth
         Y: =10
         ZIndex: =9

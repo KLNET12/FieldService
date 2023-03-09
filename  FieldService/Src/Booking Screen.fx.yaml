@@ -1,4 +1,4 @@
-Screen1 As screen:
+"'Booking Screen' As screen":
     OnVisible: =Refresh('Bookable Resource Bookings')
 
     Label1 As label:
@@ -161,6 +161,7 @@ Screen1 As screen:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(DashBoard)
         Width: =80
+        X: =560
         ZIndex: =5
 
     Icon16 As icon.Reload:
@@ -169,4 +170,10 @@ Screen1 As screen:
         X: =576
         Y: =70
         ZIndex: =6
+
+    MenuLeftNav_1 As MenuLeftNav:
+        Height: =MenuLeftNav_1.MenuHeight
+        Width: =MenuLeftNav_1.MenuWidth
+        Y: =10
+        ZIndex: =7
 

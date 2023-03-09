@@ -154,7 +154,7 @@
 
     Label10 As label:
         Align: =Align.Center
-        Fill: =RGBA(255, 255, 212, 0.91)
+        Fill: =RGBA(255, 255, 219, 1)
         Height: =1041
         OnSelect: =
         Size: =21

@@ -8,6 +8,7 @@
         Size: =21
         Text: ="Enter your username"
         Width: =640
+        X: =2
         Y: =104
         ZIndex: =2
 
@@ -19,6 +20,7 @@
         Size: =21
         Text: ="Enter the Password"
         Width: =640
+        X: =2
         Y: =251
         ZIndex: =3
 
@@ -29,6 +31,7 @@
         Mode: =TextMode.Password
         Size: =21
         Width: =640
+        X: =2
         Y: =321
         ZIndex: =4
 
@@ -41,6 +44,7 @@
         Size: =24
         Text: ="Login"
         Width: =640
+        X: =2
         Y: =446
         ZIndex: =5
 
@@ -49,17 +53,11 @@
         Height: =77
         Size: =21
         Width: =640
+        X: =2
         Y: =174
         ZIndex: =6
 
     Component1_1 As Component1:
         Height: =60
         ZIndex: =7
-
-    MenuLeftNav_1 As MenuLeftNav:
-        Height: =MenuLeftNav_1.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_1.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_1.ExpandMenu)
-        Width: =MenuLeftNav_1.MenuWidth
-        ZIndex: =8
 

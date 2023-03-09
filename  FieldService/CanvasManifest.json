@@ -118,13 +118,11 @@
   },
   "ScreenOrder": [
     "Login Screen",
-    "Screen1",
+    "Booking Screen",
     "Screen2",
     "DashBoard",
     "TimeEntrydetails",
     "WorkOrder",
-    "Screen6",
-    "Signature",
     "Add Entry",
     "Update Entry",
     "Map Screen",
@@ -132,6 +130,8 @@
     "Screen9",
     "Camera",
     "ServicesScreen",
-    "Calendar"
+    "Calendar",
+    "Account",
+    "Contact"
   ]
 }

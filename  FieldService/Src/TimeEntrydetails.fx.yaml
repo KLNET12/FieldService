@@ -157,7 +157,7 @@ TimeEntrydetails As screen:
     Icon4 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(DashBoard)
-        Y: =3
+        X: =576
         ZIndex: =5
 
     Icon8 As icon.Add:
@@ -166,4 +166,12 @@ TimeEntrydetails As screen:
         X: =576
         Y: =76
         ZIndex: =6
+
+    MenuLeftNav_3 As MenuLeftNav:
+        Height: =MenuLeftNav_3.MenuHeight
+        MenuWidth: =If(showMenu, MenuLeftNav_3.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_3.ExpandMenu)
+        Width: =MenuLeftNav_3.MenuWidth
+        Y: =10
+        ZIndex: =7
 

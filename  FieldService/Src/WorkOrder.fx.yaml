@@ -157,5 +157,14 @@ WorkOrder As screen:
     Icon6 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(DashBoard)
+        X: =576
         ZIndex: =5
+
+    MenuLeftNav_4 As MenuLeftNav:
+        Height: =MenuLeftNav_4.MenuHeight
+        MenuWidth: =If(showMenu, MenuLeftNav_4.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_4.ExpandMenu)
+        Width: =MenuLeftNav_4.MenuWidth
+        Y: =10
+        ZIndex: =6
 

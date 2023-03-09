@@ -5,7 +5,7 @@ MenuLeftNav As CanvasComponent:
     Height: =MenuLeftNav.MenuHeight
     MenuBkgColor: =RGBA(220,220,220,1)
     MenuColor: =Color.Purple
-    MenuHeight: =If(showMenu, 500,icoHamburger_1.Height)
+    MenuHeight: =If(showMenu, 1150,icoHamburger_1.Height)
     MenuItems: =colMenu
     MenuWidth: =If(showMenu, MenuLeftNav.SetMenuWidth,icoHamburger_1.Width)
     OnReset: =Set(showMenu, MenuLeftNav.ExpandMenu)
@@ -56,19 +56,19 @@ MenuLeftNav As CanvasComponent:
             PaddingRight: =10
             PaddingTop: =10
             Width: =62
-            X: =6
+            Y: =2
             ZIndex: =2
 
         lblMenu_1 As label:
             AutoHeight: =true
             Color: =MenuLeftNav.MenuColor
-            FontWeight: =FontWeight.Lighter
+            FontWeight: =FontWeight.Semibold
             Height: =41
             OnSelect: =Select(Parent)
-            Size: =14
+            Size: =18
             Text: =ThisItem.MenuLabel
             Width: =Parent.TemplateWidth-icoMenu_1.Width-rectShape_1.Width
-            X: =68
+            X: =55
             Y: =7
             ZIndex: =3
 
@@ -105,26 +105,26 @@ MenuLeftNav As CanvasComponent:
 
             icoSubMenu_1 As icon.Add:
                 Color: =MenuLeftNav.MenuColor
-                Height: =48
+                Height: =45
                 Icon: =ThisItem.MenuIcon
                 OnSelect: =Select(Parent)
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
                 PaddingTop: =10
-                Width: =29
+                Width: =45
+                Y: =2
                 ZIndex: =2
 
             lblSubMenu_1 As label:
                 Color: =MenuLeftNav.MenuColor
-                FontWeight: =FontWeight.Lighter
                 Height: =27
                 OnSelect: =Select(Parent)
-                Size: =14
+                Size: =15
                 Text: =ThisItem.MenuLabel
                 Width: =Parent.TemplateWidth-icoSubMenu_1.Width-rectShapeSubMenu_1.Width
-                X: =29
-                Y: =7
+                X: =40
+                Y: =10
                 ZIndex: =3
 
             btnClickSubMenu_1 As button:
