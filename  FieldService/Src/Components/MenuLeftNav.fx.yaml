@@ -6,7 +6,7 @@ MenuLeftNav As CanvasComponent:
     MenuBkgColor: =RGBA(220,220,220,1)
     MenuColor: =Color.Purple
     MenuHeight: =If(showMenu, 500,icoHamburger_1.Height)
-    MenuItems: =colMe
+    MenuItems: =colMenu
     MenuWidth: =If(showMenu, MenuLeftNav.SetMenuWidth,icoHamburger_1.Width)
     OnReset: =Set(showMenu, MenuLeftNav.ExpandMenu)
     SetMenuWidth: =300

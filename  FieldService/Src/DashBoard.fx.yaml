@@ -72,3 +72,11 @@ DashBoard As screen:
         X: =519
         ZIndex: =8
 
+    MenuLeftNav_2 As MenuLeftNav:
+        Height: =MenuLeftNav_2.MenuHeight
+        MenuWidth: =If(showMenu, MenuLeftNav_2.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_2.ExpandMenu)
+        Width: =MenuLeftNav_2.MenuWidth
+        Y: =10
+        ZIndex: =9
+

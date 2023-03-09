@@ -3375,7 +3375,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638139425103108291",
+    "LastModifiedTimestamp": "638139425577655907",
     "Name": "MenuLeftNav",
     "Rules": [
       {
@@ -3392,7 +3392,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "colMe",
+        "InvariantScript": "colMenu",
         "Property": "MenuItems",
         "RuleProviderType": "System"
       },
@@ -3562,7 +3562,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638139425103108291",
+  "LastModifiedTimestamp": "638139425577655907",
   "Name": "da5e2787a3bc418aaed9652593f49a28",
   "OverridableProperties": {},
   "TemplateOriginalName": "58907e171c654732b8b5aaaa44f0dc8c",
