@@ -40,7 +40,7 @@
         Height: =77
         OnSelect: |-
             =If(CountRows(Filter('Bookable Resources',Username =TextInput2.Text)) =1 && CountRows(Filter('Bookable Resources',Password =TextInput1.Text))=1, Navigate(DashBoard), Notify("Incorrect Details, Please Try again ",NotificationType.Error));
-            Set(varpassword,TextInput2.Text)
+            Set(varpassword,TextInput2.Text);Set(varusername,TextInput1.Text)
         Size: =24
         Text: ="Login"
         Width: =640

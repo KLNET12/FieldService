@@ -59,7 +59,7 @@ Calendar As screen:
                     ),
                     Color.AliceBlue
                 )
-            Height: =Parent.TemplateHeight
+            Height: =96
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -73,10 +73,10 @@ Calendar As screen:
 
         "Gallery13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
             Height: =46
-            Items: =Filter('Bookable Resource Bookings','Created On'=3/9/2023)
+            Items: =Filter('Bookable Resource Bookings',ThisItem.Value in Text('Start Time'))
             Layout: =Layout.Vertical
             TemplatePadding: =0
-            TemplateSize: =Min(96, Self.Height - 60)
+            TemplateSize: =40
             Width: =91.42857142857143
             Y: =50
             ZIndex: =1
@@ -84,7 +84,7 @@ Calendar As screen:
             Button22 As button:
                 Align: =Align.Justify
                 Height: =36
-                OnSelect: =Select(Parent)
+                OnSelect: =Navigate('Booking Screen')
                 Size: =24
                 Text: ="B"
                 Width: =91.42857142857143
@@ -102,8 +102,6 @@ Calendar As screen:
 
     MenuLeftNav_5 As MenuLeftNav:
         Height: =MenuLeftNav_5.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_5.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_5.ExpandMenu)
         Width: =MenuLeftNav_5.MenuWidth
         ZIndex: =2
 
@@ -134,7 +132,18 @@ Calendar As screen:
         Size: =24
         Text: ="Next"
         Width: =112
-        X: =528
+        X: =112
         Y: =49
         ZIndex: =5
+
+    Button16 As button:
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =73
+        OnSelect: =Navigate('Booking Screen')
+        Size: =24
+        Text: ="Booking"
+        Width: =167
+        X: =472
+        Y: =49
+        ZIndex: =6
 

@@ -162,8 +162,6 @@ WorkOrder As screen:
 
     MenuLeftNav_4 As MenuLeftNav:
         Height: =MenuLeftNav_4.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_4.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_4.ExpandMenu)
         Width: =MenuLeftNav_4.MenuWidth
         Y: =10
         ZIndex: =6
