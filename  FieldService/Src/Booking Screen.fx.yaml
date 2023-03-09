@@ -17,7 +17,7 @@
         Items: =If(Dropdown3.Selected.Value = "My Active Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Active Bookable Resource Bookings'),If(Dropdown3.Selected.Value = "My Inprogress Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username= TextInput2.Text), 'Bookable Resource Bookings (Views)'.'In Progress Booking'), If(Dropdown3.Selected.Value = "My Completed Bookings" ,Filter(Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text), 'Bookable Resource Bookings (Views)'.'Completed Booking'),Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text))))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate(Screen2)
+        OnSelect: =Navigate(UpdateBooking)
         TemplatePadding: =4
         TemplateSize: =326
         Y: =213

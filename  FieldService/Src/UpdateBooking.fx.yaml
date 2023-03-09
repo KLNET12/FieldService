@@ -1,4 +1,4 @@
-Screen2 As screen:
+UpdateBooking As screen:
 
     Form1 As form:
         DataSource: ='Bookable Resource Bookings'

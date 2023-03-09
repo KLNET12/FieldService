@@ -148,7 +148,7 @@
 
     Icon17 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen2)
+        OnSelect: =Navigate(UpdateBooking)
         Y: =3
         ZIndex: =4
 

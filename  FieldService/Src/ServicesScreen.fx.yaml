@@ -2,7 +2,7 @@ ServicesScreen As screen:
 
     "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =987
-        Items: =Filter('Work Order Services', 'Work Order Services (Views)'.'Active Work Order Services')
+        Items: ='Work Order Service Tasks'
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =232
@@ -10,7 +10,7 @@ ServicesScreen As screen:
         ZIndex: =1
 
         Title4 As label:
-            Height: =56
+            Height: =87
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -19,7 +19,7 @@ ServicesScreen As screen:
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
             Width: =543
-            X: =48
+            X: =97
             Y: =16
             ZIndex: =1
 
@@ -66,9 +66,18 @@ ServicesScreen As screen:
             Text: |-
                 ="Work Order Number:"
             Width: =296
-            X: =79
+            X: =84
             Y: =118
             ZIndex: =6
+
+        Checkbox1 As checkbox:
+            Default: =If(ThisItem.'% Complete'=100,true,false)
+            Height: =85
+            Size: =21
+            Text: =ThisItem.'% Complete'
+            Width: =70
+            Y: =61
+            ZIndex: =7
 
     Label1_1 As label:
         Align: =Align.Center
@@ -88,7 +97,7 @@ ServicesScreen As screen:
     Icon3_1 As icon.ArrowLeft:
         Height: =70
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen2)
+        OnSelect: =Navigate(UpdateBooking)
         Width: =80
         ZIndex: =4
 

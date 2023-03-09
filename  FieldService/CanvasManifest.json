@@ -119,7 +119,7 @@
   "ScreenOrder": [
     "Login Screen",
     "Booking Screen",
-    "Screen2",
+    "UpdateBooking",
     "DashBoard",
     "TimeEntrydetails",
     "WorkOrder",

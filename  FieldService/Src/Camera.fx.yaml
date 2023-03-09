@@ -107,6 +107,6 @@ Camera As screen:
 
     Icon7 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate(Screen2)
+        OnSelect: =Navigate(UpdateBooking)
         ZIndex: =12
 
