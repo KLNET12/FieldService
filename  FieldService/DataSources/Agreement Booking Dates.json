@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "msdyn_agreementbookingdate",
+    "MaxGetRowsCount": 500,
     "Name": "Agreement Booking Dates",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
