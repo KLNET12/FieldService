@@ -38,7 +38,7 @@ WorkOrder As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =508
             Y: =9
-            ZIndex: =2
+            ZIndex: =1
 
         Body1_4 As label:
             Height: =38
@@ -52,7 +52,7 @@ WorkOrder As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 32
             Y: =45
-            ZIndex: =4
+            ZIndex: =2
 
         Body1_5 As label:
             Height: =38
@@ -66,14 +66,14 @@ WorkOrder As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 32
             Y: =90
-            ZIndex: =5
+            ZIndex: =3
 
         Rectangle1_2 As rectangle:
             Height: =2
             OnSelect: =Select(Parent)
             Width: =632
             Y: =406
-            ZIndex: =6
+            ZIndex: =4
 
         Label2_6 As label:
             Height: =38
@@ -83,7 +83,7 @@ WorkOrder As screen:
                 =Text(" Billing Account:  " & ThisItem.'Billing Account'.'Account Name')
             Width: =632
             Y: =142
-            ZIndex: =7
+            ZIndex: =5
 
         Label2_7 As label:
             AutoHeight: =true
@@ -94,7 +94,7 @@ WorkOrder As screen:
                 =Text(" Work Order Summary :  " & ThisItem.'Work Order Summary')
             Width: =632
             Y: =235
-            ZIndex: =8
+            ZIndex: =6
 
         Label2_8 As label:
             OnSelect: =Select(Parent)
@@ -103,7 +103,7 @@ WorkOrder As screen:
                 =Text(" System Status :  " & ThisItem.'System Status')
             Width: =573
             Y: =190
-            ZIndex: =9
+            ZIndex: =7
 
         Label2_14 As label:
             Height: =38
@@ -113,7 +113,7 @@ WorkOrder As screen:
                 =Text(" Work Order Type:  " & ThisItem.'Work Order Type'.Name)
             Width: =632
             Y: =287
-            ZIndex: =10
+            ZIndex: =8
 
         Label2_15 As label:
             Height: =38
@@ -123,7 +123,7 @@ WorkOrder As screen:
                 =Text(" Price List:  " & ThisItem.'Price List'.Name)
             Width: =632
             Y: =338
-            ZIndex: =11
+            ZIndex: =9
 
         Button14 As button:
             Height: =57
@@ -138,7 +138,7 @@ WorkOrder As screen:
             Width: =140
             X: =492
             Y: =13
-            ZIndex: =12
+            ZIndex: =10
 
     Component1_6 As Component1:
         Height: =70

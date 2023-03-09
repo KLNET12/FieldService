@@ -227,6 +227,13 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
+    },
+    {
+      "Kind": "default.cds_msdyn_agreementbookingdate_forms",
+      "Namespace": "Agreement Booking Dates (Forms)",
+      "Values": {
+        "Information": "b81cbfe1-a9c4-48fc-84aa-95c4184f7d83"
+      }
     }
   ]
 }

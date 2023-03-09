@@ -1,18 +1,20 @@
 Calendar As screen:
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Fill: =RGBA(0, 13, 75, 1)
-        Height: =125
+        Fill: =Color.SkyBlue
+        Height: =76
         Items: =Calendar.WeekdaysShort()
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(96, Self.Height - 60)
+        TemplateSize: =71
         WrapCount: =7
-        Y: =49
+        Y: =124
         ZIndex: =1
 
         Title7 As label:
-            Height: =Self.Size * 1.8
+            Align: =Align.Center
+            Color: =Color.Red
+            Height: =70
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -20,16 +22,17 @@ Calendar As screen:
             PaddingTop: =0
             Text: =ThisItem.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
+            Width: =90
             ZIndex: =1
 
     "Gallery7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Height: =576
         Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(varCurrentDate))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(96, Self.Height - 60)
         WrapCount: =7
-        Y: =175
+        Y: =200
         ZIndex: =1
 
         Title5 As label:
@@ -40,14 +43,8 @@ Calendar As screen:
                     Month(ThisItem.Value) <> Month(varCurrentDate),
                     ColorFade(
                         Self.Fill,
-                        -15%
-                    ),
-                    RGBA(0,
-                         0,
-                         0,
-                         1
-                    )
-                )
+                        -15%),
+                   Color.Gray    )
             Fill: |
                 =If(
                     ThisItem.Value = Today(),
@@ -60,7 +57,7 @@ Calendar As screen:
                         ),
                         80%
                     ),
-                    White
+                    Color.AliceBlue
                 )
             Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
@@ -71,9 +68,28 @@ Calendar As screen:
             Text: =Day(ThisItem.Value)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth
-            X: =32
+            X: =0.4285714285714306
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
+
+        "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            Height: =96
+            Items: =Filter('Bookable Resource Bookings','Actual Arrival Time'=ThisItem.Value)
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(96, Self.Height - 60)
+            Width: =91.42857142857143
+            ZIndex: =2
+
+            Button20 As button:
+                Color: =RGBA(255, 0, 0, 1)
+                Fill: =RGBA(241, 244, 249, 1)
+                Height: =36
+                OnSelect: =Navigate(DashBoard)
+                Size: =24
+                Text: ="BD"
+                Width: =91.42857142857143
+                ZIndex: =1
 
     Label18 As label:
         Align: =Align.Center
@@ -84,4 +100,35 @@ Calendar As screen:
         Text: =Text(varCurrentDate, "mmmm yyyy")
         Width: =640
         ZIndex: =2
+
+    Label19 As label:
+        Align: =Align.Center
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =75
+        Size: =21
+        Text: ="Bookings"
+        Width: =640
+        Y: =49
+        ZIndex: =3
+
+    Button15 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =73
+        OnSelect: =Set(varCurrentDate,Date(Year(varCurrentDate),Month(varCurrentDate)-1,1))
+        Size: =24
+        Text: ="Prev"
+        Width: =112
+        Y: =49
+        ZIndex: =4
+
+    Button15_1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =73
+        OnSelect: =Set(varCurrentDate,Date(Year(varCurrentDate),Month(varCurrentDate)+1,1))
+        Size: =24
+        Text: ="Next"
+        Width: =112
+        X: =528
+        Y: =49
+        ZIndex: =5
 
