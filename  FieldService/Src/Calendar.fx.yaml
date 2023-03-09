@@ -68,26 +68,25 @@ Calendar As screen:
             Text: =Day(ThisItem.Value)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth
-            X: =0.4285714285714306
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        "Gallery11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-            Height: =96
-            Items: =Filter('Bookable Resource Bookings','Actual Arrival Time'=ThisItem.Value)
+        "Gallery13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            Height: =46
+            Items: =Filter('Bookable Resource Bookings','Created On'=3/9/2023)
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =Min(96, Self.Height - 60)
             Width: =91.42857142857143
-            ZIndex: =2
+            Y: =50
+            ZIndex: =1
 
-            Button20 As button:
-                Color: =RGBA(255, 0, 0, 1)
-                Fill: =RGBA(241, 244, 249, 1)
+            Button22 As button:
+                Align: =Align.Justify
                 Height: =36
-                OnSelect: =Navigate(DashBoard)
+                OnSelect: =Select(Parent)
                 Size: =24
-                Text: ="BD"
+                Text: ="B"
                 Width: =91.42857142857143
                 ZIndex: =1
 
