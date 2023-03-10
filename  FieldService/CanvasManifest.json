@@ -132,6 +132,8 @@
     "ServicesScreen",
     "Calendar",
     "Account",
-    "Contact"
+    "Contact",
+    "product",
+    "Activity"
   ]
 }
