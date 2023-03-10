@@ -67,7 +67,7 @@ Calendar As screen:
             PaddingTop: =0
             Text: =Day(ThisItem.Value)
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth
+            Width: =91
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
@@ -146,4 +146,13 @@ Calendar As screen:
         X: =472
         Y: =49
         ZIndex: =6
+
+    MenuLeftNav_8 As MenuLeftNav:
+        ExpandMenu: =true
+        ExpandMenuByDefault: =false
+        HamburgerMenuColor: =RGBA(255, 255, 0, 1)
+        Height: =MenuLeftNav_8.MenuHeight
+        Visible: =true
+        Width: =MenuLeftNav_8.MenuWidth
+        ZIndex: =7
 
