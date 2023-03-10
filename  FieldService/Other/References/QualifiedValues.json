@@ -226,6 +226,14 @@
       }
     },
     {
+      "Kind": "default.cds_msdyn_workorderservicetask_forms",
+      "Namespace": "Work Order Service Tasks (Forms)",
+      "Values": {
+        "Information": "12a5be6b-b565-4d80-a2bc-3d4f652a3d98",
+        "Work Order Service Task - Mobile": "06a480e2-69e6-4283-8aa5-9fa17c86671f"
+      }
+    },
+    {
       "Kind": "default.cds_provisionlanguageforuser_forms",
       "Namespace": "ProvisionLanguageForUser (Forms)",
       "Values": {}
@@ -234,14 +242,6 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
-    },
-    {
-      "Kind": "default.cds_msdyn_workorderservicetask_forms",
-      "Namespace": "Work Order Service Tasks (Forms)",
-      "Values": {
-        "Information": "12a5be6b-b565-4d80-a2bc-3d4f652a3d98",
-        "Work Order Service Task - Mobile": "06a480e2-69e6-4283-8aa5-9fa17c86671f"
-      }
     }
   ]
 }

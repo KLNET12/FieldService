@@ -1,28 +1,60 @@
 Account As screen:
 
-    "Gallery9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Items: =Filter('Bookable Resource Bookings',varpassword =Resource.Password)
+    "Gallery9 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =989
+        Items: =Accounts
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(96, Self.Height - 60)
-        Y: =40
+        TemplateSize: =230
+        Y: =147
         ZIndex: =1
 
-        Title8 As label:
+        Title6 As label:
+            Align: =Align.Center
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Name
+            Text: =ThisItem.'Account Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =104
+            Y: =16
             ZIndex: =1
 
-        NextArrow5 As icon.ChevronRight:
+        Subtitle3 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Main Phone'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =239
+            X: =401
+            Y: =169
+            ZIndex: =2
+
+        Body2 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Email
+            VerticalAlign: =VerticalAlign.Top
+            Width: =478
+            Y: =166
+            ZIndex: =3
+
+        NextArrow4 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
@@ -36,12 +68,69 @@ Account As screen:
             Width: =60
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =2
+            ZIndex: =4
 
-        Separator18 As rectangle:
+        Separator17 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =3
+            ZIndex: =5
+
+        Label20 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Name:"
+            Width: =179
+            Y: =7
+            ZIndex: =6
+
+        Label20_1 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Email:"
+            Width: =179
+            Y: =100
+            ZIndex: =7
+
+        Label20_2 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Phone:"
+            Width: =179
+            X: =422
+            Y: =88
+            ZIndex: =8
+
+    Component1_7 As Component1:
+        Height: =70
+        ZIndex: =2
+
+    Label7_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =70
+        Size: =21
+        Text: ="Accounts"
+        Width: =640
+        Y: =64
+        ZIndex: =3
+
+    MenuLeftNav_6 As MenuLeftNav:
+        ExpandMenu: =true
+        ExpandMenuByDefault: =false
+        Height: =MenuLeftNav_6.MenuHeight
+        Visible: =true
+        Width: =MenuLeftNav_6.MenuWidth
+        ZIndex: =4
 

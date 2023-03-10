@@ -72,6 +72,7 @@ ServicesScreen As screen:
 
         Checkbox1 As checkbox:
             Default: =If(ThisItem.'% Complete'=100,true,false)
+            DisplayMode: =DisplayMode.View
             Height: =85
             Size: =21
             Text: =ThisItem.'% Complete'
