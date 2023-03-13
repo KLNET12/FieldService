@@ -234,16 +234,6 @@
       }
     },
     {
-      "Kind": "default.cds_provisionlanguageforuser_forms",
-      "Namespace": "ProvisionLanguageForUser (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_resource_forms",
-      "Namespace": "Resources (Forms)",
-      "Values": {}
-    },
-    {
       "Kind": "default.cds_product_forms",
       "Namespace": "Products (Forms)",
       "Values": {
@@ -267,6 +257,16 @@
     {
       "Kind": "default.cds_activityfileattachment_forms",
       "Namespace": "Activity File Attachments (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
       "Values": {}
     }
   ]

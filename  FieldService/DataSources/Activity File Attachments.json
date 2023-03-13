@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "activityfileattachment",
+    "MaxGetRowsCount": 500,
     "Name": "Activity File Attachments",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -46,6 +47,14 @@
     },
     "PreferredName": "Activity File Attachments",
     "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Activity File Attachments (Views)",
+    "Name": "_activityfileattachment_views",
+    "RelatedEntityName": "Activity File Attachments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {}
   },
   {
     "DisplayName": "Object Type",

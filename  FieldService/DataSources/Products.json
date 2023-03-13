@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "product",
+    "MaxGetRowsCount": 500,
     "Name": "Products",
     "NativeCDSDataSourceInfoNameMapping": {
       "{Attachments}": "Attachments",
