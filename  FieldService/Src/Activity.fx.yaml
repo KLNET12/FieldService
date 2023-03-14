@@ -98,7 +98,6 @@ Activity As screen:
 
     MenuLeftNav_10 As MenuLeftNav:
         ExpandMenu: =true
-        ExpandMenuByDefault: =false
         Height: =MenuLeftNav_10.MenuHeight
         Visible: =true
         Width: =MenuLeftNav_10.MenuWidth

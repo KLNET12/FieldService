@@ -121,9 +121,8 @@ product As screen:
 
     MenuLeftNav_9 As MenuLeftNav:
         ExpandMenu: =true
-        ExpandMenuByDefault: =false
         Height: =MenuLeftNav_9.MenuHeight
         Visible: =true
         Width: =MenuLeftNav_9.MenuWidth
-        ZIndex: =4
+        ZIndex: =5
 
