@@ -93,7 +93,7 @@
         "Name": "icoHamburger_1",
         "Parent": "MenuLeftNav",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 477,
+        "PublishOrderIndex": 473,
         "Rules": [
           {
             "Category": "Data",
@@ -308,7 +308,7 @@
             "Name": "galleryTemplate1_4",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 479,
+            "PublishOrderIndex": 475,
             "Rules": [
               {
                 "Category": "Design",
@@ -383,7 +383,7 @@
             "Name": "rectShape_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 480,
+            "PublishOrderIndex": 476,
             "Rules": [
               {
                 "Category": "Data",
@@ -628,7 +628,7 @@
             "Name": "btnClick_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 481,
+            "PublishOrderIndex": 477,
             "Rules": [
               {
                 "Category": "Data",
@@ -972,7 +972,7 @@
             "Name": "icoMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 482,
+            "PublishOrderIndex": 478,
             "Rules": [
               {
                 "Category": "Data",
@@ -1274,7 +1274,7 @@
             "Name": "lblMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 483,
+            "PublishOrderIndex": 479,
             "Rules": [
               {
                 "Category": "Data",
@@ -1567,7 +1567,7 @@
                 "Name": "galleryTemplate1_5",
                 "Parent": "galSubMenu_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 485,
+                "PublishOrderIndex": 481,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1642,7 +1642,7 @@
                 "Name": "rectShapeSubMenu_1",
                 "Parent": "galSubMenu_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 486,
+                "PublishOrderIndex": 482,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1887,7 +1887,7 @@
                 "Name": "btnClickSubMenu_1",
                 "Parent": "galSubMenu_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 487,
+                "PublishOrderIndex": 483,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2238,7 +2238,7 @@
                 "Name": "icoSubMenu_1",
                 "Parent": "galSubMenu_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 488,
+                "PublishOrderIndex": 484,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2547,7 +2547,7 @@
                 "Name": "lblSubMenu_1",
                 "Parent": "galSubMenu_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 489,
+                "PublishOrderIndex": 485,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2915,7 +2915,7 @@
             "Name": "galSubMenu_1",
             "Parent": "galMenu_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 484,
+            "PublishOrderIndex": 480,
             "Rules": [
               {
                 "Category": "Data",
@@ -3167,7 +3167,7 @@
         "Name": "galMenu_1",
         "Parent": "MenuLeftNav",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 478,
+        "PublishOrderIndex": 474,
         "Rules": [
           {
             "Category": "Data",
@@ -3432,7 +3432,7 @@
       },
       "ExpandMenuByDefault"
     ],
-    "LastModifiedTimestamp": "638143588579591448",
+    "LastModifiedTimestamp": "638143773850089623",
     "Name": "MenuLeftNav",
     "Rules": [
       {
@@ -3635,7 +3635,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638143588579591448",
+  "LastModifiedTimestamp": "638143773850089623",
   "Name": "da5e2787a3bc418aaed9652593f49a28",
   "OverridableProperties": {},
   "TemplateOriginalName": "58907e171c654732b8b5aaaa44f0dc8c",

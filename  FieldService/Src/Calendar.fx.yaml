@@ -141,7 +141,7 @@ Calendar As screen:
         Height: =73
         OnSelect: =Navigate('Booking Screen')
         Size: =24
-        Text: ="Booking"
+        Text: ="Bookings"
         Width: =167
         X: =472
         Y: =49

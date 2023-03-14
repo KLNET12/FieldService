@@ -36,6 +36,11 @@
       }
     },
     {
+      "Kind": "default.cds_activityfileattachment_forms",
+      "Namespace": "Activity File Attachments (Forms)",
+      "Values": {}
+    },
+    {
       "Kind": "default.cds_msdyn_agreementbookingdate_forms",
       "Namespace": "Agreement Booking Dates (Forms)",
       "Values": {
@@ -131,12 +136,33 @@
       }
     },
     {
+      "Kind": "default.cds_productpricelevel_forms",
+      "Namespace": "Price List Items (Forms)",
+      "Values": {
+        "Information": "f051b13e-6f52-4e3e-8d42-a3fe78a7e3a3",
+        "Product Price List": "8325530a-a6a6-4275-9374-a65bef5ef92c"
+      }
+    },
+    {
       "Kind": "default.cds_pricelevel_forms",
       "Namespace": "Price Lists (Forms)",
       "Values": {
         "Information": "24e04567-e803-4bf0-a999-4c5192ed1f65",
         "Price Level": "fd57cc72-a5b1-4e65-a5db-0127da5941f7",
         "Price List Quick Create 5x5": "8ba31a9c-df98-4471-b9bf-c8a7a15ba60d"
+      }
+    },
+    {
+      "Kind": "default.cds_product_forms",
+      "Namespace": "Products (Forms)",
+      "Values": {
+        "Information": "42805efb-1f65-4ae8-91bc-618967a55c6e",
+        "Product": "a640be62-63f6-4027-90d7-48c014a7c6f3",
+        "Product family Quick Create": "fd57aeed-ab95-4a32-9c6c-61ae92d2a296",
+        "Product Hierarchy Tile Form": "44c9f1ee-9bce-4c6f-9a7f-6568be05c41c",
+        "Product Quick Create": "672e520b-6bbc-47f8-977f-228bfc6d8faf",
+        "Product Quick Create FS 5x5": "46a3bdc2-b561-4666-97a7-7de5aa831580",
+        "Project Information": "6af59e16-86c9-4ae0-94f3-3d571de2cf23"
       }
     },
     {
@@ -196,6 +222,14 @@
       }
     },
     {
+      "Kind": "default.cds_msdyn_workorderservicetask_forms",
+      "Namespace": "Work Order Service Tasks (Forms)",
+      "Values": {
+        "Information": "12a5be6b-b565-4d80-a2bc-3d4f652a3d98",
+        "Work Order Service Task - Mobile": "06a480e2-69e6-4283-8aa5-9fa17c86671f"
+      }
+    },
+    {
       "Kind": "default.cds_msdyn_workorderservice_forms",
       "Namespace": "Work Order Services (Forms)",
       "Values": {
@@ -224,40 +258,6 @@
         "Work Order Create": "ccf0b34e-a265-4005-bd73-be6f4fe30dd7",
         "Work Order Quick View": "79c33fb4-7126-41a8-9dff-13e4462c9b19"
       }
-    },
-    {
-      "Kind": "default.cds_msdyn_workorderservicetask_forms",
-      "Namespace": "Work Order Service Tasks (Forms)",
-      "Values": {
-        "Information": "12a5be6b-b565-4d80-a2bc-3d4f652a3d98",
-        "Work Order Service Task - Mobile": "06a480e2-69e6-4283-8aa5-9fa17c86671f"
-      }
-    },
-    {
-      "Kind": "default.cds_product_forms",
-      "Namespace": "Products (Forms)",
-      "Values": {
-        "Information": "42805efb-1f65-4ae8-91bc-618967a55c6e",
-        "Product": "a640be62-63f6-4027-90d7-48c014a7c6f3",
-        "Product family Quick Create": "fd57aeed-ab95-4a32-9c6c-61ae92d2a296",
-        "Product Hierarchy Tile Form": "44c9f1ee-9bce-4c6f-9a7f-6568be05c41c",
-        "Product Quick Create": "672e520b-6bbc-47f8-977f-228bfc6d8faf",
-        "Product Quick Create FS 5x5": "46a3bdc2-b561-4666-97a7-7de5aa831580",
-        "Project Information": "6af59e16-86c9-4ae0-94f3-3d571de2cf23"
-      }
-    },
-    {
-      "Kind": "default.cds_productpricelevel_forms",
-      "Namespace": "Price List Items (Forms)",
-      "Values": {
-        "Information": "f051b13e-6f52-4e3e-8d42-a3fe78a7e3a3",
-        "Product Price List": "8325530a-a6a6-4275-9374-a65bef5ef92c"
-      }
-    },
-    {
-      "Kind": "default.cds_activityfileattachment_forms",
-      "Namespace": "Activity File Attachments (Forms)",
-      "Values": {}
     },
     {
       "Kind": "default.cds_provisionlanguageforuser_forms",
