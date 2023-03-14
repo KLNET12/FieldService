@@ -147,15 +147,6 @@ Calendar As screen:
         Y: =88
         ZIndex: =6
 
-    MenuLeftNav_8 As MenuLeftNav:
-        ExpandMenu: =true
-        ExpandMenuByDefault: =false
-        HamburgerMenuColor: =RGBA(255, 255, 0, 1)
-        Height: =84
-        Visible: =true
-        Width: =74
-        ZIndex: =7
-
     Label24 As label:
         Fill: =RGBA(141, 198, 63, 1)
         FontWeight: =FontWeight.Bold
@@ -177,4 +168,10 @@ Calendar As screen:
         Width: =298
         Y: =938
         ZIndex: =9
+
+    MenuLeftNav_8 As MenuLeftNav:
+        Height: =MenuLeftNav_8.MenuHeight
+        Width: =MenuLeftNav_8.MenuWidth
+        Y: =10
+        ZIndex: =10
 
