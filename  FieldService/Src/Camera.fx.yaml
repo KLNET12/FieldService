@@ -108,5 +108,12 @@ Camera As screen:
     Icon7 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(UpdateBooking)
+        X: =576
         ZIndex: =12
+
+    MenuLeftNav_17 As MenuLeftNav:
+        Height: =MenuLeftNav_17.MenuHeight
+        Width: =MenuLeftNav_17.MenuWidth
+        Y: =10
+        ZIndex: =13
 

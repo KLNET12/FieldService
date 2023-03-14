@@ -166,6 +166,13 @@ Screen7 As screen:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.ChevronLeft
         OnSelect: =If(!varNav,Navigate('Booking Screen'),Navigate(WorkOrder))
+        X: =576
         Y: =1
         ZIndex: =4
+
+    MenuLeftNav_15 As MenuLeftNav:
+        Height: =MenuLeftNav_15.MenuHeight
+        Width: =MenuLeftNav_15.MenuWidth
+        Y: =10
+        ZIndex: =5
 

@@ -100,5 +100,12 @@ ServicesScreen As screen:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(UpdateBooking)
         Width: =80
+        X: =560
         ZIndex: =4
+
+    MenuLeftNav_18 As MenuLeftNav:
+        Height: =MenuLeftNav_18.MenuHeight
+        Width: =MenuLeftNav_18.MenuWidth
+        Y: =10
+        ZIndex: =5
 

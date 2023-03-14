@@ -1094,6 +1094,7 @@ UpdateBooking As screen:
     Icon2 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate('Booking Screen')
+        X: =576
         ZIndex: =4
 
     Button10 As button:
@@ -1136,4 +1137,10 @@ UpdateBooking As screen:
         X: =454
         Y: =77
         ZIndex: =7
+
+    MenuLeftNav_11 As MenuLeftNav:
+        Height: =MenuLeftNav_11.MenuHeight
+        Width: =MenuLeftNav_11.MenuWidth
+        Y: =10
+        ZIndex: =8
 

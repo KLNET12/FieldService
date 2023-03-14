@@ -759,5 +759,12 @@ Screen9 As screen:
             Reset(Currency_1);
             Reset('WO Number');
             Navigate(Screen7);
+        X: =576
         ZIndex: =36
+
+    MenuLeftNav_16 As MenuLeftNav:
+        Height: =MenuLeftNav_16.MenuHeight
+        Width: =MenuLeftNav_16.MenuWidth
+        Y: =10
+        ZIndex: =37
 

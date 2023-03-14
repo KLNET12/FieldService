@@ -149,6 +149,7 @@
     Icon17 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(UpdateBooking)
+        X: =576
         Y: =3
         ZIndex: =4
 
@@ -163,4 +164,10 @@
         Width: =640
         Y: =93
         ZIndex: =5
+
+    MenuLeftNav_14 As MenuLeftNav:
+        Height: =MenuLeftNav_14.MenuHeight
+        Width: =MenuLeftNav_14.MenuWidth
+        Y: =10
+        ZIndex: =6
 

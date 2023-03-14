@@ -77,7 +77,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Bookable resource",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -366,7 +366,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6",
-      "ParentIndex": 29,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -578,7 +578,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Component1_8",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -685,7 +685,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -980,7 +980,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_1",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1268,7 +1268,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Customer",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1558,7 +1558,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Due date",
-      "ParentIndex": 22,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1854,7 +1854,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery6",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2077,7 +2077,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon13",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2276,7 +2276,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Invoice Date",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2570,7 +2570,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2874,7 +2874,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3171,7 +3171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_10",
-      "ParentIndex": 23,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3468,7 +3468,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_11",
-      "ParentIndex": 18,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3765,7 +3765,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_13",
-      "ParentIndex": 27,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4062,7 +4062,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_14",
-      "ParentIndex": 25,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4366,7 +4366,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_2",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4670,7 +4670,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_3",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4974,7 +4974,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_4",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5271,7 +5271,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_5",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5568,7 +5568,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_6",
-      "ParentIndex": 16,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5866,7 +5866,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_7",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6168,7 +6168,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_8",
-      "ParentIndex": 19,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6465,7 +6465,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_9",
-      "ParentIndex": 21,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17135,6 +17135,212 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
+    "MenuLeftNav_16": {
+      "AllowAccessToGlobals": true,
+      "ControlPropertyState": [
+        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "640",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "640",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "ZIndex",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Table(\n    {\n        MenuLabel: \"Home\",\n        MenuIcon: Icon.Home,\n        MenuScreenNavigate: App.ActiveScreen,\n        MenuID: 1,\n        SubMenu: Table({\n        MenuLabel: \"Currency\",\n        MenuIcon: Icon.Currency,\n        MenuScreenNavigate: App.ActiveScreen,\n        MenuID: 2\n    }) \n    },\n    {\n        MenuLabel: \"Currency\",\n        MenuIcon: Icon.Currency,\n        MenuScreenNavigate: App.ActiveScreen,\n        MenuID: 2\n    },\n    {\n        MenuLabel: \"Document\",\n        MenuIcon: Icon.DocumentPDF,\n        MenuScreenNavigate: App.ActiveScreen,\n        MenuID: 3\n    }\n)",
+          "InvariantPropertyName": "MenuItems",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "ExpandMenu",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "OnReset",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "MenuColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "HamburgerMenuColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "MenuBkgColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "100",
+          "InvariantPropertyName": "MenuWidth",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "100",
+          "InvariantPropertyName": "SetMenuWidth",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "100",
+          "InvariantPropertyName": "MenuHeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "ExpandMenuByDefault"
+      ],
+      "HasDynamicProperties": false,
+      "IsAutoGenerated": false,
+      "IsComponentDefinition": false,
+      "IsDataControl": false,
+      "IsFromScreenLayout": false,
+      "IsGroupControl": false,
+      "IsLocked": false,
+      "LayoutName": "",
+      "Metadata": {
+        "AllowAccessToGlobals": false,
+        "AllowCustomization": true,
+        "Description": ""
+      },
+      "MetaDataIDKey": "",
+      "Name": "MenuLeftNav_16",
+      "ParentIndex": 0,
+      "PersistMetaDataIDKey": false,
+      "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "MenuWidth",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HamburgerMenuColor",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "MenuItems",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "MenuBkgColor",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ExpandMenu",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "MenuColor",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "SetMenuWidth",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "MenuHeight",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ExpandMenuByDefault",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnReset",
+          "RuleProviderType": "System"
+        }
+      ],
+      "StyleName": "",
+      "Type": "ControlInfo"
+    },
     "Name": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
@@ -17209,7 +17415,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Name",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17492,7 +17698,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Name_1",
-      "ParentIndex": 17,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17771,7 +17977,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Price List",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18237,7 +18443,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Status",
-      "ParentIndex": 28,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18520,7 +18726,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Type",
-      "ParentIndex": 24,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18808,7 +19014,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WO Number",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

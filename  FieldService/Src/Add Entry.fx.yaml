@@ -17,6 +17,7 @@
     Icon5_3 As icon.ChevronLeft:
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(TimeEntrydetails)
+        X: =576
         ZIndex: =4
 
     Button12_1 As button:
@@ -1048,4 +1049,10 @@
                 Wrap: =false
                 Y: =DataCardKey21.Y
                 ZIndex: =4
+
+    MenuLeftNav_12 As MenuLeftNav:
+        Height: =MenuLeftNav_12.MenuHeight
+        Width: =MenuLeftNav_12.MenuWidth
+        Y: =10
+        ZIndex: =7
 

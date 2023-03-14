@@ -165,9 +165,8 @@
 
     MenuLeftNav_1 As MenuLeftNav:
         ExpandMenuByDefault: =false
-        Height: =MenuLeftNav_1.MenuHeight
+        Height: =1136
         Width: =MenuLeftNav_1.MenuWidth
-        Y: =10
         ZIndex: =7
 
     Button17 As button:
