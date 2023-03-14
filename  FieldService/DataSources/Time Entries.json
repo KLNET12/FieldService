@@ -169,16 +169,16 @@
     "OptionSetIsGlobal": true,
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "msdyn_targetentrystatus",
+        "OptionSetReferenceColumnName": "msdyn_entrystatus",
         "OptionSetReferenceEntityName": "Time Entries"
       },
       "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "msdyn_entrystatus",
+        "OptionSetReferenceColumnName": "msdyn_targetentrystatus",
         "OptionSetReferenceEntityName": "Time Entries"
       }
     },
     "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "msdyn_targetentrystatus",
+    "RelatedColumnInvariantName": "msdyn_entrystatus",
     "RelatedEntityName": "Time Entries",
     "Type": "OptionSetInfo"
   },

@@ -27,7 +27,7 @@ App As appinfo:
                      {
                         MenuLabel: "Activities",
                         MenuIcon: Icon.Currency,
-                       // MenuScreenNavigate: 'Booking Screen',
+                        MenuScreenNavigate: Activity,
                         MenuID: 2
                     },
                      {
@@ -39,7 +39,7 @@ App As appinfo:
                      {
                         MenuLabel: "Products",
                         MenuIcon: Icon.Currency,
-                       // MenuScreenNavigate: 'Booking Screen',
+                        MenuScreenNavigate: product,
                         MenuID: 4
                     }
                 )
