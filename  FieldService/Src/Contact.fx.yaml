@@ -89,6 +89,13 @@ Contact As screen:
             Y: =192
             ZIndex: =8
 
+        Icon18 As icon.NextArrow:
+            Icon: =Icon.NextArrow
+            OnSelect: =Navigate('Edit Contact')
+            X: =569
+            Y: =87
+            ZIndex: =9
+
     Component1_15 As Component1:
         Height: =70
         ZIndex: =2

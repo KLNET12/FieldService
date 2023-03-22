@@ -92,9 +92,16 @@ Account As screen:
             Text: |-
                 ="Phone:"
             Width: =179
-            X: =422
+            X: =401
             Y: =88
             ZIndex: =8
+
+        Icon16 As icon.NextArrow:
+            Icon: =Icon.NextArrow
+            OnSelect: =Select(Parent)
+            X: =563
+            Y: =77
+            ZIndex: =9
 
     Component1_7 As Component1:
         Height: =70
