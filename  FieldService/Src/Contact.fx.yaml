@@ -111,3 +111,10 @@ Contact As screen:
         Width: =MenuLeftNav_7.MenuWidth
         ZIndex: =4
 
+    Icon5 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =Navigate('Add New Contact')
+        X: =576
+        Y: =77
+        ZIndex: =5
+

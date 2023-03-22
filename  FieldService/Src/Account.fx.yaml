@@ -118,3 +118,10 @@ Account As screen:
         Width: =MenuLeftNav_6.MenuWidth
         ZIndex: =4
 
+    Icon15 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =Navigate(Form_NewAccount)
+        X: =576
+        Y: =66
+        ZIndex: =5
+
