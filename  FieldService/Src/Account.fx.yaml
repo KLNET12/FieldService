@@ -98,7 +98,7 @@ Account As screen:
 
         Icon16 As icon.NextArrow:
             Icon: =Icon.NextArrow
-            OnSelect: =Select(Parent)
+            OnSelect: =Navigate('Edit Account')
             X: =563
             Y: =77
             ZIndex: =9

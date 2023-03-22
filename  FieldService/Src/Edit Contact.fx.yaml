@@ -23,8 +23,8 @@
     Button12_4 As button:
         Height: =70
         OnSelect: |+
-            =SubmitForm(Form_NewContact_1);
-            NewForm(Form_NewContact_1);
+            =SubmitForm(Form_UpdateContact);
+            
             
         Size: =24
         Text: ="Update Contact"
@@ -38,13 +38,14 @@
         Y: =10
         ZIndex: =7
 
-    Form_NewContact_1 As form:
+    Form_UpdateContact As form:
         DataSource: =Contacts
         Height: =799
+        Item: =Gallery10.Selected
         OnFailure: =Notify("Please Fill required Info",NotificationType.Error)
         OnSuccess: |-
             =Navigate(Contact);
-            Notify("Contact Created",NotificationType.Success)
+            Notify("Contact Updated Successfully",NotificationType.Success)
         Width: =640
         Y: =196
         ZIndex: =8
