@@ -97,3 +97,20 @@ Activity As screen:
         Y: =83
         ZIndex: =5
 
+    Rectangle2 As rectangle:
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =254
+        Width: =116
+        X: =If(VarWaffle,490,490+490*(WaffleTimer.Value/WaffleTimer.Duration))
+        Y: =142
+        ZIndex: =6
+
+    WaffleTimer As timer:
+        Duration: =150
+        Height: =43
+        Start: =VarTimer
+        Width: =175
+        X: =465
+        Y: =6
+        ZIndex: =7
+
