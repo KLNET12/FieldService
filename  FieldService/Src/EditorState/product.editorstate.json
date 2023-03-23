@@ -264,7 +264,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Component1_16",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1414,7 +1414,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label7_3",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1743,7 +1743,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "MenuLeftNav_9",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2334,7 +2334,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_17",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
