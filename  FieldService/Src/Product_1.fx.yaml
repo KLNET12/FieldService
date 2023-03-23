@@ -23,6 +23,7 @@ Product As screen:
 
     Product_form As form:
         DataSource: =Products
+        DefaultMode: =FormMode.New
         Height: =915
         Width: =640
         Y: =137
