@@ -110,6 +110,7 @@ Activity As screen:
         Duration: =150
         Height: =43
         Start: =VarTimer
+        Visible: =false
         Width: =175
         X: =465
         Y: =6
