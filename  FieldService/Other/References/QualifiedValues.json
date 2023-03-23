@@ -268,6 +268,21 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
+    },
+    {
+      "Kind": "default.cds_uom_forms",
+      "Namespace": "Units (Forms)",
+      "Values": {
+        "Information": "02aa3f91-c4dd-47b2-b17f-5790a8b977dd",
+        "Unit of Measure Quick Create": "a19aaf8b-9e2a-4f6a-9360-498269d5b137"
+      }
+    },
+    {
+      "Kind": "default.cds_uomschedule_forms",
+      "Namespace": "Unit Groups (Forms)",
+      "Values": {
+        "Information": "a793fa7c-8b63-43f0-b4bc-73f75a68935a"
+      }
     }
   ]
 }
