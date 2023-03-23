@@ -138,6 +138,7 @@
     "Account",
     "Contact",
     "product",
-    "Activity"
+    "Activity",
+    "Product"
   ]
 }
