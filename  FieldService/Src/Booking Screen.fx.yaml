@@ -181,3 +181,16 @@
         Y: =70
         ZIndex: =8
 
+    Timer1 As timer:
+        AutoStart: =true
+        Height: =66
+        OnTimerEnd: |
+            =If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData);
+            );
+        Repeat: =true
+        Width: =202
+        Y: =72
+        ZIndex: =9
+

@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "uom",
+    "MaxGetRowsCount": 500,
     "Name": "Units",
     "NativeCDSDataSourceInfoNameMapping": {
       "baseuom": "Base Unit",

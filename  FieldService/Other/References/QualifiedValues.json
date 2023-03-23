@@ -260,16 +260,6 @@
       }
     },
     {
-      "Kind": "default.cds_provisionlanguageforuser_forms",
-      "Namespace": "ProvisionLanguageForUser (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_resource_forms",
-      "Namespace": "Resources (Forms)",
-      "Values": {}
-    },
-    {
       "Kind": "default.cds_uom_forms",
       "Namespace": "Units (Forms)",
       "Values": {
@@ -283,6 +273,16 @@
       "Values": {
         "Information": "a793fa7c-8b63-43f0-b4bc-73f75a68935a"
       }
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {}
     }
   ]
 }

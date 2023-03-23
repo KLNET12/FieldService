@@ -383,8 +383,6 @@
 
     MenuLeftNav_23 As MenuLeftNav:
         Height: =MenuLeftNav_23.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_23.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_23.ExpandMenu)
         Width: =MenuLeftNav_23.MenuWidth
         Y: =10
         ZIndex: =4

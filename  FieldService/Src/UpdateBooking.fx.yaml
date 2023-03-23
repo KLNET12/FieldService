@@ -1079,7 +1079,7 @@ UpdateBooking As screen:
     Button1 As button:
         Height: =56
         OnSelect: |-
-            =SubmitForm(Form1);Notify("Booking is successfully updated:", NotificationType.Success);
+            =If(Connection.Connected,SubmitForm(Form1);Notify("Booking is successfully updated:",NotificationType.Success),Collect(OfflineBookingData,{BookingItem:Gallery1.Selected,'Start Time':DateValue1.SelectedDate+Time(Value(HourValue1.Selected.Value),Value(MinuteValue1.Selected.Value),0),'End Time':DateValue2.SelectedDate+Time(Value(HourValue2.Selected.Value),Value(MinuteValue2.Selected.Value),0),'Actual Arrival Time':DateValue8.SelectedDate+Time(Value(HourValue8.Selected.Value),Value(MinuteValue8.Selected.Value),0),'Estimated Arrival Time':DateValue3.SelectedDate+Time(Value(HourValue3.Selected.Value),Value(MinuteValue3.Selected.Value),0),'Booking Status':DataCardValue6.Selected,'Booking Type':DataCardValue7.Selected.Value,'Duration':Value(DataCardValue21.Text),'Name':DataCardValue22.Text,'Resource':DataCardValue23.Selected});SaveData(OfflineBookingData,"OfflineBookingData");Notify("Data Saved Offline Successfully, It will get Updated when reconnected",NotificationType.Information));
             ResetForm(Form1)
         Size: =24
         Text: ="Save"

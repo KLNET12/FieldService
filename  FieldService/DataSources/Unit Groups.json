@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "uomschedule",
+    "MaxGetRowsCount": 500,
     "Name": "Unit Groups",
     "NativeCDSDataSourceInfoNameMapping": {
       "baseuomname": "Base Unit name",
