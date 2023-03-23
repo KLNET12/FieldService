@@ -1316,7 +1316,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon8",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4077,7 +4077,7 @@
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "Timer1_1": {
+    "Timer1_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Text",
@@ -4158,8 +4158,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Timer1_1",
-      "ParentIndex": 4,
+      "Name": "Timer1_4",
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
