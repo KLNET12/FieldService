@@ -387,3 +387,12 @@ Product As screen:
                 Y: =DataCardKey49.Y
                 ZIndex: =4
 
+    Button18 As button:
+        Height: =72
+        OnSelect: =SubmitForm(Product_form);ResetForm(Product_form)
+        Size: =24
+        Text: ="Create Product"
+        Width: =640
+        Y: =908
+        ZIndex: =5
+
