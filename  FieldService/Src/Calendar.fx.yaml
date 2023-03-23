@@ -212,3 +212,13 @@ Calendar As screen:
         Y: =92
         ZIndex: =11
 
+    Button19 As button:
+        Fill: =RGBA(0, 18, 107, 1)
+        Height: =84
+        OnSelect: =Navigate('Weekly Calendar')
+        Size: =24
+        Text: ="Weekly Calender"
+        Width: =168
+        X: =472
+        ZIndex: =12
+
