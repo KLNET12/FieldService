@@ -1,14 +1,25 @@
 Camera As screen:
     BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
-    OnVisible: =Set(varCam,0)
+    OnVisible: |
+        =Set(varCam,0);If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);
+        );
 
     Button8 As button:
         Height: =66
         OnSelect: |-
-            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
+            =If(Connection.Connected,Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
+            Notify("Picture Uploaded",NotificationType.Success),Collect(OfflinePictureSignature,{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Image",Document:Substitute(Substitute(JSON(Image4.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });SaveData(OfflinePictureSignature,"OfflinePictureSignature");Notify("Data Saved Offline Successfully, It will get Updated when reconnected",NotificationType.Information));
             Set(varImage,false);
-            Notify("Picture Uploaded",NotificationType.Success)
         Size: =24
         Text: ="Upload Image"
         Width: =640
@@ -92,9 +103,10 @@ Camera As screen:
     Button8_1 As button:
         Height: =66
         OnSelect: |-
-            =Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Signature",Document:Substitute(Substitute(JSON(PenInput1.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
+            =If(Connection.Connected,Patch(Notes, Defaults(Notes),{'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Signature",Document:Substitute(Substitute(JSON(PenInput1.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });
             Notify("Signature updated",NotificationType.Success);
-            Reset(PenInput1)
+            , Collect(OfflinePictureSignature,{ 'File Name':Gallery1.Selected.Name&".png",Title:Gallery1.Selected.Name & " Signature",Document:Substitute(Substitute(JSON(PenInput1.Image,JSONFormat.IncludeBinaryData),"data:image/png;base64,",""),"""","") , Regarding: Gallery1.Selected, 'Is Document': true });SaveData(OfflinePictureSignature,"OfflinePictureSignature");Notify("Data Saved Offline Successfully, It will get Updated when reconnected",NotificationType.Information));
+            Reset(PenInput1);
         Size: =24
         Text: ="Upload Signature"
         Width: =640
@@ -116,4 +128,27 @@ Camera As screen:
         Width: =MenuLeftNav_17.MenuWidth
         Y: =10
         ZIndex: =13
+
+    Timer1_12 As timer:
+        AutoStart: =true
+        Duration: =40000
+        Height: =66
+        OnTimerEnd: |
+            =If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);
+            );
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =14
 

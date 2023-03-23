@@ -1,4 +1,16 @@
 Calendar As screen:
+    OnVisible: |
+        =If( Connection.Connected,
+            ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+            Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+            Clear(OfflineTimeEntry); Refresh('Time Entries');
+            ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+            Clear(OfflineAccount); Refresh(Accounts);
+        ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+            Clear(OfflineContact); Refresh(Contacts);
+            ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+            Clear(OfflinePictureSignature);
+        );
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Fill: =Color.SkyBlue
@@ -174,4 +186,27 @@ Calendar As screen:
         Width: =MenuLeftNav_8.MenuWidth
         Y: =10
         ZIndex: =10
+
+    Timer1_14 As timer:
+        AutoStart: =true
+        Duration: =40000
+        Height: =66
+        OnTimerEnd: |
+            =If( Connection.Connected,
+                ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
+                Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries');
+                ForAll(OfflineAccount,Patch(Accounts, ThisRecord.AccountItem, {'Account Name':ThisRecord.'Account Name', 'Main Phone':ThisRecord.'Main Phone', Email:ThisRecord.Email, 'Address 1: City':ThisRecord.'Address 1: City'}));
+                Clear(OfflineAccount); Refresh(Accounts);
+            ForAll(OfflineContact,Patch(Contacts, ThisRecord.ContactItem, {'First Name':ThisRecord.'First Name', 'Last Name':ThisRecord.'Last Name', Email:ThisRecord.Email, 'Business Phone':ThisRecord.'Business Phone'}));
+                Clear(OfflineContact); Refresh(Contacts);
+                ForAll(OfflinePictureSignature,Patch(Notes,Defaults(Notes),{'File Name':ThisRecord.'File Name',Title:ThisRecord.Title,Regarding:ThisRecord.Regarding, Document:ThisRecord.Document, 'Is Document':ThisRecord.'Is Document'}));
+                Clear(OfflinePictureSignature);
+            );
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        X: =20
+        Y: =92
+        ZIndex: =11
 
