@@ -101,7 +101,7 @@ Activity As screen:
         Fill: =RGBA(39, 113, 194, 1)
         Height: =254
         Width: =116
-        X: =If(VarWaffle,490,490+490*(WaffleTimer.Value/WaffleTimer.Duration))
+        X: =If(VarWaffle,523,523+523*(WaffleTimer.Value/WaffleTimer.Duration))
         Y: =142
         ZIndex: =6
 
