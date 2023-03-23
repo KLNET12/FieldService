@@ -87,3 +87,13 @@ Activity As screen:
         Width: =MenuLeftNav_10.MenuWidth
         ZIndex: =4
 
+    Icon19 As icon.Add:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =47
+        Icon: =Icon.Add
+        OnSelect: |-
+            =UpdateContext({VarTimer:false});UpdateContext({VarWaffle:!VarWaffle,VarTimer:true})
+        X: =562
+        Y: =83
+        ZIndex: =5
+
