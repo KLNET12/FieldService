@@ -98,10 +98,11 @@ Activity As screen:
         ZIndex: =5
 
     Rectangle2 As rectangle:
-        Fill: =RGBA(255, 255, 255, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 121, 187, 1)
         Height: =237
         Width: =83
-        X: =555
+        X: =If(VarWaffle,550,550+550*(WaffleTimer.Value/WaffleTimer.Duration))
         Y: =142
         ZIndex: =6
 
@@ -115,7 +116,7 @@ Activity As screen:
         ZIndex: =7
 
     Icon20 As icon.Notebook:
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
         Height: =50
         Icon: =Icon.Notebook
         Width: =50
@@ -124,7 +125,7 @@ Activity As screen:
         ZIndex: =8
 
     Icon21 As icon.Phone:
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
         Height: =44
         Icon: =Icon.Phone
         Width: =57
