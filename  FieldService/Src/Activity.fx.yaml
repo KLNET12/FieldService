@@ -1,4 +1,6 @@
 Activity As screen:
+    OnVisible: |-
+        =UpdateContext({timeline:false})
 
     "Gallery12 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =994
@@ -102,19 +104,9 @@ Activity As screen:
         Fill: =RGBA(202, 202, 202, 1)
         Height: =237
         Width: =83
-        X: =If(VarWaffle,550,550+550*(WaffleTimer.Value/WaffleTimer.Duration))
+        X: =550
         Y: =142
         ZIndex: =6
-
-    WaffleTimer As timer:
-        Duration: =150
-        Height: =43
-        Start: =VarTimer
-        Visible: =false
-        Width: =175
-        X: =465
-        Y: =6
-        ZIndex: =7
 
     Icon20 As icon.Notebook:
         Color: =RGBA(109, 49, 162, 1)
@@ -122,7 +114,7 @@ Activity As screen:
         Icon: =Icon.Notebook
         Tooltip: ="Task Activity"
         Width: =50
-        X: =If(VarWaffle,565,565+565*(WaffleTimer.Value/WaffleTimer.Duration))
+        X: =565
         Y: =171
         ZIndex: =8
 
@@ -132,7 +124,7 @@ Activity As screen:
         Icon: =Icon.Phone
         Tooltip: ="Phone Call Activity"
         Width: =57
-        X: =If(VarWaffle,561,561+561*(WaffleTimer.Value/WaffleTimer.Duration))
+        X: =561
         Y: =255
         ZIndex: =9
 
