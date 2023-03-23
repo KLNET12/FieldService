@@ -5591,19 +5591,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Product.Product_form.Name_DataCard1.DataCardValue1.AccessibleLabel"
+                  "fullyQualifiedName": "'Product creation'.Product_form.Name_DataCard1.DataCardValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Product.Product_form.Name_DataCard1.DataCardValue1.AccessibleLabel",
+                  "fullyQualifiedName": "'Product creation'.Product_form.Name_DataCard1.DataCardValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Product",
-                "type": "Product.Product_form.Name_DataCard1.DataCardValue1"
+                "module": "Product creation",
+                "type": "'Product creation'.Product_form.Name_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -5621,19 +5621,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Product.Product_form.'Default Unit_DataCard1'.DataCardValue40.AccessibleLabel"
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Default Unit_DataCard1'.DataCardValue40.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Product.Product_form.'Default Unit_DataCard1'.DataCardValue40.AccessibleLabel",
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Default Unit_DataCard1'.DataCardValue40.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Product",
-                "type": "Product.Product_form.'Default Unit_DataCard1'.DataCardValue40"
+                "module": "Product creation",
+                "type": "'Product creation'.Product_form.'Default Unit_DataCard1'.DataCardValue40"
               }
             }
           ],
@@ -5651,19 +5651,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Product.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39.AccessibleLabel"
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Product.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39.AccessibleLabel",
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Product",
-                "type": "Product.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39"
+                "module": "Product creation",
+                "type": "'Product creation'.Product_form.'Field Service Product Type_DataCard1'.DataCardValue39"
               }
             }
           ],
@@ -5681,19 +5681,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Product.Product_form.'Default Price List_DataCard1'.DataCardValue41.AccessibleLabel"
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Default Price List_DataCard1'.DataCardValue41.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Product.Product_form.'Default Price List_DataCard1'.DataCardValue41.AccessibleLabel",
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Default Price List_DataCard1'.DataCardValue41.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Product",
-                "type": "Product.Product_form.'Default Price List_DataCard1'.DataCardValue41"
+                "module": "Product creation",
+                "type": "'Product creation'.Product_form.'Default Price List_DataCard1'.DataCardValue41"
               }
             }
           ],
@@ -5711,19 +5711,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Product.Product_form.'Unit Group_DataCard1'.DataCardValue42.AccessibleLabel"
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Unit Group_DataCard1'.DataCardValue42.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Product.Product_form.'Unit Group_DataCard1'.DataCardValue42.AccessibleLabel",
+                  "fullyQualifiedName": "'Product creation'.Product_form.'Unit Group_DataCard1'.DataCardValue42.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Product",
-                "type": "Product.Product_form.'Unit Group_DataCard1'.DataCardValue42"
+                "module": "Product creation",
+                "type": "'Product creation'.Product_form.'Unit Group_DataCard1'.DataCardValue42"
               }
             }
           ],

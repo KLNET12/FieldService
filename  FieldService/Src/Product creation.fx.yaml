@@ -1,15 +1,4 @@
-Product As screen:
-
-    Component1_22 As Component1:
-        Height: =69
-
-    MenuLeftNav_23 As MenuLeftNav:
-        Height: =MenuLeftNav_23.MenuHeight
-        MenuWidth: =If(showMenu, MenuLeftNav_23.SetMenuWidth,icoHamburger_1.Width)
-        OnReset: =Set(showMenu, MenuLeftNav_23.ExpandMenu)
-        Width: =MenuLeftNav_23.MenuWidth
-        Y: =10
-        ZIndex: =2
+"'Product creation' As screen":
 
     Label7_5 As label:
         Align: =Align.Center
@@ -19,7 +8,7 @@ Product As screen:
         Text: ="Product"
         Width: =640
         Y: =69
-        ZIndex: =3
+        ZIndex: =1
 
     Product_form As form:
         DataSource: =Products
@@ -27,7 +16,7 @@ Product As screen:
         Height: =915
         Width: =640
         Y: =137
-        ZIndex: =4
+        ZIndex: =2
 
         "'Default Unit_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -387,6 +376,18 @@ Product As screen:
                 Wrap: =false
                 Y: =DataCardKey49.Y
                 ZIndex: =4
+
+    Component1_22 As Component1:
+        Height: =69
+        ZIndex: =3
+
+    MenuLeftNav_23 As MenuLeftNav:
+        Height: =MenuLeftNav_23.MenuHeight
+        MenuWidth: =If(showMenu, MenuLeftNav_23.SetMenuWidth,icoHamburger_1.Width)
+        OnReset: =Set(showMenu, MenuLeftNav_23.ExpandMenu)
+        Width: =MenuLeftNav_23.MenuWidth
+        Y: =10
+        ZIndex: =4
 
     Button18 As button:
         Height: =72
