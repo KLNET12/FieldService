@@ -176,3 +176,17 @@ TimeEntrydetails As screen:
         Y: =10
         ZIndex: =7
 
+    Timer1_1 As timer:
+        AutoStart: =true
+        Height: =66
+        OnTimerEnd: |
+            =If( Connection.Connected,
+                ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
+                Clear(OfflineTimeEntry); Refresh('Time Entries')
+            );
+        Repeat: =true
+        Visible: =false
+        Width: =202
+        Y: =74
+        ZIndex: =8
+

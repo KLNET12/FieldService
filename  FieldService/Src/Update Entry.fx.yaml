@@ -897,8 +897,7 @@
     Button12 As button:
         Height: =70
         OnSelect: |-
-            =SubmitForm(Form3);
-            Notify("Entry updated",NotificationType.Success)
+            =If(Connection.Connected,SubmitForm(Form3);Notify("Entry Updated",NotificationType.Success),Collect(OfflineTimeEntry,{TimeEntryItem:Gallery1_1.Selected,'Bookable Resource': DataCardValue11.Selected, Type: DataCardValue5.Selected.Value, Start: DateValue5.SelectedDate + Time(Value(HourValue5.Selected.Value), Value(MinuteValue5.Selected.Value), 0), End: DateValue6.SelectedDate + Time(Value(HourValue6.Selected.Value), Value(MinuteValue6.Selected.Value), 0), 'Work Order': DataCardValue14.Selected, 'Bookable Resource Booking':DataCardValue16.Selected, Date: DateValue7.SelectedDate + Time(Value(HourValue7.Selected.Value), Value(MinuteValue7.Selected.Value), 0), 'Entry Status': DataCardValue10.Selected.Value, 'Description': DataCardValue12.Text, 'External Comments': DataCardValue13.Text});SaveData(OfflineTimeEntry,"OfflineTimeEntry");Notify("Data Saved Offline Successfully, It will get Updated when reconnected",NotificationType.Information));
         Size: =24
         Text: ="Save"
         Width: =640
