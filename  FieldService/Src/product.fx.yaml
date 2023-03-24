@@ -33,6 +33,7 @@ product As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =402
             X: =238
+            Y: =7
             ZIndex: =1
 
         Subtitle7 As label:
@@ -46,11 +47,11 @@ product As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =402
             X: =238
-            Y: =101
+            Y: =56
             ZIndex: =2
 
         Body4 As label:
-            Height: =54
+            Height: =41
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -60,7 +61,7 @@ product As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =402
             X: =238
-            Y: =183
+            Y: =108
             ZIndex: =3
 
         Separator21 As rectangle:
@@ -78,6 +79,7 @@ product As screen:
             Text: |-
                 ="Name:"
             Width: =560
+            Y: =10
             ZIndex: =6
 
         Label22_1 As label:
@@ -88,7 +90,7 @@ product As screen:
             Text: |-
                 ="Product ID:"
             Width: =238
-            Y: =95
+            Y: =53
             ZIndex: =7
 
         Label22_2 As label:
@@ -99,7 +101,7 @@ product As screen:
             Text: |-
                 ="Product Type:"
             Width: =238
-            Y: =183
+            Y: =98
             ZIndex: =8
 
     Component1_16 As Component1:
