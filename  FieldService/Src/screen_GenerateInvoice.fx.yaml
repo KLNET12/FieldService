@@ -36,7 +36,7 @@ screen_GenerateInvoice As screen:
             Reset('WO Number');
             Notify("Invoice Generated",NotificationType.Success)
         Size: =24
-        Text: ="Generate Invoice"
+        Text: =If(IsBlank(varInvoiceId),"Generate Invoice","Update Invoice")
         Visible: =!varInvoice && varEditSummary
         Width: =640
         Y: =1051
@@ -844,6 +844,14 @@ screen_GenerateInvoice As screen:
         X: =487
         Y: =2
         ZIndex: =39
+
+    Icon22 As icon.Edit:
+        Icon: =Icon.Edit
+        OnSelect: =Set(varInvoice,false)
+        Visible: =varInvoice
+        X: =487
+        Y: =2
+        ZIndex: =40
 
     Plicelist As group:
         Height: =5
