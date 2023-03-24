@@ -313,6 +313,15 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
+    },
+    {
+      "Kind": "default.cds_invoicedetail_forms",
+      "Namespace": "Invoice Lines (Forms)",
+      "Values": {
+        "Information": "684b159c-c312-4248-8b0f-0c164abe7d9e",
+        "InvoiceDetail": "83ffb4aa-51d5-4a12-9e08-783c67cfeb44",
+        "Project": "f03952d2-62cc-453f-97bb-d66b4adff342"
+      }
     }
   ]
 }

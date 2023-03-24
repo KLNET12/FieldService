@@ -138,7 +138,7 @@ WorkOrder As screen:
             ZIndex: =9
 
         Button14 As button:
-            Height: =57
+            Height: =70
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -151,6 +151,30 @@ WorkOrder As screen:
             X: =492
             Y: =13
             ZIndex: =10
+
+        button_GenerateInvoice As button:
+            Height: =70
+            OnSelect: |-
+                =Set(varLoadingScreen,true); 
+                Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft
+                } ));
+                Set(varInvoiceId,GeneratedInvoice.Invoice);
+                CreateInvoiceLines.Run(varInvoiceId,ThisItem.'WO Number');
+                Refresh(Invoices);
+                Set(varInvoice,true);
+                Set(varLoadingScreen,false);
+                Navigate(screen_GenerateInvoice);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Text: ="Generate Invoice"
+            Tooltip: ="To see Invoices"
+            Width: =140
+            X: =492
+            Y: =142
+            ZIndex: =11
 
     Component1_6 As Component1:
         Height: =70
@@ -201,4 +225,28 @@ WorkOrder As screen:
         X: =20
         Y: =92
         ZIndex: =7
+
+    Loading As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =14
+
+        LoadingComponent_1 As LoadingComponent:
+            Height: =Parent.Height
+            Visible: =varLoadingScreen
+            ZIndex: =12
+
+        LoadingMessage As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =21
+            Text: ="Invoice is Generating Please Wait"
+            Visible: =varLoadingScreen
+            Width: =560
+            X: =40
+            Y: =700
+            ZIndex: =13
 

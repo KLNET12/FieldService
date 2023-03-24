@@ -467,6 +467,10 @@
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "pricingerrorcode",
         "OptionSetReferenceEntityName": "Invoices"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "pricingerrorcode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
       }
     },
     "OptionSetTypeKey": "PicklistType",

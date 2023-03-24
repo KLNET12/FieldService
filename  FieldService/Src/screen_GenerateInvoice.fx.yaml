@@ -1,7 +1,8 @@
 screen_GenerateInvoice As screen:
     Fill: =RGBA(252, 252, 232, 1)
     OnVisible: |
-        =If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        =If(varInvoice,Set(varDisplaySummary,true);Set(varDisplayProducts,false);Set(varDisplayServices,false),Set(varEditSummary,true);Set(varEditProducts,false);Set(varEditServices,false));
+        If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
         If( Connection.Connected,
             ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
             Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
@@ -34,6 +35,7 @@ screen_GenerateInvoice As screen:
             Notify("Invoice Generated",NotificationType.Success)
         Size: =24
         Text: ="Generate Invoice"
+        Visible: =!varInvoice && varEditSummary
         Width: =640
         Y: =1051
         ZIndex: =4
@@ -59,7 +61,7 @@ screen_GenerateInvoice As screen:
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =964
-        Visible: =varInvoice
+        Visible: =varInvoice && varDisplaySummary
         Y: =210
         ZIndex: =28
 
@@ -567,6 +569,131 @@ screen_GenerateInvoice As screen:
         Y: =92
         ZIndex: =32
 
+    "'Invoice Products' As gallery.variableTemplateHeightGallery":
+        DelayItemLoading: =true
+        Height: =926
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Y: =210
+        ZIndex: =36
+
+        Name_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+            Label33 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Product Name'
+                Width: =430
+                X: =200
+                ZIndex: =1
+
+            Label33_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Name:"
+                Width: =200
+                ZIndex: =2
+
+        Description_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            Label34 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Description:"
+                Width: =200
+                Y: =70
+                ZIndex: =3
+
+            Label33_2 As label:
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Description
+                Width: =430
+                X: =200
+                Y: =70
+                ZIndex: =4
+
+        Amount_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =9
+
+            Label34_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Amount:"
+                Width: =200
+                Y: =240
+                ZIndex: =7
+
+            Label33_4 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Amount
+                Width: =430
+                X: =200
+                Y: =240
+                ZIndex: =8
+
+        Rectangle3 As rectangle:
+            Height: =2
+            Width: =Parent.Width
+            Y: =310
+            ZIndex: =11
+
+        Quantity_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =11
+
+            Label34_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Quantity:"
+                Width: =200
+                Y: =170
+                ZIndex: =9
+
+            Label33_3 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Quantity
+                Width: =430
+                X: =200
+                Y: =170
+                ZIndex: =10
+
     Plicelist As group:
         Height: =5
         Width: =5
@@ -580,6 +707,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Price List"
+            Visible: =!varInvoice && varEditSummary
             Width: =640
             Y: =480
             ZIndex: =11
@@ -589,6 +717,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: ='Price Lists'
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =480
@@ -605,6 +734,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =Choices('Project Invoice Status')
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =900
@@ -616,6 +746,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =18
             Text: ="Invoice Status"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =900
             ZIndex: =23
@@ -633,6 +764,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =18
             Text: ="Bookings"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =840
             ZIndex: =24
@@ -642,6 +774,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text)
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =840
@@ -660,6 +793,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Type"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =780
             ZIndex: =21
@@ -669,6 +803,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =Choices('Type (Invoices)')
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =780
@@ -687,6 +822,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Due Date"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =720
             ZIndex: =19
@@ -694,6 +830,7 @@ screen_GenerateInvoice As screen:
         "'Due date' As datepicker":
             Height: =60
             Size: =24
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =720
@@ -712,6 +849,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Invoice Date"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =660
             ZIndex: =17
@@ -719,6 +857,7 @@ screen_GenerateInvoice As screen:
         "'Invoice Date' As datepicker":
             Height: =60
             Size: =24
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =660
@@ -737,6 +876,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Total Amount"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =600
             ZIndex: =1
@@ -747,6 +887,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Size: =21
             Text: =Gallery3.Selected.'Total Amount'
+            Visible: =!varInvoice && varEditSummary
             Width: =457
             X: =183
             Y: =600
@@ -765,6 +906,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Currency"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =540
             ZIndex: =3
@@ -774,6 +916,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =Currencies
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =540
@@ -794,6 +937,7 @@ screen_GenerateInvoice As screen:
             Text: |-
                 ="Bookable
                 Resource"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =415
             ZIndex: =9
@@ -803,6 +947,7 @@ screen_GenerateInvoice As screen:
             Height: =65
             Items: =First(Filter('Bookable Resources', Username = TextInput2.Text))
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =415
@@ -821,6 +966,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Workorder"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =355
             ZIndex: =8
@@ -830,6 +976,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =First(Filter('Work Orders','WO Number' = varWorkId))
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =355
@@ -848,6 +995,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =19
             Text: ="Customer"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =295
             ZIndex: =7
@@ -857,6 +1005,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             Items: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account))
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =458
             X: =182
             Y: =295
@@ -875,6 +1024,7 @@ screen_GenerateInvoice As screen:
             PaddingLeft: =10
             Size: =20
             Text: ="Name"
+            Visible: =!varInvoice && varEditSummary
             Width: =182
             Y: =235
             ZIndex: =5
@@ -884,6 +1034,7 @@ screen_GenerateInvoice As screen:
             Height: =60
             HintText: ="Name"
             Size: =21
+            Visible: =!varInvoice && varEditSummary
             Width: =457
             X: =182
             Y: =235
@@ -898,6 +1049,7 @@ screen_GenerateInvoice As screen:
 
         button_Summary As button:
             Height: =70
+            OnSelect: =If(varInvoice,Set(varDisplaySummary,true);Set(varDisplayProducts,false);Set(varDisplayServices,false),Set(varEditSummary,true);Set(varEditProducts,false);Set(varEditServices,false))
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -910,6 +1062,7 @@ screen_GenerateInvoice As screen:
 
         button_Products As button:
             Height: =70
+            OnSelect: =If(varInvoice,Set(varDisplaySummary,false);Set(varDisplayProducts,true);Set(varDisplayServices,false),Set(varEditSummary,false);Set(varEditProducts,true);Set(varEditServices,false))
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -923,6 +1076,7 @@ screen_GenerateInvoice As screen:
 
         button_Services As button:
             Height: =70
+            OnSelect: =If(varInvoice,Set(varDisplaySummary,false);Set(varDisplayProducts,false);Set(varDisplayServices,true),Set(varEditSummary,false);Set(varEditProducts,false);Set(varEditServices,true))
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
