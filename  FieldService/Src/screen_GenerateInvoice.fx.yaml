@@ -571,10 +571,12 @@ screen_GenerateInvoice As screen:
 
     "'Invoice Products' As gallery.variableTemplateHeightGallery":
         DelayItemLoading: =true
+        Fill: =RGBA(252, 255, 204, 1)
         Height: =926
-        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId)
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.Product || 'Product type'='Product Type'.'Optional Bundle Product'))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        Visible: =varDisplayProducts || varEditProducts
         Y: =210
         ZIndex: =36
 
@@ -685,6 +687,133 @@ screen_GenerateInvoice As screen:
                 ZIndex: =9
 
             Label33_3 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Quantity
+                Width: =430
+                X: =200
+                Y: =170
+                ZIndex: =10
+
+    "'Invoice Services' As gallery.variableTemplateHeightGallery":
+        DelayItemLoading: =true
+        Fill: =RGBA(252, 255, 204, 1)
+        Height: =926
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && 'Product type' = 'Product Type'.'Project-based Service')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Visible: =varDisplayServices || varEditServices
+        Y: =210
+        ZIndex: =37
+
+        Name_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+            Label33_6 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Product Name'
+                Width: =430
+                X: =200
+                ZIndex: =1
+
+            Label33_5 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Name:"
+                Width: =200
+                ZIndex: =2
+
+        Description_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            Label34_3 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Description:"
+                Width: =200
+                Y: =70
+                ZIndex: =3
+
+            Label33_7 As label:
+                Height: =100
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Description
+                Width: =430
+                X: =200
+                Y: =70
+                ZIndex: =4
+
+        Amount_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =9
+
+            Label34_5 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Amount:"
+                Width: =200
+                Y: =240
+                ZIndex: =7
+
+            Label33_9 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Amount
+                Width: =430
+                X: =200
+                Y: =240
+                ZIndex: =8
+
+        Rectangle3_1 As rectangle:
+            Height: =2
+            Width: =630
+            Y: =310
+            ZIndex: =11
+
+        Quantity_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-30
+            ZIndex: =11
+
+            Label34_4 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Quantity:"
+                Width: =200
+                Y: =170
+                ZIndex: =9
+
+            Label33_8 As label:
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =21
@@ -1001,7 +1130,7 @@ screen_GenerateInvoice As screen:
             ZIndex: =7
 
         Customer As dropdown:
-            Default: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account)).'Account Name'
+            Default: =If(IsBlank(varInvoiceId),First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account)).'Account Name',Filter(Accounts,AccountGeneratedInvoice.Customer)
             Height: =60
             Items: =First(Filter(Accounts,Account =First(Filter('Work Orders','WO Number' = varWorkId)).'Billing Account'.Account))
             Size: =21
@@ -1030,7 +1159,7 @@ screen_GenerateInvoice As screen:
             ZIndex: =5
 
         Name As text:
-            Default: =""
+            Default: =If(IsBlank(varInvoiceId),Gallery1_2.Selected.'WO Number',GeneratedInvoice.Name)
             Height: =60
             HintText: ="Name"
             Size: =21
