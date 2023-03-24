@@ -297,6 +297,20 @@
         "Task quick create form.": "a1c8a6dc-8804-4019-9c78-7dbe86560ea1",
         "Task Reference Panel": "81a89014-442c-44ad-9725-4077426a7fee"
       }
+    },
+    {
+      "Kind": "default.cds_appointment_forms",
+      "Namespace": "Appointments (Forms)",
+      "Values": {
+        "After Meeting": "7f58467b-ab43-447c-ab95-29deea3b1e35",
+        "Appointment": "549a8aa3-c349-4ab9-8bac-4873fa9a7a5c",
+        "Appointment Card form": "656cc4ad-235b-495b-8cb9-6174f9b09321",
+        "Appointment for Interactive experience": "230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e",
+        "Appointment quick create form.": "5895e983-598b-4834-80f9-68a4e9f4f744",
+        "Appointment Reference Panel": "4cd45c5d-29b3-48d3-997a-2bc3f8beeba8",
+        "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
+        "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
+      }
     }
   ]
 }

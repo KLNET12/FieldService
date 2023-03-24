@@ -61,7 +61,7 @@ Activity As screen:
             FontWeight: =FontWeight.Bold
             Height: =70
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =20
             Text: |-
                 ="Subject:"
             Width: =214
@@ -72,7 +72,7 @@ Activity As screen:
             FontWeight: =FontWeight.Bold
             Height: =55
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =20
             Text: |-
                 ="Status:"
             Width: =214
@@ -86,19 +86,44 @@ Activity As screen:
             Text: =ThisItem.Priority
             Width: =214
             X: =213
-            Y: =130
+            Y: =123
             ZIndex: =9
 
         Label26_1 As label:
             FontWeight: =FontWeight.Bold
             Height: =43
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =20
             Text: |-
                 ="Priority:"
             Width: =214
             Y: =123
             ZIndex: =10
+
+        Label26_2 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Description:"
+            Width: =180
+            Y: =64
+            ZIndex: =11
+
+        Label27 As label:
+            Height: =63
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Description
+            Width: =327
+            X: =213
+            Y: =60
+            ZIndex: =12
 
     Component1_17 As Component1:
         Height: =70

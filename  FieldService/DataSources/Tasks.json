@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "task",
+    "MaxGetRowsCount": 500,
     "Name": "Tasks",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -33,6 +34,7 @@
       "modifiedon": "Modified On",
       "modifiedonbehalfby_task": "Modified By (Delegate)",
       "msdyn_task_msdyn_ocliveworkitem_msdyn_msdyn_routableobjectid": "Conversations",
+      "ntzz_Bookableresource_Task": "Bookable resource",
       "onholdtime": "On Hold Time (Minutes)",
       "overriddencreatedon": "Record Created On",
       "owningbusinessunit_task": "Owning Business Unit",

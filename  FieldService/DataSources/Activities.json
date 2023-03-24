@@ -175,6 +175,10 @@
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "activitytypecode",
         "OptionSetReferenceEntityName": "Tasks"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "activitytypecode",
+        "OptionSetReferenceEntityName": "Appointments"
       }
     },
     "OptionSetTypeKey": "EntityNameType",
@@ -291,6 +295,10 @@
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "isregularactivity",
         "OptionSetReferenceEntityName": "Tasks"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "isregularactivity",
+        "OptionSetReferenceEntityName": "Appointments"
       }
     },
     "OptionSetTypeKey": "BooleanType",
