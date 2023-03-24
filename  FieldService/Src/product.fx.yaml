@@ -140,7 +140,7 @@ product As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =402
             X: =238
-            Y: =207
+            Y: =209
             ZIndex: =11
 
         Label22_4 As label:
