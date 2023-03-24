@@ -433,3 +433,12 @@
         Y: =92
         ZIndex: =6
 
+    Icon20 As icon.ChevronLeft:
+        Height: =54
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =37
+        X: =577
+        Y: =7
+        ZIndex: =7
+
