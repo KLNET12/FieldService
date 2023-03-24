@@ -104,6 +104,31 @@ product As screen:
             Y: =98
             ZIndex: =8
 
+        Label22_3 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Price List:"
+            Width: =200
+            Y: =149
+            ZIndex: =9
+
+        Body4_1 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Default Price List'.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =402
+            X: =238
+            Y: =159
+            ZIndex: =10
+
     Component1_16 As Component1:
         Height: =70
         ZIndex: =2
