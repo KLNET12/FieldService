@@ -154,6 +154,14 @@ product As screen:
             Y: =199
             ZIndex: =12
 
+        Arrow1 As arrow:
+            Height: =46
+            OnSelect: =Select(Parent);Navigate('Product view');
+            Width: =52
+            X: =560
+            Y: =104
+            ZIndex: =13
+
     Component1_16 As Component1:
         Height: =70
         ZIndex: =2
