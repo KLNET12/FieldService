@@ -119,7 +119,7 @@ Activity As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =ThisItem.Description
+            Text: =
             Width: =327
             X: =213
             Y: =60
