@@ -96,6 +96,7 @@
       "msdyn_projectid": "Project",
       "msdyn_projectteamid": "Project Team Member",
       "msdyn_quickNoteAction": "Quick note actions",
+      "msdyn_reportview": "reportview",
       "msdyn_requirementgroupid": "Requirement Group",
       "msdyn_requirementgroupset": "Requirement Group Set",
       "msdyn_resourcecategoryid": "Resource Category",
