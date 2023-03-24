@@ -42,7 +42,7 @@ Screen7 As screen:
             OnSelect: |-
                 =Set(varInvoice,true);
                 Set(varInvoiceId, GUID(ThisItem.Invoice));
-                Navigate(Screen9)
+                Navigate(screen_GenerateInvoice)
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =204
@@ -150,7 +150,7 @@ Screen7 As screen:
             OnSelect: |-
                 =Set(varInvoice,false);
                 Set(varWID,GUID(Gallery3.Selected.'Billing Account'.Account));
-                Navigate(Screen9)
+                Navigate(screen_GenerateInvoice)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
