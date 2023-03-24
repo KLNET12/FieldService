@@ -79,6 +79,27 @@ Activity As screen:
             Y: =166
             ZIndex: =8
 
+        Label26 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Priority
+            Width: =214
+            X: =213
+            Y: =130
+            ZIndex: =9
+
+        Label26_1 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Priority:"
+            Width: =214
+            Y: =123
+            ZIndex: =10
+
     Component1_17 As Component1:
         Height: =70
         ZIndex: =2
