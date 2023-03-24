@@ -14,11 +14,12 @@ product As screen:
         );)
 
     "Gallery11 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Height: =1136
+        Height: =1001
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =250
+        Y: =135
         ZIndex: =1
 
         Title11 As label:
@@ -139,7 +140,7 @@ product As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =402
             X: =238
-            Y: =199
+            Y: =207
             ZIndex: =11
 
         Label22_4 As label:

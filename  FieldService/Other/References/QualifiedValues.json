@@ -275,16 +275,6 @@
       }
     },
     {
-      "Kind": "default.cds_provisionlanguageforuser_forms",
-      "Namespace": "ProvisionLanguageForUser (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_resource_forms",
-      "Namespace": "Resources (Forms)",
-      "Values": {}
-    },
-    {
       "Kind": "default.cds_task_forms",
       "Namespace": "Tasks (Forms)",
       "Values": {
@@ -311,6 +301,16 @@
         "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
         "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
       }
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {}
     }
   ]
 }

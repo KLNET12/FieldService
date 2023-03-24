@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "appointment",
+    "MaxGetRowsCount": 500,
     "Name": "Appointments",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
