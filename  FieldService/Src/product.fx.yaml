@@ -14,12 +14,11 @@ product As screen:
         );)
 
     "Gallery11 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Height: =999
+        Height: =1136
         Items: =Products
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =250
-        Y: =135
         ZIndex: =1
 
         Title11 As label:
@@ -128,6 +127,31 @@ product As screen:
             X: =238
             Y: =159
             ZIndex: =10
+
+        Body4_2 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Default Price List'.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =402
+            X: =238
+            Y: =199
+            ZIndex: =11
+
+        Label22_4 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Price List:"
+            Width: =200
+            Y: =199
+            ZIndex: =12
 
     Component1_16 As Component1:
         Height: =70
