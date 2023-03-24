@@ -21,7 +21,7 @@ WorkOrder As screen:
         Y: =141
         ZIndex: =1
 
-    "Gallery1_2 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+    "gallery_WorkOrder As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         DelayItemLoading: =true
         Height: =923
         Items: |
@@ -30,7 +30,7 @@ WorkOrder As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
             =Set(varNav,true);
-            Set(varWorkId,GUID(Gallery1_2.Selected.'WO Number'));
+            Set(varWorkId,GUID(gallery_WorkOrder.Selected.'WO Number'));
             Navigate(screen_ShowInvoices)
         ShowScrollbar: =false
         TemplatePadding: =4
@@ -141,7 +141,7 @@ WorkOrder As screen:
             Height: =70
             OnSelect: |-
                 =Set(varNav,true);
-                Set(varWorkId,GUID(Gallery1_2.Selected.'WO Number'));
+                Set(varWorkId,GUID(gallery_WorkOrder.Selected.'WO Number'));
                 Navigate(screen_ShowInvoices)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -167,6 +167,8 @@ WorkOrder As screen:
                 Refresh(Invoices);
                 Refresh('Invoice Lines');
                 Set(varInvoice,true);
+                Set(varNav,true);
+                Set(varWorkId,GUID(gallery_WorkOrder.Selected.'WO Number'));
                 Set(varLoadingScreen,false);
                 Navigate(screen_GenerateInvoice);
             RadiusBottomLeft: =0

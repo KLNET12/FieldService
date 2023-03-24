@@ -41,7 +41,7 @@
         Default: =""
         Height: =80
         HintText: ="Enter your password"
-        Mode: =TextMode.Password
+        Mode: =If(ShowPass,TextMode.SingleLine,TextMode.Password)
         Size: =21
         Width: =640
         X: =2
@@ -64,6 +64,7 @@
     TextInput2 As text:
         Default: =""
         Height: =77
+        HintText: ="Enter your username"
         Size: =21
         Width: =640
         X: =2
@@ -97,4 +98,24 @@
         X: =20
         Y: =92
         ZIndex: =8
+
+    Image3 As image:
+        Height: =64
+        Image: ='Hide Pass'
+        OnSelect: =Set(ShowPass,true)
+        Visible: =!ShowPass
+        Width: =64
+        X: =562
+        Y: =329
+        ZIndex: =9
+
+    Image3_1 As image:
+        Height: =64
+        Image: =ShowPass_1
+        OnSelect: =Set(ShowPass,false)
+        Visible: =ShowPass
+        Width: =64
+        X: =562
+        Y: =329
+        ZIndex: =10
 

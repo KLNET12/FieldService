@@ -20,7 +20,7 @@ screen_GenerateInvoice As screen:
         Height: =85
         OnSelect: |-
             =If(IsBlank(varInvoiceId),Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected , Currency: Currency.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value,'Bookable Resource Booking':Currency_1.Selected
-            } )),Set(GeneratedInvoice,Patch(Invoices,GeneratedInvoice, {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected , Currency: Currency.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value,'Bookable Resource Booking':Currency_1.Selected
+            } )),Set(GeneratedInvoice,Patch(Invoices,GeneratedInvoice, {Name:Name.Text, Customer: Customer.Selected , 'Bookable Resource':'Bookable resource'.Selected, 'Invoice Date': 'Invoice Date'.SelectedDate, 'Due Date': 'Due date'.SelectedDate, Type: Type.Selected.Value , 'Price List': 'Price List'.Selected, 'Work Order': 'WO Number'.Selected, 'Project Invoice Status': Status.Selected.Value,'Bookable Resource Booking':Currency_1.Selected
             } )));
             Set(varInvoiceId,GeneratedInvoice.Invoice);
             Reset(Name);
@@ -847,7 +847,7 @@ screen_GenerateInvoice As screen:
 
     Icon22 As icon.Edit:
         Icon: =Icon.Edit
-        OnSelect: =Set(varInvoice,false)
+        OnSelect: =Set(varInvoice,false); Set(varEditSummary,true);
         Visible: =varInvoice
         X: =487
         Y: =2
@@ -872,7 +872,7 @@ screen_GenerateInvoice As screen:
             ZIndex: =11
 
         "'Price List' As dropdown":
-            Default: =If(IsBlank(varInvoiceId),Gallery1_2.Selected.'Price List'.Name,GeneratedInvoice.'Price List'.Name)
+            Default: =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.'Price List'.Name,GeneratedInvoice.'Price List'.Name)
             Height: =60
             Items: ='Price Lists'
             Size: =21
@@ -930,7 +930,7 @@ screen_GenerateInvoice As screen:
             ZIndex: =24
 
         Currency_1 As dropdown:
-            Default: =If(IsBlank(varInvoiceId),First(Gallery1_2.Selected.'Bookable Resource Bookings').Name,GeneratedInvoice.'Bookable Resource Booking'.Name)
+            Default: =If(IsBlank(varInvoiceId),First(gallery_WorkOrder.Selected.'Bookable Resource Bookings').Name,GeneratedInvoice.'Bookable Resource Booking'.Name)
             Height: =60
             Items: =Filter('Bookable Resource Bookings',Resource.Username = TextInput2.Text)
             Size: =21
@@ -1075,7 +1075,9 @@ screen_GenerateInvoice As screen:
 
         Currency As dropdown:
             Default: |
-                =If(IsBlank(varInvoiceId),Gallery1_2.Selected.Currency.'Currency Name',GeneratedInvoice.Currency.'Currency Name')
+                =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.Currency.'Currency Name',GeneratedInvoice.Currency.'Currency Name')
+            DisabledFill: =RGBA(26, 26, 26, 1)
+            DisplayMode: =If(IsBlank(varInvoiceId),DisplayMode.Edit,DisplayMode.View)
             Height: =60
             Items: =Currencies
             Size: =21
@@ -1193,7 +1195,7 @@ screen_GenerateInvoice As screen:
             ZIndex: =5
 
         Name As text:
-            Default: =If(IsBlank(varInvoiceId),Gallery1_2.Selected.'Work Order Number',GeneratedInvoice.Name)
+            Default: =If(IsBlank(varInvoiceId),gallery_WorkOrder.Selected.'Work Order Number',GeneratedInvoice.Name)
             Height: =60
             HintText: ="Name"
             Size: =21
