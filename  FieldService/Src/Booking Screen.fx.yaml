@@ -150,7 +150,7 @@
             Icon: =Icon.Add
             OnSelect: |-
                 =Set(varNav,false);
-                Navigate(Screen7)
+                Navigate(screen_ShowInvoices)
             Tooltip: ="Create Invoice"
             X: =553
             Y: =139

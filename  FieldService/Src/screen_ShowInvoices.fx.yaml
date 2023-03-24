@@ -1,4 +1,4 @@
-Screen7 As screen:
+screen_ShowInvoices As screen:
     Fill: =
     OnVisible: |+
         =Refresh('Work Orders');
@@ -69,7 +69,11 @@ Screen7 As screen:
                 AccessibleLabel: =Self.Tooltip
                 Height: =60
                 Icon: =Icon.ChevronRight
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =Set(varInvoice,true);
+                    Set(GeneratedInvoice,ThisItem);
+                    Set(varInvoiceId, GUID(ThisItem.Invoice));
+                    Navigate(screen_GenerateInvoice)
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -149,6 +153,7 @@ Screen7 As screen:
             Height: =67
             OnSelect: |-
                 =Set(varInvoice,false);
+                Set(varInvoiceId,Blank());
                 Set(varWID,GUID(Gallery3.Selected.'Billing Account'.Account));
                 Navigate(screen_GenerateInvoice)
             RadiusBottomLeft: =0

@@ -31,7 +31,7 @@ WorkOrder As screen:
         OnSelect: |-
             =Set(varNav,true);
             Set(varWorkId,GUID(Gallery1_2.Selected.'WO Number'));
-            Navigate(Screen7)
+            Navigate(screen_ShowInvoices)
         ShowScrollbar: =false
         TemplatePadding: =4
         TemplateSize: =411
@@ -139,14 +139,18 @@ WorkOrder As screen:
 
         Button14 As button:
             Height: =70
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Set(varNav,true);
+                Set(varWorkId,GUID(Gallery1_2.Selected.'WO Number'));
+                Navigate(screen_ShowInvoices)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =18
-            Text: ="Invoice"
+            Text: ="Invoices"
             Tooltip: ="To see Invoices"
+            Visible: =If(ThisItem.'System Status'='WO System Status'.Completed,true,false)
             Width: =140
             X: =492
             Y: =13
@@ -156,7 +160,7 @@ WorkOrder As screen:
             Height: =70
             OnSelect: |-
                 =Set(varLoadingScreen,true); 
-                Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft
+                Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft, 'Bookable Resource Booking':First(ThisItem.'Bookable Resource Bookings')
                 } ));
                 Set(varInvoiceId,GeneratedInvoice.Invoice);
                 CreateInvoiceLines.Run(varInvoiceId,ThisItem.'WO Number');
@@ -171,6 +175,7 @@ WorkOrder As screen:
             Size: =18
             Text: ="Generate Invoice"
             Tooltip: ="To see Invoices"
+            Visible: =If(ThisItem.'System Status'='WO System Status'.Completed,true,false)
             Width: =140
             X: =492
             Y: =142
