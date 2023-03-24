@@ -163,8 +163,9 @@ WorkOrder As screen:
                 Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft, 'Bookable Resource Booking':First(ThisItem.'Bookable Resource Bookings')
                 } ));
                 Set(varInvoiceId,GeneratedInvoice.Invoice);
-                CreateInvoiceLines.Run(varInvoiceId,ThisItem.'WO Number');
+                Set(varValue,CreateInvoiceLines.Run(varInvoiceId,ThisItem.'WO Number').value);
                 Refresh(Invoices);
+                Refresh('Invoice Lines');
                 Set(varInvoice,true);
                 Set(varLoadingScreen,false);
                 Navigate(screen_GenerateInvoice);

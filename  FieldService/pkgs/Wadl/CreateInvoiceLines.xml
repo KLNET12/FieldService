@@ -8,6 +8,11 @@
         <property name="Addanewrow_InvoiceID(Invoices)" type="string" />
         <property name="Addanewrow_WorkOrder(WorkOrders)" type="string" />
       </object>
+      <string name="ResponseActionOutput_value_def" />
+      <object name="ResponseActionOutput">
+        <property name="value" type="string" />
+      </object>
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/logicflows">
@@ -24,6 +29,9 @@
             <param style="plain" name="Addanewrow_WorkOrder(WorkOrders)" path="/Addanewrow_WorkOrder(WorkOrders)" type="xs:string" required="true" />
           </representation>
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>

@@ -6333,6 +6333,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varValue"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varValue",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varValue",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.6-best-ways-to-collect-customer-feedback-on-instagram"
                 }
               ],
