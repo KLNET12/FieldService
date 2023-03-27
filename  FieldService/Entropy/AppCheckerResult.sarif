@@ -1832,36 +1832,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "screen_GenerateInvoice.icon_AddInvoiceLine.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "screen_GenerateInvoice.icon_AddInvoiceLine.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "screen_GenerateInvoice",
-                "type": "screen_GenerateInvoice.icon_AddInvoiceLine"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "screen_GenerateInvoice.icon_AddInvoiceLine.TabIndex"
                 }
               ],
@@ -1886,6 +1856,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "screen_GenerateInvoice.icon_AddInvoiceLine.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "screen_GenerateInvoice.icon_AddInvoiceLine.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_GenerateInvoice",
+                "type": "screen_GenerateInvoice.icon_AddInvoiceLine"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [

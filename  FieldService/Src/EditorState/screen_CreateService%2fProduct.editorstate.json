@@ -538,7 +538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency_DataCard4",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17698,7 +17698,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Property Configuration_DataCard1",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23303,7 +23303,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Work Order Service_DataCard2",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
