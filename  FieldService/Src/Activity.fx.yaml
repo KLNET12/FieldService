@@ -564,7 +564,7 @@ Activity As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =419
             X: =214
-            Y: =309
+            Y: =127
             ZIndex: =2
 
         Separator23_4 As rectangle:
@@ -593,7 +593,7 @@ Activity As screen:
             Text: |-
                 ="Status:"
             Width: =214
-            Y: =296
+            Y: =114
             ZIndex: =5
 
         Label26_14 As label:
@@ -603,7 +603,7 @@ Activity As screen:
             Text: =ThisItem.Priority
             Width: =214
             X: =213
-            Y: =253
+            Y: =71
             ZIndex: =6
 
         Label26_13 As label:
@@ -614,7 +614,7 @@ Activity As screen:
             Text: |-
                 ="Priority:"
             Width: =214
-            Y: =253
+            Y: =71
             ZIndex: =7
 
         Label26_12 As label:
@@ -625,11 +625,11 @@ Activity As screen:
             Text: |-
                 ="Description:"
             Width: =180
-            Y: =77
+            Y: =168
             ZIndex: =8
 
         Label27_4 As label:
-            Height: =55
+            Height: =174
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -639,6 +639,6 @@ Activity As screen:
             Text: =ThisItem.Description
             Width: =427
             X: =213
-            Y: =198
+            Y: =185
             ZIndex: =9
 
