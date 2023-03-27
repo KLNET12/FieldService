@@ -699,6 +699,15 @@ screen_GenerateInvoice As screen:
                 Y: =170
                 ZIndex: =10
 
+        Icon19 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =ResetForm(Form5);
+                Set(varInvoiceLine,ThisItem); Navigate('screen_CreateService/Product')
+            X: =566
+            Y: =6
+            ZIndex: =14
+
         Price_Product As group:
             Height: =5
             Width: =5
