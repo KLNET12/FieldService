@@ -1592,19 +1592,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83.AccessibleLabel"
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard1.DataCardValue57.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83.AccessibleLabel",
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard1.DataCardValue57.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "screen_CreateService/Product",
-                "type": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83"
+                "type": "'screen_CreateService/Product'.Form5.Salesperson_DataCard1.DataCardValue57"
               }
             }
           ],
@@ -8681,7 +8681,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"screen_GenerateInvoice\" is 364, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"screen_GenerateInvoice\" is 394, which exceeds the maximum threshold recommended (300)."
               }
             },
             {

@@ -576,7 +576,7 @@ screen_GenerateInvoice As screen:
         DelayItemLoading: =true
         Fill: =RGBA(252, 255, 204, 1)
         Height: =926
-        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.Product || 'Product type'='Product Type'.'Optional Bundle Product'))
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.Product || 'Product type'='Product Type'.'Optional Bundle Product') && Not('Existing Product'.'Product Type'='Product Type (Products)'.Services))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Visible: =varDisplayProducts || varEditProducts
@@ -659,7 +659,7 @@ screen_GenerateInvoice As screen:
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =21
-                Text: =ThisItem.Amount
+                Text: =ThisItem.'Extended Amount'
                 Width: =430
                 X: =200
                 Y: =240
@@ -699,11 +699,42 @@ screen_GenerateInvoice As screen:
                 Y: =170
                 ZIndex: =10
 
+        Price_Product As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =14
+
+            Label33_10 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Price Per Unit'
+                Width: =130
+                X: =500
+                Y: =170
+                ZIndex: =12
+
+            Label34_6 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Price per Unit:"
+                Width: =220
+                X: =280
+                Y: =170
+                ZIndex: =13
+
     "'Invoice Services' As gallery.variableTemplateHeightGallery":
         DelayItemLoading: =true
         Fill: =RGBA(252, 255, 204, 1)
         Height: =926
-        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.'Project-based Service' || 'Existing Product'.'Product Type'='Product Type (Products)'.Services))
+        Items: |-
+            =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.'Project-based Service' 
+            || 'Existing Product'.'Product Type'='Product Type (Products)'.Services))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Visible: =varDisplayServices || varEditServices
@@ -825,6 +856,35 @@ screen_GenerateInvoice As screen:
                 X: =200
                 Y: =170
                 ZIndex: =10
+
+        Price_Product_1 As group:
+            Height: =5
+            Width: =5
+            X: =-240
+            Y: =-130
+            ZIndex: =14
+
+            Label33_11 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.'Price Per Unit'
+                Width: =130
+                X: =500
+                Y: =170
+                ZIndex: =12
+
+            Label34_7 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: |-
+                    ="Price per Unit:"
+                Width: =220
+                X: =280
+                Y: =170
+                ZIndex: =13
 
     label_noDataAvailable_Products As label:
         Align: =Align.Center
