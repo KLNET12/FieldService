@@ -322,6 +322,36 @@
       "Kind": "default.cds_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {}
+    },
+    {
+      "Kind": "default.cds_phonecall_forms",
+      "Namespace": "Phone Calls (Forms)",
+      "Values": {
+        "Information": "dcfacadb-b9dd-44ff-b8a7-cd52179c92dc",
+        "Phone Call": "a91390a5-99bb-4d10-9eee-3a5c87f841f1",
+        "Phone Call Card form": "983dc188-2a05-4cfe-b907-4fbfae8c21f7",
+        "Phone Call for Interactive experience": "cdc622ea-2a17-4cc3-9605-44564d56cea7",
+        "Phone call quick create form.": "a80fb36c-353f-4310-a4cb-b8fa47d58b9b",
+        "Phone Call Reference Panel": "c466c56a-ab9d-41a3-ac68-008a60bfe67e",
+        "Phonecall card": "fbefc534-019c-472b-96d1-c3514d056297",
+        "Quick Form": "8e0b7c1e-f5a0-4e7d-b04d-4ca8d5c5ca80"
+      }
+    },
+    {
+      "Kind": "default.cds_email_forms",
+      "Namespace": "Email Messages (Forms)",
+      "Values": {
+        "Bulk Email": "5e0f2e7e-df92-eb11-b1ac-00224802b8a3",
+        "Email": "0d1e47ff-12b2-4f53-9090-bee951b98cb4",
+        "Email card": "4b2778f9-e9c6-40f5-9383-42f04feb3f11",
+        "Email Card form": "e5538bb9-77ec-4d24-bc5f-8cb2d825f664",
+        "Email for Interactive experience": "1d5ad078-3edb-4edc-98c6-c0c21e3125e3",
+        "Email Reference Panel": "6661cf9b-c178-44fd-b70b-8c632bd0bfb2",
+        "Enhanced Email": "63769d04-c74f-4808-b0aa-77339e1b9191",
+        "Enhanced Email (deprecated)": "b54ca399-eaa6-45f8-83f2-c268b0021087",
+        "Information": "394ca387-4777-457c-b5ae-c7a3e632be41",
+        "Wizard": "9360ee64-5238-4334-a1de-c155d20fe63d"
+      }
     }
   ]
 }

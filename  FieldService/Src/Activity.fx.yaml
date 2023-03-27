@@ -13,13 +13,14 @@ Activity As screen:
             Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
         );)
 
-    "Gallery12 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Height: =994
-        Items: =Activities
+    "TaskGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =918
+        Items: =If(Dropdown1.Selected.Value="Task",Tasks)
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =250
-        Y: =142
+        TemplateSize: =340
+        Visible: =If(Dropdown1.Selected.Value="Task",true,false)
+        Y: =216
         ZIndex: =1
 
         Title13 As label:
@@ -29,7 +30,7 @@ Activity As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Subject
+            Text: =ThisItem.'Additional Parameters'
             VerticalAlign: =VerticalAlign.Top
             Width: =426
             X: =214
@@ -47,7 +48,7 @@ Activity As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =419
             X: =214
-            Y: =179
+            Y: =127
             ZIndex: =3
 
         Separator23 As rectangle:
@@ -76,7 +77,7 @@ Activity As screen:
             Text: |-
                 ="Status:"
             Width: =214
-            Y: =166
+            Y: =114
             ZIndex: =8
 
         Label26 As label:
@@ -86,7 +87,7 @@ Activity As screen:
             Text: =ThisItem.Priority
             Width: =214
             X: =213
-            Y: =123
+            Y: =71
             ZIndex: =9
 
         Label26_1 As label:
@@ -97,32 +98,32 @@ Activity As screen:
             Text: |-
                 ="Priority:"
             Width: =214
-            Y: =123
+            Y: =71
             ZIndex: =10
 
         Label26_2 As label:
             FontWeight: =FontWeight.Bold
-            Height: =49
+            Height: =73
             OnSelect: =Select(Parent)
             Size: =20
             Text: |-
                 ="Description:"
             Width: =180
-            Y: =64
+            Y: =155
             ZIndex: =11
 
         Label27 As label:
-            Height: =63
+            Height: =171
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =
-            Width: =327
+            Text: =ThisItem.Description
+            Width: =427
             X: =213
-            Y: =60
+            Y: =141
             ZIndex: =12
 
     Component1_17 As Component1:
@@ -169,4 +170,475 @@ Activity As screen:
         X: =20
         Y: =92
         ZIndex: =10
+
+    Label29 As label:
+        Font: =Font.'Lato Black'
+        Height: =44
+        Size: =21
+        Text: ="Type"
+        Width: =115
+        Y: =142
+        ZIndex: =11
+
+    Dropdown1 As dropdown:
+        BorderThickness: =1
+        Height: =57
+        Items: =["ALL","Task","Phone","Appointment","Email"]
+        Size: =21
+        Width: =477
+        X: =163
+        Y: =142
+        ZIndex: =12
+
+    "PhoneGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =918
+        Items: ='Phone Calls'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =292
+        Visible: =If(Dropdown1.Selected.Value="Phone",true,false)
+        Y: =218
+        ZIndex: =13
+
+        Title13_1 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
+            Width: =426
+            X: =214
+            Y: =18
+            ZIndex: =1
+
+        Body5_1 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Activity Status'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =419
+            X: =214
+            Y: =145
+            ZIndex: =3
+
+        Separator23_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label23_1 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Subject:"
+            Width: =214
+            Y: =1
+            ZIndex: =6
+
+        Label23_3 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Status:"
+            Width: =214
+            Y: =132
+            ZIndex: =8
+
+        Label26_5 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Priority
+            Width: =214
+            X: =213
+            Y: =76
+            ZIndex: =9
+
+        Label26_4 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Priority:"
+            Width: =214
+            Y: =80
+            ZIndex: =10
+
+        Label26_3 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Description:"
+            Width: =180
+            Y: =192
+            ZIndex: =11
+
+        Label27_1 As label:
+            Height: =59
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Description
+            Width: =420
+            X: =217
+            Y: =194
+            ZIndex: =12
+
+    "AppointmentGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =918
+        Items: =Appointments
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =257
+        Visible: =If(Dropdown1.Selected.Value="Appointment",true,false)
+        Y: =218
+        ZIndex: =14
+
+        Title13_2 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
+            Width: =426
+            X: =214
+            Y: =18
+            ZIndex: =1
+
+        Body5_2 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Status
+            VerticalAlign: =VerticalAlign.Top
+            Width: =419
+            X: =214
+            Y: =126
+            ZIndex: =3
+
+        Separator23_2 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label23_4 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Subject:"
+            Width: =214
+            Y: =1
+            ZIndex: =6
+
+        Label23_5 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Status:"
+            Width: =214
+            Y: =113
+            ZIndex: =8
+
+        Label26_8 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Priority
+            Width: =214
+            X: =213
+            Y: =71
+            ZIndex: =9
+
+        Label26_7 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Priority:"
+            Width: =214
+            Y: =71
+            ZIndex: =10
+
+        Label26_6 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Description:"
+            Width: =180
+            Y: =168
+            ZIndex: =11
+
+        Label27_2 As label:
+            Height: =93
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Description
+            Width: =427
+            X: =213
+            Y: =164
+            ZIndex: =12
+
+    "EmailGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =918
+        Items: ='Email Messages'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =250
+        Visible: =If(Dropdown1.Selected.Value="Email",true,false)
+        Y: =218
+        ZIndex: =15
+
+        Title13_3 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
+            Width: =426
+            X: =214
+            Y: =18
+            ZIndex: =1
+
+        Body5_3 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Activity Status'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =419
+            X: =214
+            Y: =127
+            ZIndex: =3
+
+        Separator23_3 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label23_6 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Subject:"
+            Width: =214
+            Y: =1
+            ZIndex: =6
+
+        Label23_7 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Status:"
+            Width: =214
+            Y: =114
+            ZIndex: =8
+
+        Label26_11 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Priority
+            Width: =214
+            X: =213
+            Y: =71
+            ZIndex: =9
+
+        Label26_10 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Priority:"
+            Width: =214
+            Y: =71
+            ZIndex: =10
+
+        Label26_9 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Description:"
+            Width: =180
+            Y: =168
+            ZIndex: =11
+
+        Label27_3 As label:
+            Height: =82
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Description
+            Width: =327
+            X: =213
+            Y: =168
+            ZIndex: =12
+
+    "Allactivitygallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =918
+        Items: =Activities
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =372
+        Visible: =If(Dropdown1.Selected.Value="ALL",true,false)
+        Y: =218
+        ZIndex: =16
+
+        Title13_4 As label:
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
+            Width: =426
+            X: =214
+            Y: =18
+            ZIndex: =1
+
+        Body5_4 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Activity Status'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =419
+            X: =214
+            Y: =309
+            ZIndex: =2
+
+        Separator23_4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Label23_8 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Subject:"
+            Width: =214
+            Y: =1
+            ZIndex: =4
+
+        Label23_9 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Status:"
+            Width: =214
+            Y: =296
+            ZIndex: =5
+
+        Label26_14 As label:
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Priority
+            Width: =214
+            X: =213
+            Y: =253
+            ZIndex: =6
+
+        Label26_13 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Priority:"
+            Width: =214
+            Y: =253
+            ZIndex: =7
+
+        Label26_12 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                ="Description:"
+            Width: =180
+            Y: =77
+            ZIndex: =8
+
+        Label27_4 As label:
+            Height: =55
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Description
+            Width: =427
+            X: =213
+            Y: =198
+            ZIndex: =9
 

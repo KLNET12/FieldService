@@ -179,6 +179,14 @@
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "activitytypecode",
         "OptionSetReferenceEntityName": "Appointments"
+      },
+      "OptionSetReferenceItem4": {
+        "OptionSetReferenceColumnName": "activitytypecode",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      },
+      "OptionSetReferenceItem5": {
+        "OptionSetReferenceColumnName": "activitytypecode",
+        "OptionSetReferenceEntityName": "Email Messages"
       }
     },
     "OptionSetTypeKey": "EntityNameType",
@@ -204,6 +212,10 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "deliveryprioritycode",
         "OptionSetReferenceEntityName": "Customer Voice alert"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "deliveryprioritycode",
+        "OptionSetReferenceEntityName": "Email Messages"
       }
     },
     "OptionSetTypeKey": "PicklistType",
@@ -299,6 +311,14 @@
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "isregularactivity",
         "OptionSetReferenceEntityName": "Appointments"
+      },
+      "OptionSetReferenceItem4": {
+        "OptionSetReferenceColumnName": "isregularactivity",
+        "OptionSetReferenceEntityName": "Phone Calls"
+      },
+      "OptionSetReferenceItem5": {
+        "OptionSetReferenceColumnName": "isregularactivity",
+        "OptionSetReferenceEntityName": "Email Messages"
       }
     },
     "OptionSetTypeKey": "BooleanType",
