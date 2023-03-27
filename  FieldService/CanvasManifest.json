@@ -124,6 +124,7 @@
     "TimeEntrydetails",
     "WorkOrder",
     "screen_GenerateInvoice",
+    "screen_CreateService/Product",
     "screen_ShowInvoices",
     "Add Entry",
     "Add New Contact",

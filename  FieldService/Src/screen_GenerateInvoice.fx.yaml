@@ -840,6 +840,9 @@ screen_GenerateInvoice As screen:
 
     icon_AddInvoiceLine As icon.Add:
         Icon: =Icon.Add
+        OnSelect: |-
+            =NewForm(Form5);
+            Navigate('screen_CreateService/Product');
         Visible: =If(varEditProducts || varEditServices,true,false)
         X: =487
         Y: =2
@@ -1048,7 +1051,7 @@ screen_GenerateInvoice As screen:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =60
             Size: =21
-            Text: =If(IsBlank(varInvoiceId),Value(0),GeneratedInvoice.'Total Amount')
+            Text: =If(IsBlank(varInvoiceId),Value(0),First(Filter(Invoices,Invoice=GeneratedInvoice.Invoice)).'Total Amount')
             Visible: =!varInvoice && varEditSummary
             Width: =457
             X: =183
