@@ -310,6 +310,67 @@
     "Type": "OptionSetInfo"
   },
   {
+    "DisplayName": "Pricing Error ",
+    "Name": "qooi_pricingerrorcode",
+    "OptionSetInfoNameMapping": {
+      "0": "None",
+      "1": "Detail Error",
+      "10": "Missing UOM",
+      "11": "Product Not In Price Level",
+      "12": "Missing Price Level Amount",
+      "13": "Missing Price Level Percentage",
+      "14": "Missing Price",
+      "15": "Missing Current Cost",
+      "16": "Missing Standard Cost",
+      "17": "Invalid Price Level Amount",
+      "18": "Invalid Price Level Percentage",
+      "19": "Invalid Price",
+      "2": "Missing Price Level",
+      "20": "Invalid Current Cost",
+      "21": "Invalid Standard Cost",
+      "22": "Invalid Rounding Policy",
+      "23": "Invalid Rounding Option",
+      "24": "Invalid Rounding Amount",
+      "25": "Price Calculation Error",
+      "26": "Invalid Discount Type",
+      "27": "Discount Type Invalid State",
+      "28": "Invalid Discount",
+      "29": "Invalid Quantity",
+      "3": "Inactive Price Level",
+      "30": "Invalid Pricing Precision",
+      "31": "Missing Product Default UOM",
+      "32": "Missing Product UOM Schedule ",
+      "33": "Inactive Discount Type",
+      "34": "Invalid Price Level Currency",
+      "35": "Price Attribute Out Of Range",
+      "36": "Base Currency Attribute Overflow",
+      "37": "Base Currency Attribute Underflow",
+      "38": "Transaction currency is not set for the product price list item",
+      "4": "Missing Quantity",
+      "5": "Missing Unit Price",
+      "6": "Missing Product",
+      "7": "Invalid Product",
+      "8": "Missing Pricing Code",
+      "9": "Invalid Pricing Code"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "pricingerrorcode",
+        "OptionSetReferenceEntityName": "Invoice Lines"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "pricingerrorcode",
+        "OptionSetReferenceEntityName": "Invoices"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "pricingerrorcode",
+    "RelatedEntityName": "Invoice Lines",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "SkipPriceCalculation Option Set_1",
     "Name": "qooidetail_skippricecalculation",
     "OptionSetInfoNameMapping": {

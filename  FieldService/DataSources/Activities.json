@@ -170,15 +170,15 @@
       },
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "activitytypecode",
-        "OptionSetReferenceEntityName": "Customer Voice alert"
+        "OptionSetReferenceEntityName": "Appointments"
       },
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "activitytypecode",
-        "OptionSetReferenceEntityName": "Tasks"
+        "OptionSetReferenceEntityName": "Customer Voice alert"
       },
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "activitytypecode",
-        "OptionSetReferenceEntityName": "Appointments"
+        "OptionSetReferenceEntityName": "Email Messages"
       },
       "OptionSetReferenceItem4": {
         "OptionSetReferenceColumnName": "activitytypecode",
@@ -186,7 +186,7 @@
       },
       "OptionSetReferenceItem5": {
         "OptionSetReferenceColumnName": "activitytypecode",
-        "OptionSetReferenceEntityName": "Email Messages"
+        "OptionSetReferenceEntityName": "Tasks"
       }
     },
     "OptionSetTypeKey": "EntityNameType",
@@ -302,15 +302,15 @@
       },
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "isregularactivity",
-        "OptionSetReferenceEntityName": "Customer Voice alert"
+        "OptionSetReferenceEntityName": "Appointments"
       },
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "isregularactivity",
-        "OptionSetReferenceEntityName": "Tasks"
+        "OptionSetReferenceEntityName": "Customer Voice alert"
       },
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "isregularactivity",
-        "OptionSetReferenceEntityName": "Appointments"
+        "OptionSetReferenceEntityName": "Email Messages"
       },
       "OptionSetReferenceItem4": {
         "OptionSetReferenceColumnName": "isregularactivity",
@@ -318,7 +318,7 @@
       },
       "OptionSetReferenceItem5": {
         "OptionSetReferenceColumnName": "isregularactivity",
-        "OptionSetReferenceEntityName": "Email Messages"
+        "OptionSetReferenceEntityName": "Tasks"
       }
     },
     "OptionSetTypeKey": "BooleanType",

@@ -48,6 +48,20 @@
       }
     },
     {
+      "Kind": "default.cds_appointment_forms",
+      "Namespace": "Appointments (Forms)",
+      "Values": {
+        "After Meeting": "7f58467b-ab43-447c-ab95-29deea3b1e35",
+        "Appointment": "549a8aa3-c349-4ab9-8bac-4873fa9a7a5c",
+        "Appointment Card form": "656cc4ad-235b-495b-8cb9-6174f9b09321",
+        "Appointment for Interactive experience": "230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e",
+        "Appointment quick create form.": "5895e983-598b-4834-80f9-68a4e9f4f744",
+        "Appointment Reference Panel": "4cd45c5d-29b3-48d3-997a-2bc3f8beeba8",
+        "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
+        "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
+      }
+    },
+    {
       "Kind": "default.cds_bookableresourcebooking_forms",
       "Namespace": "Bookable Resource Bookings (Forms)",
       "Values": {
@@ -118,6 +132,31 @@
       }
     },
     {
+      "Kind": "default.cds_email_forms",
+      "Namespace": "Email Messages (Forms)",
+      "Values": {
+        "Bulk Email": "5e0f2e7e-df92-eb11-b1ac-00224802b8a3",
+        "Email": "0d1e47ff-12b2-4f53-9090-bee951b98cb4",
+        "Email card": "4b2778f9-e9c6-40f5-9383-42f04feb3f11",
+        "Email Card form": "e5538bb9-77ec-4d24-bc5f-8cb2d825f664",
+        "Email for Interactive experience": "1d5ad078-3edb-4edc-98c6-c0c21e3125e3",
+        "Email Reference Panel": "6661cf9b-c178-44fd-b70b-8c632bd0bfb2",
+        "Enhanced Email": "63769d04-c74f-4808-b0aa-77339e1b9191",
+        "Enhanced Email (deprecated)": "b54ca399-eaa6-45f8-83f2-c268b0021087",
+        "Information": "394ca387-4777-457c-b5ae-c7a3e632be41",
+        "Wizard": "9360ee64-5238-4334-a1de-c155d20fe63d"
+      }
+    },
+    {
+      "Kind": "default.cds_invoicedetail_forms",
+      "Namespace": "Invoice Lines (Forms)",
+      "Values": {
+        "Information": "684b159c-c312-4248-8b0f-0c164abe7d9e",
+        "InvoiceDetail": "83ffb4aa-51d5-4a12-9e08-783c67cfeb44",
+        "Project": "f03952d2-62cc-453f-97bb-d66b4adff342"
+      }
+    },
+    {
       "Kind": "default.cds_invoice_forms",
       "Namespace": "Invoices (Forms)",
       "Values": {
@@ -135,6 +174,20 @@
       "Values": {
         "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
         "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
+      }
+    },
+    {
+      "Kind": "default.cds_phonecall_forms",
+      "Namespace": "Phone Calls (Forms)",
+      "Values": {
+        "Information": "dcfacadb-b9dd-44ff-b8a7-cd52179c92dc",
+        "Phone Call": "a91390a5-99bb-4d10-9eee-3a5c87f841f1",
+        "Phone Call Card form": "983dc188-2a05-4cfe-b907-4fbfae8c21f7",
+        "Phone Call for Interactive experience": "cdc622ea-2a17-4cc3-9605-44564d56cea7",
+        "Phone call quick create form.": "a80fb36c-353f-4310-a4cb-b8fa47d58b9b",
+        "Phone Call Reference Panel": "c466c56a-ab9d-41a3-ac68-008a60bfe67e",
+        "Phonecall card": "fbefc534-019c-472b-96d1-c3514d056297",
+        "Quick Form": "8e0b7c1e-f5a0-4e7d-b04d-4ca8d5c5ca80"
       }
     },
     {
@@ -180,6 +233,20 @@
       }
     },
     {
+      "Kind": "default.cds_task_forms",
+      "Namespace": "Tasks (Forms)",
+      "Values": {
+        "Information": "b62ce022-cc0f-4c8c-bb29-21948f70dc74",
+        "Quick Form": "1fac7e2e-0b1c-4b6c-ab92-8af0f92dbdbc",
+        "Task": "16654191-19ad-48ca-9e46-c4b4fbdad76f",
+        "Task card": "e9c378d3-27a7-43fe-8075-322dcd7ff380",
+        "Task Card form": "5e9725e4-5449-4363-8c1c-5ae71767af34",
+        "Task for Interactive experience": "d5b4a1b2-de4f-4f86-8768-b0730001e7d1",
+        "Task quick create form.": "a1c8a6dc-8804-4019-9c78-7dbe86560ea1",
+        "Task Reference Panel": "81a89014-442c-44ad-9725-4077426a7fee"
+      }
+    },
+    {
       "Kind": "default.cds_msdyn_timeentry_forms",
       "Namespace": "Time Entries (Forms)",
       "Values": {
@@ -201,6 +268,21 @@
       "Namespace": "Time Sources (Forms)",
       "Values": {
         "Information": "a3e23374-2210-4c0e-8603-ba3967ff184d"
+      }
+    },
+    {
+      "Kind": "default.cds_uomschedule_forms",
+      "Namespace": "Unit Groups (Forms)",
+      "Values": {
+        "Information": "a793fa7c-8b63-43f0-b4bc-73f75a68935a"
+      }
+    },
+    {
+      "Kind": "default.cds_uom_forms",
+      "Namespace": "Units (Forms)",
+      "Values": {
+        "Information": "02aa3f91-c4dd-47b2-b17f-5790a8b977dd",
+        "Unit of Measure Quick Create": "a19aaf8b-9e2a-4f6a-9360-498269d5b137"
       }
     },
     {
@@ -259,88 +341,6 @@
         "Work Order - Service": "613513a1-322d-4ecc-81bd-bd65640d834c",
         "Work Order Create": "ccf0b34e-a265-4005-bd73-be6f4fe30dd7",
         "Work Order Quick View": "79c33fb4-7126-41a8-9dff-13e4462c9b19"
-      }
-    },
-    {
-      "Kind": "default.cds_uom_forms",
-      "Namespace": "Units (Forms)",
-      "Values": {
-        "Information": "02aa3f91-c4dd-47b2-b17f-5790a8b977dd",
-        "Unit of Measure Quick Create": "a19aaf8b-9e2a-4f6a-9360-498269d5b137"
-      }
-    },
-    {
-      "Kind": "default.cds_uomschedule_forms",
-      "Namespace": "Unit Groups (Forms)",
-      "Values": {
-        "Information": "a793fa7c-8b63-43f0-b4bc-73f75a68935a"
-      }
-    },
-    {
-      "Kind": "default.cds_task_forms",
-      "Namespace": "Tasks (Forms)",
-      "Values": {
-        "Information": "b62ce022-cc0f-4c8c-bb29-21948f70dc74",
-        "Quick Form": "1fac7e2e-0b1c-4b6c-ab92-8af0f92dbdbc",
-        "Task": "16654191-19ad-48ca-9e46-c4b4fbdad76f",
-        "Task card": "e9c378d3-27a7-43fe-8075-322dcd7ff380",
-        "Task Card form": "5e9725e4-5449-4363-8c1c-5ae71767af34",
-        "Task for Interactive experience": "d5b4a1b2-de4f-4f86-8768-b0730001e7d1",
-        "Task quick create form.": "a1c8a6dc-8804-4019-9c78-7dbe86560ea1",
-        "Task Reference Panel": "81a89014-442c-44ad-9725-4077426a7fee"
-      }
-    },
-    {
-      "Kind": "default.cds_appointment_forms",
-      "Namespace": "Appointments (Forms)",
-      "Values": {
-        "After Meeting": "7f58467b-ab43-447c-ab95-29deea3b1e35",
-        "Appointment": "549a8aa3-c349-4ab9-8bac-4873fa9a7a5c",
-        "Appointment Card form": "656cc4ad-235b-495b-8cb9-6174f9b09321",
-        "Appointment for Interactive experience": "230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e",
-        "Appointment quick create form.": "5895e983-598b-4834-80f9-68a4e9f4f744",
-        "Appointment Reference Panel": "4cd45c5d-29b3-48d3-997a-2bc3f8beeba8",
-        "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
-        "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
-      }
-    },
-    {
-      "Kind": "default.cds_invoicedetail_forms",
-      "Namespace": "Invoice Lines (Forms)",
-      "Values": {
-        "Information": "684b159c-c312-4248-8b0f-0c164abe7d9e",
-        "InvoiceDetail": "83ffb4aa-51d5-4a12-9e08-783c67cfeb44",
-        "Project": "f03952d2-62cc-453f-97bb-d66b4adff342"
-      }
-    },
-    {
-      "Kind": "default.cds_phonecall_forms",
-      "Namespace": "Phone Calls (Forms)",
-      "Values": {
-        "Information": "dcfacadb-b9dd-44ff-b8a7-cd52179c92dc",
-        "Phone Call": "a91390a5-99bb-4d10-9eee-3a5c87f841f1",
-        "Phone Call Card form": "983dc188-2a05-4cfe-b907-4fbfae8c21f7",
-        "Phone Call for Interactive experience": "cdc622ea-2a17-4cc3-9605-44564d56cea7",
-        "Phone call quick create form.": "a80fb36c-353f-4310-a4cb-b8fa47d58b9b",
-        "Phone Call Reference Panel": "c466c56a-ab9d-41a3-ac68-008a60bfe67e",
-        "Phonecall card": "fbefc534-019c-472b-96d1-c3514d056297",
-        "Quick Form": "8e0b7c1e-f5a0-4e7d-b04d-4ca8d5c5ca80"
-      }
-    },
-    {
-      "Kind": "default.cds_email_forms",
-      "Namespace": "Email Messages (Forms)",
-      "Values": {
-        "Bulk Email": "5e0f2e7e-df92-eb11-b1ac-00224802b8a3",
-        "Email": "0d1e47ff-12b2-4f53-9090-bee951b98cb4",
-        "Email card": "4b2778f9-e9c6-40f5-9383-42f04feb3f11",
-        "Email Card form": "e5538bb9-77ec-4d24-bc5f-8cb2d825f664",
-        "Email for Interactive experience": "1d5ad078-3edb-4edc-98c6-c0c21e3125e3",
-        "Email Reference Panel": "6661cf9b-c178-44fd-b70b-8c632bd0bfb2",
-        "Enhanced Email": "63769d04-c74f-4808-b0aa-77339e1b9191",
-        "Enhanced Email (deprecated)": "b54ca399-eaa6-45f8-83f2-c268b0021087",
-        "Information": "394ca387-4777-457c-b5ae-c7a3e632be41",
-        "Wizard": "9360ee64-5238-4334-a1de-c155d20fe63d"
       }
     },
     {
