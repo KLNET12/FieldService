@@ -826,13 +826,13 @@ screen_GenerateInvoice As screen:
                 Y: =170
                 ZIndex: =10
 
-    Label35 As label:
+    label_noDataAvailable_Products As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =21
         Text: ="No Data Available"
-        Visible: =If((varDisplayProducts || varDisplayServices || varEditProducts || varEditServices) && (CountRows('Invoice Products'.AllItems)=0 || CountRows('Invoice Services'.AllItems)=0),true,false)
+        Visible: =If((varDisplayProducts || varEditProducts) && CountRows('Invoice Products'.AllItems)=0,true,false)
         Width: =560
         X: =Parent.Width/17
         Y: =Parent.Height/2
@@ -1204,6 +1204,18 @@ screen_GenerateInvoice As screen:
             X: =182
             Y: =235
             ZIndex: =6
+
+    label_noDataAvailable_Services As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="No Data Available"
+        Visible: =If((varDisplayServices || varEditServices) && CountRows('Invoice Services'.AllItems)=0,true,false)
+        Width: =560
+        X: =Parent.Width/17
+        Y: =Parent.Height/2
+        ZIndex: =41
 
     Tabs As group:
         Height: =5

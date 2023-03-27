@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "phonecall",
+    "MaxGetRowsCount": 500,
     "Name": "Phone Calls",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

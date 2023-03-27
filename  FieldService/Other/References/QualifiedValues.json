@@ -314,16 +314,6 @@
       }
     },
     {
-      "Kind": "default.cds_provisionlanguageforuser_forms",
-      "Namespace": "ProvisionLanguageForUser (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_resource_forms",
-      "Namespace": "Resources (Forms)",
-      "Values": {}
-    },
-    {
       "Kind": "default.cds_phonecall_forms",
       "Namespace": "Phone Calls (Forms)",
       "Values": {
@@ -352,6 +342,16 @@
         "Information": "394ca387-4777-457c-b5ae-c7a3e632be41",
         "Wizard": "9360ee64-5238-4334-a1de-c155d20fe63d"
       }
+    },
+    {
+      "Kind": "default.cds_provisionlanguageforuser_forms",
+      "Namespace": "ProvisionLanguageForUser (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {}
     }
   ]
 }

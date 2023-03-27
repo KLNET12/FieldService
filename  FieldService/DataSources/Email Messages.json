@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "email",
+    "MaxGetRowsCount": 500,
     "Name": "Email Messages",
     "NativeCDSDataSourceInfoNameMapping": {
       "_acceptingentityid_value": "Accepting Entity",
