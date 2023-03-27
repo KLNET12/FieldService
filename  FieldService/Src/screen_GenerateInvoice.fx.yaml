@@ -843,6 +843,7 @@ screen_GenerateInvoice As screen:
         OnSelect: |-
             =NewForm(Form5);
             Navigate('screen_CreateService/Product');
+        Tooltip: =If(varEditProducts,"Add New Invoice Line Product","Add New Invoice Line Service")
         Visible: =If(varEditProducts || varEditServices,true,false)
         X: =487
         Y: =2
