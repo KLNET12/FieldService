@@ -126,10 +126,6 @@ Activity As screen:
             Y: =141
             ZIndex: =12
 
-    Component1_17 As Component1:
-        Height: =70
-        ZIndex: =2
-
     Label7_4 As label:
         Align: =Align.Center
         Fill: =RGBA(209, 232, 178, 1)
@@ -138,14 +134,11 @@ Activity As screen:
         Text: ="Activity"
         Width: =640
         Y: =72
-        ZIndex: =3
+        ZIndex: =2
 
-    MenuLeftNav_10 As MenuLeftNav:
-        ExpandMenu: =true
-        Height: =MenuLeftNav_10.MenuHeight
-        Visible: =true
-        Width: =MenuLeftNav_10.MenuWidth
-        ZIndex: =4
+    Component1_17 As Component1:
+        Height: =70
+        ZIndex: =3
 
     Timer1_18 As timer:
         AutoStart: =true
@@ -169,26 +162,27 @@ Activity As screen:
         Width: =202
         X: =20
         Y: =92
-        ZIndex: =10
+        ZIndex: =4
 
     Label29 As label:
         Font: =Font.'Lato Black'
-        Height: =44
+        Height: =57
         Size: =21
-        Text: ="Type"
-        Width: =115
+        Text: |-
+            ="Activity Type:"
+        Width: =357
         Y: =142
-        ZIndex: =11
+        ZIndex: =5
 
     Dropdown1 As dropdown:
         BorderThickness: =1
         Height: =57
         Items: =["ALL","Task","Phone","Appointment","Email"]
         Size: =21
-        Width: =477
-        X: =163
+        Width: =282
+        X: =357
         Y: =142
-        ZIndex: =12
+        ZIndex: =6
 
     "PhoneGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =918
@@ -198,7 +192,7 @@ Activity As screen:
         TemplateSize: =292
         Visible: =If(Dropdown1.Selected.Value="Phone",true,false)
         Y: =218
-        ZIndex: =13
+        ZIndex: =7
 
         Title13_1 As label:
             Height: =36
@@ -311,7 +305,7 @@ Activity As screen:
         TemplateSize: =257
         Visible: =If(Dropdown1.Selected.Value="Appointment",true,false)
         Y: =218
-        ZIndex: =14
+        ZIndex: =8
 
         Title13_2 As label:
             Height: =36
@@ -424,7 +418,7 @@ Activity As screen:
         TemplateSize: =250
         Visible: =If(Dropdown1.Selected.Value="Email",true,false)
         Y: =218
-        ZIndex: =15
+        ZIndex: =9
 
         Title13_3 As label:
             Height: =36
@@ -537,7 +531,7 @@ Activity As screen:
         TemplateSize: =372
         Visible: =If(Dropdown1.Selected.Value="ALL",true,false)
         Y: =218
-        ZIndex: =16
+        ZIndex: =10
 
         Title13_4 As label:
             Height: =36
@@ -641,4 +635,11 @@ Activity As screen:
             X: =213
             Y: =185
             ZIndex: =9
+
+    MenuLeftNav_10 As MenuLeftNav:
+        ExpandMenu: =true
+        Height: =MenuLeftNav_10.MenuHeight
+        Visible: =true
+        Width: =MenuLeftNav_10.MenuWidth
+        ZIndex: =11
 
