@@ -514,815 +514,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Camera.Icon7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Icon7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Camera",
-                "type": "Camera.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Camera1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Camera1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.Camera1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Icon11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.Icon11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Icon11.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon11.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Camera",
-                "type": "Camera.Icon11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Icon12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.Icon12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.Icon12.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.Icon12.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Camera",
-                "type": "Camera.Icon12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.PenInput1"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.PenInput1",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "Camera",
-                "type": "Camera.PenInput1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-AlternativeInputNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Camera.PenInput1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Camera.PenInput1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Camera",
-                "type": "Camera.PenInput1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Icon5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Icon5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Contact",
-                "type": "Contact.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Icon5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Icon5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Contact",
-                "type": "Contact.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Gallery10.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Gallery10.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Contact",
-                "type": "Contact.Gallery10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Gallery10.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Gallery10.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Contact",
-                "type": "Contact.Gallery10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Gallery10.Icon18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Gallery10.Icon18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Contact",
-                "type": "Contact.Gallery10.Icon18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Contact.Gallery10.Icon18.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Contact.Gallery10.Icon18.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Contact",
-                "type": "Contact.Gallery10.Icon18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Icon5_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Icon5_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Icon5_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Icon5_7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Icon5_7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Icon5_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Icon5_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Icon5_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Login Screen'.TextInput2.AccessibleLabel"
                 }
               ],
@@ -2065,7 +1256,7 @@
             "level": "Low"
           },
           "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2355,6 +1546,275 @@
                 "member": "AccessibleLabel",
                 "module": "Screen1",
                 "type": "Screen1.Form2.'Social Channel_DataCard1'.DataCardValue48"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Camera",
+                "type": "Camera.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Camera",
+                "type": "Camera.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Camera1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Camera1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Camera",
+                "type": "Camera.Camera1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Camera",
+                "type": "Camera.Icon11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Camera",
+                "type": "Camera.Icon11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Camera",
+                "type": "Camera.Icon12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.Icon12.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.Icon12.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Camera",
+                "type": "Camera.Icon12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.PenInput1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.PenInput1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "Camera",
+                "type": "Camera.PenInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-AlternativeInputNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Camera.PenInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Camera.PenInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Camera",
+                "type": "Camera.PenInput1"
               }
             }
           ],
@@ -3326,6 +2786,186 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Icon5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Icon5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Contact",
+                "type": "Contact.Icon5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Icon5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Icon5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Contact",
+                "type": "Contact.Icon5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Gallery10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Gallery10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Contact",
+                "type": "Contact.Gallery10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Gallery10.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Gallery10.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Contact",
+                "type": "Contact.Gallery10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Gallery10.Icon18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Gallery10.Icon18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Contact",
+                "type": "Contact.Gallery10.Icon18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Contact.Gallery10.Icon18.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Contact.Gallery10.Icon18.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Contact",
+                "type": "Contact.Gallery10.Icon18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5276,6 +4916,186 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Icon5_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Icon5_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Icon5_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Icon5_7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Icon5_7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Icon5_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Form_UpdateAccount.'Account Name_DataCard2'.DataCardValue34"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Form_UpdateAccount.'Main Phone_DataCard2'.DataCardValue35"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Form_UpdateAccount.Email_DataCard3.DataCardValue37"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Form_UpdateAccount.'Address 1: City_DataCard2'.DataCardValue36"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -7292,6 +7112,456 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Icon5_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Icon5_6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Icon5_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Form_UpdateContact.'First Name_DataCard1_1'.DataCardValue28_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Form_UpdateContact.'Last Name_DataCard1_1'.DataCardValue29_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Form_UpdateContact.Email_DataCard1_1.DataCardValue4_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Form_UpdateContact.'Business Phone_DataCard1_1'.DataCardValue27_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.Salesperson_DataCard2.DataCardValue83"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Manual Discount_DataCard2'.DataCardValue82.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Manual Discount_DataCard2'.DataCardValue82.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.'Manual Discount_DataCard2'.DataCardValue82"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Description_DataCard5.DataCardValue81.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Description_DataCard5.DataCardValue81.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.Description_DataCard5.DataCardValue81"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Currency_DataCard4.DataCardValue80.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Currency_DataCard4.DataCardValue80.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.Currency_DataCard4.DataCardValue80"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Currency_DataCard3.DataCardValue79.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.Currency_DataCard3.DataCardValue79.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.Currency_DataCard3.DataCardValue79"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order Service_DataCard2'.DataCardValue78.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order Service_DataCard2'.DataCardValue78.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.'Work Order Service_DataCard2'.DataCardValue78"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order Product_DataCard2'.DataCardValue77.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order Product_DataCard2'.DataCardValue77.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.'Work Order Product_DataCard2'.DataCardValue77"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order_DataCard5'.DataCardValue76.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Work Order_DataCard5'.DataCardValue76.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.'Work Order_DataCard5'.DataCardValue76"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Price Per Unit_DataCard2'.DataCardValue84.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'screen_CreateService/Product'.Form5.'Price Per Unit_DataCard2'.DataCardValue84.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "screen_CreateService/Product",
+                "type": "'screen_CreateService/Product'.Form5.'Price Per Unit_DataCard2'.DataCardValue84"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varpassword"
                 }
               ],
@@ -7592,66 +7862,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Item",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "Edit Account",
-                "type": "'Edit Account'.Form_UpdateAccount"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Item",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "Edit Contact",
-                "type": "'Edit Contact'.Form_UpdateContact"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Login Screen'.TextInput2.DelayOutput"
                 }
               ],
@@ -7675,7 +7885,7 @@
             "level": "Medium"
           },
           "ruleId": "app-TextInputIsNotDelayOutput",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7705,7 +7915,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7735,7 +7945,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7765,7 +7975,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7824,7 +8034,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7854,7 +8064,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7884,7 +8094,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7914,7 +8124,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7944,7 +8154,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7974,7 +8184,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8004,7 +8214,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8034,7 +8244,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8064,7 +8274,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8094,7 +8304,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8124,7 +8334,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8154,7 +8364,37 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Account'.Form_UpdateAccount.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Edit Account",
+                "type": "'Edit Account'.Form_UpdateAccount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8214,7 +8454,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -8244,7 +8484,37 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Contact'.Form_UpdateContact.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Edit Contact",
+                "type": "'Edit Contact'.Form_UpdateContact"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
         }
       ],
       "tool": {
@@ -8326,23 +8596,6 @@
               }
             },
             {
-              "id": "acc-AlternativeInputNeeded",
-              "messageStrings": {
-                "issue": {
-                  "text": "Add another input method"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Add a text input in addition to the pen control for an accessible experience."
-                ],
-                "level": "Low",
-                "primaryCategory": "accessibility",
-                "whyFix": "Some users can't use a pen and require another way to input information. Example: Typing in a signature."
-              }
-            },
-            {
               "id": "acc-ReadableScreenNameNeeded",
               "messageStrings": {
                 "issue": {
@@ -8357,6 +8610,23 @@
                 "level": "Low",
                 "primaryCategory": "accessibility",
                 "whyFix": "People who are blind, have low vision, or a reading disability rely on screen titles to navigate using the screen reader. "
+              }
+            },
+            {
+              "id": "acc-AlternativeInputNeeded",
+              "messageStrings": {
+                "issue": {
+                  "text": "Add another input method"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Add a text input in addition to the pen control for an accessible experience."
+                ],
+                "level": "Low",
+                "primaryCategory": "accessibility",
+                "whyFix": "Some users can't use a pen and require another way to input information. Example: Typing in a signature."
               }
             },
             {
@@ -8394,23 +8664,6 @@
               }
             },
             {
-              "id": "app-InefficientDelayLoading",
-              "messageStrings": {
-                "issue": {
-                  "text": "Inefficient delay loading"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Use variables, collections, and navigation context to share state across screens instead."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
-              }
-            },
-            {
               "id": "app-TextInputIsNotDelayOutput",
               "messageStrings": {
                 "issue": {
@@ -8425,6 +8678,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "When a text input control has many controls that depend on its value, typing into that input can slow down the app. Setting DelayOutput to true prevents this problem by only updating dependant controls when typing stops."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             },
             {

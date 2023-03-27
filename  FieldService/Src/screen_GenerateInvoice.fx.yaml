@@ -703,7 +703,7 @@ screen_GenerateInvoice As screen:
         DelayItemLoading: =true
         Fill: =RGBA(252, 255, 204, 1)
         Height: =926
-        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && 'Product type' = 'Product Type'.'Project-based Service')
+        Items: =Filter('Invoice Lines','Invoice ID'.Invoice = varInvoiceId && ('Product type' = 'Product Type'.'Project-based Service' || 'Existing Product'.'Product Type'='Product Type (Products)'.Services))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Visible: =varDisplayServices || varEditServices
