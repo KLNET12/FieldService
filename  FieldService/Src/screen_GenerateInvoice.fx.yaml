@@ -811,7 +811,7 @@ screen_GenerateInvoice As screen:
                 OnSelect: =Select(Parent)
                 Size: =21
                 Text: |-
-                    ="Quantity:"
+                    ="Duration:"
                 Width: =200
                 Y: =170
                 ZIndex: =9
