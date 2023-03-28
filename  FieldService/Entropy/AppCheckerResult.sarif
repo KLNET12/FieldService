@@ -8251,6 +8251,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ServicesScreen.Label1_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ServicesScreen.Label1_1.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "ServicesScreen",
+                "type": "ServicesScreen.Label1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "TimeEntrydetails.Gallery1_1.Items"
                 }
               ],

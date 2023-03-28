@@ -99,7 +99,8 @@ ServicesScreen As screen:
         FontWeight: =FontWeight.Semibold
         Height: =72
         Size: =21
-        Text: ="Your Services"
+        Text: |-
+            ="Services for WO #" & Gallery1.Selected.'Work Order'.'Work Order Number'
         Width: =640
         Y: =77
         ZIndex: =2
