@@ -194,7 +194,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Bookable resource",
-      "ParentIndex": 21,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -618,7 +618,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "button_Products",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -911,7 +911,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "button_Services",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1197,7 +1197,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "button_Summary",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1816,7 +1816,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Currency",
-      "ParentIndex": 25,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2483,7 +2483,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Customer",
-      "ParentIndex": 17,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2928,7 +2928,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Display Invoice Record",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3577,7 +3577,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icon_AddInvoiceLine",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3773,7 +3773,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon13",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4139,7 +4139,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon22",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4665,7 +4665,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Invoice Products",
-      "ParentIndex": 12,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4872,7 +4872,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Invoice Services",
-      "ParentIndex": 13,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5202,7 +5202,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "label_noDataAvailable_Products",
-      "ParentIndex": 26,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5505,7 +5505,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "label_noDataAvailable_Services",
-      "ParentIndex": 27,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5794,7 +5794,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12",
-      "ParentIndex": 5,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6111,7 +6111,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_1",
-      "ParentIndex": 14,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7668,7 +7668,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_2",
-      "ParentIndex": 16,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7985,7 +7985,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_3",
-      "ParentIndex": 18,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8302,7 +8302,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_4",
-      "ParentIndex": 20,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8612,7 +8612,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_5",
-      "ParentIndex": 22,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8922,7 +8922,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_6",
-      "ParentIndex": 24,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9232,7 +9232,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_7",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26659,7 +26659,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "MenuLeftNav_16",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26835,7 +26835,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Name",
-      "ParentIndex": 15,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27331,7 +27331,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Price List",
-      "ParentIndex": 23,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28676,7 +28676,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_21",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29343,7 +29343,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WO Number",
-      "ParentIndex": 19,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

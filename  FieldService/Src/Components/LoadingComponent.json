@@ -58,7 +58,7 @@
         "Name": "Rectangle2",
         "Parent": "LoadingComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 924,
+        "PublishOrderIndex": 925,
         "Rules": [
           {
             "Category": "Design",
@@ -235,7 +235,7 @@
         "Name": "Image2",
         "Parent": "LoadingComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 925,
+        "PublishOrderIndex": 926,
         "Rules": [
           {
             "Category": "Data",
