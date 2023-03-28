@@ -134,6 +134,7 @@ Contact As screen:
     Icon5 As icon.Add:
         Icon: =Icon.Add
         OnSelect: =Navigate('Add New Contact')
+        Visible: =false
         X: =576
         Y: =77
         ZIndex: =5

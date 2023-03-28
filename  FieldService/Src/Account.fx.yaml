@@ -141,6 +141,7 @@ Account As screen:
     Icon15 As icon.Add:
         Icon: =Icon.Add
         OnSelect: =Navigate(Form_NewAccount)
+        Visible: =false
         X: =576
         Y: =66
         ZIndex: =5
