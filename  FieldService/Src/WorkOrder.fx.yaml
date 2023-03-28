@@ -1,6 +1,7 @@
 WorkOrder As screen:
     OnVisible: |
-        =Refresh('Work Orders');If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
+        =Refresh('Work Orders');
+        If(Or(CountRows(OfflineBookingData)>0,CountRows(OfflineTimeEntry)>0,CountRows(OfflinePictureSignature)>0,CountRows(OfflineAccount)>0,CountRows(OfflineContact)>0),
         If( Connection.Connected,
             ForAll(OfflineBookingData, Patch('Bookable Resource Bookings',ThisRecord.BookingItem,{Name: ThisRecord.Name, 'Start Time':ThisRecord.'Start Time','End Time':ThisRecord.'End Time','Actual Arrival Time':ThisRecord.'Actual Arrival Time','Estimated Arrival Time':ThisRecord.'Estimated Arrival Time',Duration:ThisRecord.Duration,'Booking Status':ThisRecord.'Booking Status', 'Booking Type': ThisRecord.'Booking Type', Resource:ThisRecord.Resource}));
             Clear(OfflineBookingData); Refresh('Bookable Resource Bookings'); ForAll(OfflineTimeEntry, Patch('Time Entries',ThisRecord.TimeEntryItem,{'Bookable Resource':ThisRecord.'Bookable Resource',Type:ThisRecord.Type, Start:ThisRecord.Start, End:ThisRecord.End, Date:ThisRecord.Date, 'Work Order':ThisRecord.'Work Order', 'Bookable Resource Booking':ThisRecord.'Bookable Resource Booking', 'Entry Status':ThisRecord.'Entry Status', Description: ThisRecord.Description, 'External Comments':ThisRecord.'External Comments'}));
@@ -24,8 +25,7 @@ WorkOrder As screen:
     "gallery_WorkOrder As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
         DelayItemLoading: =true
         Height: =923
-        Items: |
-            =If(Dropdown3_2.Selected.Value = "All Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'),If(Dropdown3_2.Selected.Value = "Active Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'), If(Dropdown3_2.Selected.Value = "Closed Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Inactive Work Orders'),Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'))))
+        Items: =If(Dropdown3_2.Selected.Value = "All Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'),If(Dropdown3_2.Selected.Value = "Active Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'), If(Dropdown3_2.Selected.Value = "Closed Workorders" ,Filter('Work Orders','Work Orders (Views)'.'Inactive Work Orders'),Filter('Work Orders','Work Orders (Views)'.'Active Work Orders'))))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
@@ -160,7 +160,7 @@ WorkOrder As screen:
             Height: =70
             OnSelect: |-
                 =Set(varLoadingScreen,true); 
-                Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft, 'Bookable Resource Booking':First(ThisItem.'Bookable Resource Bookings')
+                Set(GeneratedInvoice,Patch(Invoices,Defaults(Invoices), {Name:ThisItem.'Work Order Number', Customer: ThisItem.'Billing Account' , 'Bookable Resource':First(Filter('Bookable Resources', Username = TextInput2.Text)), 'Invoice Date': Today(), 'Due Date': Today(), Type: 'Type (Invoices)'.'Work based' , 'Price List': ThisItem.'Price List' , Currency: ThisItem.Currency, 'Work Order': ThisItem, 'Project Invoice Status': 'Project Invoice Status'.Draft, 'Bookable Resource Booking':First(Filter(ThisItem.'Bookable Resource Bookings','Work Order'.'Work Order Number'=Gallery1.Selected.'Work Order'.'Work Order Number'))
                 } ));
                 Set(varInvoiceId,GeneratedInvoice.Invoice);
                 Set(varValue,CreateInvoiceLines.Run(varInvoiceId,ThisItem.'WO Number').value);
@@ -191,7 +191,7 @@ WorkOrder As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =24
+            Size: =22
             Text: ="RTR"
             Width: =140
             X: =492
