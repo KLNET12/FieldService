@@ -72,12 +72,13 @@
         Y: =92
         ZIndex: =32
 
-    Form5 As form:
+    form_InvoiceLine As form:
         DataSource: ='Invoice Lines'
         Height: =928
         Item: =varInvoiceLine
         NumberOfColumns: =2
-        OnSuccess: =ResetForm(Form5);Refresh('Invoice Lines');Refresh(Invoices);Navigate(screen_GenerateInvoice)
+        OnSuccess: =ResetForm(form_InvoiceLine);Refresh('Invoice Lines');Refresh(Invoices);Navigate(screen_GenerateInvoice)
+        SnapToColumns: =false
         Width: =640
         Y: =140
         ZIndex: =33
@@ -306,14 +307,14 @@
 
         Currency_DataCard3 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: =""
+            DataField: =If(varNew,"transactioncurrencyid","")
             Default: =If(IsBlank(ThisItem.'Currency (transactioncurrencyid)'),GeneratedInvoice.Currency,ThisItem.'Currency (transactioncurrencyid)')
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"transactioncurrencyid")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =
+            Update: =If(varNew,DataCardValue79.Selected,Blank())
             Width: =320
             X: =1
             Y: =2
@@ -627,7 +628,7 @@
         "'Product type_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="producttypecode"
-            Default: =ThisItem.'Product type'
+            Default: =If(IsBlank(ThisItem.'Product type'),If(varPro,'Product Type'.Product,'Product Type'.'Project-based Service'),ThisItem.'Product type')
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"producttypecode")
             Fill: =RGBA(0, 0, 0, 0)
@@ -844,6 +845,222 @@
                 Y: =DataCardKey65.Y
                 ZIndex: =4
 
+        "'Work Order Product_DataCard2' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="msdyn_workorderproductid"
+            Default: =ThisItem.'Work Order Product'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"msdyn_workorderproductid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue77.Selected
+            Visible: =If(IsBlank(ThisItem.'Work Order Product'),false,true)
+            Width: =320
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey89 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue77 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["msdyn_name"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Invoice Lines'].msdyn_workorderproductid)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["msdyn_name"]
+                SearchItems: =Search(Choices([@'Invoice Lines'].msdyn_workorderproductid),DataCardValue77.SearchText,"msdyn_name")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey89.Y + DataCardKey89.Height + 5
+                ZIndex: =2
+
+            ErrorMessage88 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue77.Y + DataCardValue77.Height
+                ZIndex: =3
+
+            StarVisible88 As label:
+                Align: =Align.Center
+                Height: =DataCardKey89.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey89.Y
+                ZIndex: =4
+
+        "'Work Order_DataCard5' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="msdyn_workorderid"
+            Default: =If(IsBlank(ThisItem.'Work Order'),First(Filter('Work Orders','WO Number'=varWorkId)),ThisItem.'Work Order')
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"msdyn_workorderid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue76.Selected
+            Visible: =false
+            Width: =320
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey88 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue76 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["msdyn_name"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Invoice Lines'].msdyn_workorderid)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["msdyn_name"]
+                SearchItems: =Search(Choices([@'Invoice Lines'].msdyn_workorderid),DataCardValue76.SearchText,"msdyn_name")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey88.Y + DataCardKey88.Height + 5
+                ZIndex: =2
+
+            ErrorMessage87 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue76.Y + DataCardValue76.Height
+                ZIndex: =3
+
+            StarVisible87 As label:
+                Align: =Align.Center
+                Height: =DataCardKey88.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey88.Y
+                ZIndex: =4
+
+        Salesperson_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="salesrepid"
+            Default: =If(IsBlank(ThisItem.Salesperson),GeneratedInvoice.'Created By',ThisItem.Salesperson)
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"salesrepid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue57.Selected
+            Visible: =false
+            Width: =320
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey69 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue57 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["fullname"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Invoice Lines'].salesrepid)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["fullname"]
+                SearchItems: =Search(Choices([@'Invoice Lines'].salesrepid),DataCardValue57.SearchText,"fullname")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey69.Y + DataCardKey69.Height + 5
+                ZIndex: =2
+
+            ErrorMessage68 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue57.Y + DataCardValue57.Height
+                ZIndex: =3
+
+            StarVisible68 As label:
+                Align: =Align.Center
+                Height: =DataCardKey69.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey69.Y
+                ZIndex: =4
+
         "'Property Configuration_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="propertyconfigurationstatus"
@@ -917,78 +1134,6 @@
                 Y: =DataCardKey68.Y
                 ZIndex: =4
 
-        "'Work Order Product_DataCard2' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="msdyn_workorderproductid"
-            Default: =ThisItem.'Work Order Product'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"msdyn_workorderproductid")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue77.Selected
-            Visible: =If(IsBlank(ThisItem.'Work Order Product'),false,true)
-            Width: =640
-            X: =0
-            Y: =8
-            ZIndex: =1
-
-            DataCardKey89 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue77 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["msdyn_name"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Invoice Lines'].msdyn_workorderproductid)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["msdyn_name"]
-                SearchItems: =Search(Choices([@'Invoice Lines'].msdyn_workorderproductid),DataCardValue77.SearchText,"msdyn_name")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey89.Y + DataCardKey89.Height + 5
-                ZIndex: =2
-
-            ErrorMessage88 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue77.Y + DataCardValue77.Height
-                ZIndex: =3
-
-            StarVisible88 As label:
-                Align: =Align.Center
-                Height: =DataCardKey89.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey89.Y
-                ZIndex: =4
-
         "'Work Order Service_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="msdyn_workorderserviceid"
@@ -1001,8 +1146,8 @@
             Update: =DataCardValue78.Selected
             Visible: =If(IsBlank(ThisItem.'Work Order Service'),false,true)
             Width: =320
-            X: =0
-            Y: =9
+            X: =1
+            Y: =8
             ZIndex: =1
 
             DataCardKey90 As label:
@@ -1061,78 +1206,6 @@
                 Y: =DataCardKey90.Y
                 ZIndex: =4
 
-        "'Work Order_DataCard5' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="msdyn_workorderid"
-            Default: =If(IsBlank(ThisItem.'Work Order'),First(Filter('Work Orders','WO Number'=varWorkId)),ThisItem.'Work Order')
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"msdyn_workorderid")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue76.Selected
-            Visible: =false
-            Width: =320
-            X: =1
-            Y: =9
-            ZIndex: =1
-
-            DataCardKey88 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue76 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["msdyn_name"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Invoice Lines'].msdyn_workorderid)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["msdyn_name"]
-                SearchItems: =Search(Choices([@'Invoice Lines'].msdyn_workorderid),DataCardValue76.SearchText,"msdyn_name")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey88.Y + DataCardKey88.Height + 5
-                ZIndex: =2
-
-            ErrorMessage87 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue76.Y + DataCardValue76.Height
-                ZIndex: =3
-
-            StarVisible87 As label:
-                Align: =Align.Center
-                Height: =DataCardKey88.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey88.Y
-                ZIndex: =4
-
         Currency_DataCard4 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="msdyn_currency"
@@ -1145,8 +1218,8 @@
             Update: =DataCardValue80.Selected
             Visible: =false
             Width: =320
-            X: =0
-            Y: =10
+            X: =1
+            Y: =9
             ZIndex: =1
 
             DataCardKey92 As label:
@@ -1205,81 +1278,9 @@
                 Y: =DataCardKey92.Y
                 ZIndex: =4
 
-        Salesperson_DataCard1 As typedDataCard.comboBoxEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="salesrepid"
-            Default: =If(IsBlank(ThisItem.Salesperson),GeneratedInvoice.'Created By',ThisItem.Salesperson)
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Invoice Lines'],DataSourceInfo.DisplayName,"salesrepid")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue57.Selected
-            Visible: =false
-            Width: =320
-            X: =1
-            Y: =10
-            ZIndex: =1
-
-            DataCardKey69 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue57 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["fullname"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Invoice Lines'].salesrepid)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["fullname"]
-                SearchItems: =Search(Choices([@'Invoice Lines'].salesrepid),DataCardValue57.SearchText,"fullname")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey69.Y + DataCardKey69.Height + 5
-                ZIndex: =2
-
-            ErrorMessage68 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue57.Y + DataCardValue57.Height
-                ZIndex: =3
-
-            StarVisible68 As label:
-                Align: =Align.Center
-                Height: =DataCardKey69.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey69.Y
-                ZIndex: =4
-
-    Button18 As button:
+    "'button _Submit' As button":
         Height: =70
-        OnSelect: =SubmitForm(Form5);
+        OnSelect: =SubmitForm(form_InvoiceLine); Notify(form_InvoiceLine.Error)
         Size: =24
         Text: ="Submit"
         Width: =640

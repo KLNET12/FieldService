@@ -699,13 +699,13 @@ screen_GenerateInvoice As screen:
                 Y: =170
                 ZIndex: =10
 
-        Icon19 As icon.Edit:
+        icon_editInvoiceProduct As icon.Edit:
             Icon: =Icon.Edit
             OnSelect: |-
-                =ResetForm(Form5);
+                =ResetForm(form_InvoiceLine);
                 Set(varInvoiceLine,ThisItem); Navigate('screen_CreateService/Product')
             X: =566
-            Y: =6
+            Y: =243
             ZIndex: =14
 
         Price_Product As group:
@@ -866,6 +866,15 @@ screen_GenerateInvoice As screen:
                 Y: =170
                 ZIndex: =10
 
+        icon_editInvoiceProduct_1 As icon.Edit:
+            Icon: =Icon.Edit
+            OnSelect: |-
+                =ResetForm(form_InvoiceLine);
+                Set(varInvoiceLine,ThisItem); Navigate('screen_CreateService/Product')
+            X: =566
+            Y: =243
+            ZIndex: =14
+
         Price_Product_1 As group:
             Height: =5
             Width: =5
@@ -910,8 +919,10 @@ screen_GenerateInvoice As screen:
     icon_AddInvoiceLine As icon.Add:
         Icon: =Icon.Add
         OnSelect: |-
-            =NewForm(Form5);
+            =ResetForm(form_InvoiceLine);
+            NewForm(form_InvoiceLine);
             If(varEditProducts,Set(varPro,true),Set(varPro,false));
+            Set(varNew,true);
             Navigate('screen_CreateService/Product')
         Tooltip: =If(varEditProducts,"Add New Invoice Line Product","Add New Invoice Line Service")
         Visible: =If(varEditProducts || varEditServices,true,false)
