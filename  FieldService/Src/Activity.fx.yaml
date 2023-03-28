@@ -534,6 +534,7 @@ Activity As screen:
         ZIndex: =10
 
         Title13_4 As label:
+            Font: =Font.'Lato Black'
             Height: =36
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -554,11 +555,12 @@ Activity As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =18
             Text: =ThisItem.'Activity Status'
             VerticalAlign: =VerticalAlign.Top
             Width: =419
             X: =214
-            Y: =127
+            Y: =115
             ZIndex: =2
 
         Separator23_4 As rectangle:
@@ -576,7 +578,6 @@ Activity As screen:
             Text: |-
                 ="Subject:"
             Width: =214
-            Y: =1
             ZIndex: =4
 
         Label23_9 As label:
@@ -587,17 +588,18 @@ Activity As screen:
             Text: |-
                 ="Status:"
             Width: =214
-            Y: =114
+            Y: =97
             ZIndex: =5
 
         Label26_14 As label:
+            Font: =Font.'Lato Black'
             Height: =43
             OnSelect: =Select(Parent)
             Size: =16
             Text: =ThisItem.Priority
             Width: =214
             X: =213
-            Y: =71
+            Y: =58
             ZIndex: =6
 
         Label26_13 As label:
@@ -608,7 +610,7 @@ Activity As screen:
             Text: |-
                 ="Priority:"
             Width: =214
-            Y: =71
+            Y: =54
             ZIndex: =7
 
         Label26_12 As label:
@@ -619,21 +621,24 @@ Activity As screen:
             Text: |-
                 ="Description:"
             Width: =180
-            Y: =168
+            Y: =211
             ZIndex: =8
 
         Label27_4 As label:
-            Height: =174
+            BorderThickness: =1
+            FocusedBorderThickness: =1
+            Height: =183
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
             Text: =ThisItem.Description
-            Width: =427
+            Width: =403
             X: =213
-            Y: =185
+            Y: =168
             ZIndex: =9
 
     MenuLeftNav_10 As MenuLeftNav:

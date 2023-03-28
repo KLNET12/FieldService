@@ -467,16 +467,16 @@
     "OptionSetIsGlobal": true,
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "msdyn_startlocation",
+        "OptionSetReferenceColumnName": "msdyn_endlocation",
         "OptionSetReferenceEntityName": "Bookable Resources"
       },
       "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "msdyn_endlocation",
+        "OptionSetReferenceColumnName": "msdyn_startlocation",
         "OptionSetReferenceEntityName": "Bookable Resources"
       }
     },
     "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "msdyn_startlocation",
+    "RelatedColumnInvariantName": "msdyn_endlocation",
     "RelatedEntityName": "Bookable Resources",
     "Type": "OptionSetInfo"
   }
