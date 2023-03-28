@@ -279,6 +279,7 @@ Activity As screen:
             Size: =20
             Text: |-
                 ="Description:"
+            Visible: =If(IsBlank(ThisItem.Description),false,true)
             Width: =180
             Y: =192
             ZIndex: =11
